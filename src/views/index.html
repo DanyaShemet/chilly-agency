@@ -9,7 +9,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="shortcut icon" href="../img/favicons/favicon.ico" type="image/x-icon">
-
+    <script src="https://kit.fontawesome.com/0824cc2138.js" crossorigin="anonymous"></script>
     <link rel="icon" sizes="16x16" href="../img/favicons/favicon-16x16.png" type="image/png">
     <link rel="icon" sizes="32x32" href="../img/favicons/favicon-32x32.png" type="image/png">
     <link rel="apple-touch-icon-precomposed" href="../img/favicons/apple-touch-icon-precomposed.png">
@@ -29,16 +29,26 @@
 
 </head>
 <body>
-<div class="header-wrapper">
+<div class="header-wrapper" id="first-screen">
+    @@include("../blocks/modules/header/header.html")
     <div class="container">
-        @@include("../blocks/modules/header/header.html")
+        <div class="header-wrapper__trapezoid">
+            <h2>Chilly Agency</h2>
+        </div>
+        <div class="header-wrapper__block-text">
+            <h1>Hoorey</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam consequuntur cum eligendi fugit molestiae obcaecati quam rerum veniam voluptas.</p>
+        </div>
+        <div class="header-wrapper__video">
+            <button><i class="fas fa-play"></i></button>
+            <p>Look about us</p>
+        </div>
+
     </div>
 </div>
 
 
-
 @@include("../blocks/modules/footer/footer.html")
-
 
 
 <script src="../js/main.js"></script>
