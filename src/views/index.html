@@ -29,27 +29,16 @@
 
 </head>
 <body>
-<div class="header-wrapper" id="first-screen">
-    @@include("../blocks/modules/header/header.html")
+
+@@include("../blocks/modules/header/header.html")
+
+<main>
     <div class="container">
-        <div class="header-wrapper__trapezoid">
-            <h2>Chilly Agency</h2>
-        </div>
-        <div class="header-wrapper__block-text">
-            <h1>Hoorey</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam consequuntur cum eligendi fugit molestiae obcaecati quam rerum veniam voluptas.</p>
-        </div>
-        <div class="header-wrapper__video">
-            <button><i class="fas fa-play"></i></button>
-            <p>Look about us</p>
-        </div>
-
+        @@include("../blocks/modules/about/about.html")
     </div>
-</div>
-
+</main>
 
 @@include("../blocks/modules/footer/footer.html")
-
 
 <script src="../js/main.js"></script>
 <script src="../js/vendor.js"></script>
