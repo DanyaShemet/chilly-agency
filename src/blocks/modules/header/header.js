@@ -1,6 +1,7 @@
 import $ from "jquery";
 import "velocity-animate/velocity.min"
 import "velocity-animate/velocity.ui.min"
+import {TweenMax} from "gsap"
 
 let burger = $('.burger-icon');
 let links = $('nav ul li a');
@@ -53,11 +54,60 @@ function hideMenu() {
 }
 
 // On Scroll Functionality
-$(window).scroll(function (){
+$(window).scroll(function (e){
     let st = $(this).scrollTop();
-    let windowTop = $(window).scrollTop();
-    windowTop > 100 ? $('.burger-wrapper').addClass('navShadow') : $('.burger-wrapper').removeClass('navShadow');
-    $('.header-wrapper .container').css({
-        "transform": "translate(0%, " + -st / 2 + "px"
-    });
+    let windowTop =
+    windowTop > 200 ? $('.burger-wrapper').addClass('navShadow') : $('.burger-wrapper').removeClass('navShadow');
+    $('#header-wrapper .container').css({"transform": "translate(0%, " + -st / 1.5 + "px"});
+    $('.circle-1').css({"transform": "translate(0px, " + -st / 3 + "px"});
+    $('.circle-2').css({"transform": "translate(0px, " + -st / 3 + "px"});
 });
+
+
+
+// Parallax effect
+
+$("#header-wrapper").mousemove(function(e) {
+    parallaxIt(e, ".circle-1", -30);
+    parallaxIt(e, ".circle-2", 10);
+    parallaxIt(e, ".circle-3", 20);
+    parallaxIt(e, ".square-1", -40);
+    parallaxIt(e, ".trapezoid-1", -5);
+    parallaxIt(e, ".repeat-grid-circles", 20);
+
+});
+
+function parallaxIt(e, target, movement) {
+    let $this = $("#header-wrapper");
+    let relX = e.pageX - $this.offset().left;
+    let relY = e.pageY - $this.offset().top;
+    TweenMax.to(target, 1, {
+        x: (relX - $this.width() / 2) / $this.width() * movement,
+        y: (relY - $this.height() / 2) / $this.height() * movement
+    });
+}
+
+
+
+// $("[data-media]").on("click", function(e) {
+//     e.preventDefault();
+//     let $this = $(this);
+//     let videoUrl = $this.attr("data-media");
+//     let popup = $this.attr("href");
+//     let $popupIframe = $(popup).find("iframe");
+//
+//     $popupIframe.attr("src", videoUrl);
+//
+//     $this.closest(".page").addClass("show-popup");
+// });
+//
+// $(".popup").on("click", function(e) {
+//     e.preventDefault();
+//     e.stopPropagation();
+//
+//     $(".page").removeClass("show-popup");
+// });
+//
+// $(".popup > iframe").on("click", function(e) {
+//     e.stopPropagation();
+// });

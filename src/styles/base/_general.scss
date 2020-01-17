@@ -1,3 +1,4 @@
+
 body{
     font-family: Quicksand;
 }
@@ -12,15 +13,21 @@ a{
     color: black;
     text-decoration: none;
 }
+img{
+    user-select: none;
+}
 button{
-    +button-starter();
+    @include button-starter();
+}
+.color{
+    color: $mainColor
 }
 .container {
-    +container();
-    +sm(max-width, rem(510));
-    +md(max-width, rem(690));
-    +lg(max-width, rem(930));
-    +xl(max-width, rem(1110));
+    @include container();
+    @include sm(max-width, rem(510));
+    @include md(max-width, rem(690));
+    @include lg(max-width, rem(930));
+    @include xl(max-width, rem(1110));
 }
 
 

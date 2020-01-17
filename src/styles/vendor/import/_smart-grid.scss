@@ -7,7 +7,6 @@ $break_md: 48rem;
 $break_lg: 62rem;
 $break_xl: 75rem;
 
-//$offset: 1.875rem;
 $offset: 0.1rem;
 $offset_xs: $offset;
 $offset_sm: $offset;
@@ -48,7 +47,7 @@ $fields: 0.9375rem;
 @mixin row-flex(){
     display: flex;
     flex-wrap: wrap;
-    //@include row-offsets();
+    @include row-offsets();
 }
 
 @mixin row-float(){

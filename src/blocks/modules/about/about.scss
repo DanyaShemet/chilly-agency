@@ -6,10 +6,43 @@
     @include row-flex();
   }
   &__text-item {
-    @include size-xs(12);
-    @include size-sm(6);
-    @include size-xl(4);
 
+    box-sizing: border-box;
+    padding: 0;
+    margin-bottom: 20px;
+    @include size-xs(12);
+    @include size-lg(4);
+    @include lg-block{
+      padding: 0 10px 0 20px;
+    }
+    &:first-child{
+      color: $mainColor;
+      display: flex;
+      padding: 0;
+      font-size: 1.5rem;
+      & span{
+        height: 12px;
+        margin-top:  14px;
+        margin-right: 3px;
+        width: 11px;
+        display: block;
+        clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+        background-color: black;
+      }
+    }
+    &:nth-child(2){
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: 2.1rem;
+    }
+    &:last-child{
+      color: $secondaryText;
+      font-size: 1.05rem;
+      line-height: 1.6rem;
+      @include lg-block{
+        margin-bottom: 0;
+      }
+    }
   }
   &__card-items{
     @include row-flex();
@@ -18,7 +51,6 @@
     @include size-xs(12);
     @include size-sm(6);
     @include size-xl(4);
-
     border: 0.5px solid #ccc;
     padding: 40px 0 40px 0;
   }
