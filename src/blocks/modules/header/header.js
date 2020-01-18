@@ -9,6 +9,7 @@ let menu = $('nav ul li');
 let overlay_navigation = $('.overlay-navigation');
 
 // Burger menu functionality
+
 burger.click(showMenu)
 links.click(hideMenu);
 
@@ -18,7 +19,6 @@ function showMenu() {
     overlay_navigation.toggleClass('overlay-active');
     if (overlay_navigation.hasClass('overlay-active')) {
         burger.addClass('active');
-        $("body").addClass("fixed");
         overlay_navigation.velocity('transition.slideLeftIn', {
             begin: function () {
                 menu.velocity('transition.perspectiveLeftIn', {
@@ -39,7 +39,7 @@ function hideMenu() {
     burger.css('pointer-events', 'none');
     burger.removeClass('active')
     overlay_navigation.removeClass('overlay-active');
-    $("body").removeClass("fixed");
+    //$("body").removeClass("fixed");
     menu.velocity('transition.perspectiveRightOut', {
         stagger: 100,
         delay: 0,
@@ -54,26 +54,27 @@ function hideMenu() {
 }
 
 // On Scroll Functionality
-$(window).scroll(function (e){
+$(window).scroll(function (e) {
     let st = $(this).scrollTop();
-    let windowTop =
-    windowTop > 200 ? $('.burger-wrapper').addClass('navShadow') : $('.burger-wrapper').removeClass('navShadow');
-    $('#header-wrapper .container').css({"transform": "translate(0%, " + -st / 1.5 + "px"});
-    $('.circle-1').css({"transform": "translate(0px, " + -st / 3 + "px"});
-    $('.circle-2').css({"transform": "translate(0px, " + -st / 3 + "px"});
+    st > 200 ? $('.burger-wrapper').addClass('navShadow') : $('.burger-wrapper').removeClass('navShadow');
+    if (document.documentElement.clientWidth >= 1050) {
+        $('#header-wrapper .container').css({"transform": "translate(0%, " + -st / 1.5 + "px"});
+    }
 });
-
 
 
 // Parallax effect
 
-$("#header-wrapper").mousemove(function(e) {
-    parallaxIt(e, ".circle-1", -30);
-    parallaxIt(e, ".circle-2", 10);
-    parallaxIt(e, ".circle-3", 20);
-    parallaxIt(e, ".square-1", -40);
-    parallaxIt(e, ".trapezoid-1", -5);
-    parallaxIt(e, ".repeat-grid-circles", 20);
+$('#header-wrapper').mousemove(function (e) {
+    if (document.documentElement.clientWidth >= 1050) {
+        parallaxIt(e, ".circle-1", -30);
+        parallaxIt(e, ".circle-2", 10);
+        parallaxIt(e, ".circle-3", 20);
+        parallaxIt(e, ".square-1", -40);
+        parallaxIt(e, ".trapezoid-1", -5);
+        parallaxIt(e, ".repeat-grid-circles", 20);
+    }
+
 
 });
 
@@ -87,27 +88,3 @@ function parallaxIt(e, target, movement) {
     });
 }
 
-
-
-// $("[data-media]").on("click", function(e) {
-//     e.preventDefault();
-//     let $this = $(this);
-//     let videoUrl = $this.attr("data-media");
-//     let popup = $this.attr("href");
-//     let $popupIframe = $(popup).find("iframe");
-//
-//     $popupIframe.attr("src", videoUrl);
-//
-//     $this.closest(".page").addClass("show-popup");
-// });
-//
-// $(".popup").on("click", function(e) {
-//     e.preventDefault();
-//     e.stopPropagation();
-//
-//     $(".page").removeClass("show-popup");
-// });
-//
-// $(".popup > iframe").on("click", function(e) {
-//     e.stopPropagation();
-// });
