@@ -1,6 +1,7 @@
 .fixed {
- overflow: hidden;
+  overflow: hidden;
 }
+
 .overlay-navigation {
   position: fixed;
   z-index: 101;
@@ -30,6 +31,7 @@
         overflow: hidden;
         display: none;
         background-color: rgba(255, 255, 255, 0.7);
+
         &:hover {
           background-color: rgba(255, 255, 255, .9);
         }
@@ -65,7 +67,7 @@
   z-index: 10000;
   justify-content: start;
   align-items: center;
-  @include sm-block{
+  @include sm-block {
     justify-content: center;
 
   }
@@ -75,23 +77,27 @@
     font-size: 20px;
     color: transparent;
     transition: all .5s;
-    @include sm-block{
+    @include sm-block {
       font-size: 30px;
     }
   }
+
   &.navShadow {
     height: 80px;
     background-color: rgba(255, 255, 255, 0.5);
+
     & a {
       color: #000;
       padding-left: 1rem;
       @include sm(padding-left, 0)
     }
-    & .burger-icon  {
+
+    & .burger-icon {
       top: 1.75rem;
       background-color: #000;
     }
   }
+
   & .burger-icon {
     position: fixed;
     top: 1.4rem;
@@ -103,14 +109,18 @@
     height: 1px;
     transition: all .4s;
     background-clip: content-box;
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
 
     @include xs(right, 2rem);
     @include sm(right, 5rem);
     @include lg(top, 3.6rem);
-    &:hover{
+
+    &:hover {
       width: 50px;
     }
-    &:before, &:after{
+
+    &:before, &:after {
       content: "";
       position: absolute;
       background-color: #Fff;
@@ -121,21 +131,25 @@
       transform: rotate(0deg);
       transition: all 0.5s ease;
     }
-    &:before{
+
+    &:before {
       top: -10px;
       width: 80%;
     }
-    &:after{
+
+    &:after {
       top: 10px;
       width: 50%;
     }
-    &.active:after{
+
+    &.active:after {
       transform: rotate(-135deg);
       background: #000;
       width: 110%;
       top: 0;
     }
-    &.active:before{
+
+    &.active:before {
       transform: rotate(135deg);
       top: 0;
       background: #000;
@@ -143,11 +157,13 @@
     }
   }
 }
+
 .burger-wrapper.navShadow > .burger-icon,
 .burger-wrapper.navShadow > .burger-icon:after,
 .burger-wrapper.navShadow > .burger-icon:before {
   background-color: #000;
 }
+
 .burger-icon.active, .navShadow > .burger-icon.active {
   background-color: transparent;
   background-clip: content-box;
@@ -172,10 +188,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    @include sm-block{
+    @include sm-block {
       height: 192px;
       width: 187px;
     }
+
     & h2 {
       font-family: Pacifico;
       z-index: 98;
@@ -183,7 +200,7 @@
       font-size: 1.1rem;
       text-align: center;
       user-select: none;
-      @include sm-block{
+      @include sm-block {
         font-size: 1.5rem;
       }
     }
@@ -197,14 +214,15 @@
     position: relative;
     @include md(width, 50%);
     @include xs(width, 80%);
-    @include md-block{
+    @include md-block {
       font-size: 1.4rem;
     }
+
     & h1 {
       color: $mainColor;
       font-size: 2.1rem;
       margin-bottom: 20px;
-      @include md-block{
+      @include md-block {
         font-size: 2.6rem;
       }
     }
@@ -226,6 +244,7 @@
     color: #fff;
     height: 150px;
     @include sm(height, auto);
+
     & a {
       background-image: linear-gradient(to right, #13CADF, #1396E2);
       box-shadow: 10px 20px 40px rgba(255, 255, 255, 0.4);
@@ -238,7 +257,7 @@
       align-items: center;
       display: flex;
       justify-content: center;
-      @include md-block{
+      @include md-block {
         width: 80px;
         height: 80px;
       }
@@ -255,7 +274,7 @@
         color: white;
         padding-left: 5px;
         line-height: 30px;
-        @include md-block{
+        @include md-block {
           font-size: 30px;
         }
       }
@@ -307,11 +326,11 @@
     top: -10rem;
     @include md(left, -15rem);
     @include xl(left, -10rem);
-    @include sm-block{
+    @include sm-block {
       display: block;
       left: -20rem;
     }
-    @include xs-block{
+    @include xs-block {
       display: none;
     }
   }
@@ -320,12 +339,12 @@
     width: 190px;
     height: 190px;
     @include xl(right, 0rem);
-    @include sm-block{
+    @include sm-block {
       display: block;
       top: 12rem;
       right: -5rem;
     }
-    @include xs-block{
+    @include xs-block {
       display: none;
     }
   }
@@ -336,7 +355,7 @@
     top: 25rem;
     @include md(left, -10rem);
     @include xl(left, -5rem);
-    @include sm-block{
+    @include sm-block {
       display: block;
       left: -11rem;
     }
@@ -347,25 +366,27 @@
     width: 24px;
     bottom: 10rem;
     @include xl(right, 10rem);
-    @include sm-block{
+    @include sm-block {
       display: block;
       right: 6rem;
     }
-    @include xs-block{
+    @include xs-block {
       display: none;
     }
   }
-  & .square-1-mobile{
+
+  & .square-1-mobile {
     width: 24px;
     bottom: 10rem;
     right: 3rem;
     @include sm(display, none);
     @include xs(display, block)
   }
-  & .trapezoid-1{
+
+  & .trapezoid-1 {
     width: 41px;
     bottom: 8rem;
-    @include sm-block{
+    @include sm-block {
       display: block;
       right: 20rem;
     }
