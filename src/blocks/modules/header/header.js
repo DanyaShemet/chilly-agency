@@ -1,7 +1,10 @@
 import $ from "jquery";
 import "velocity-animate/velocity.min"
 import "velocity-animate/velocity.ui.min"
-import {TweenMax} from "gsap"
+import {TweenMax, gsap} from "gsap"
+
+
+gsap.registerPlugin (TweenMax);
 
 let burger = $('.burger-icon');
 let links = $('nav ul li a');
