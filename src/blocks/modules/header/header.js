@@ -1,6 +1,8 @@
+"use strict";
 
 import "velocity-animate/velocity.min"
 import "velocity-animate/velocity.ui.min"
+
 
 
 let burger = $('.burger-icon');
@@ -9,7 +11,6 @@ let menu = $('nav ul li');
 let overlay_navigation = $('.overlay-navigation');
 
 // Burger menu functionality
-
 burger.click(showMenu)
 links.click(hideMenu);
 
@@ -43,6 +44,7 @@ function hideMenu() {
     })
 }
 // On Scroll Functionality
+
 $(window).scroll(function (e) {
     let st = $(this).scrollTop();
     st > 200 ? $('.burger-wrapper').addClass('navShadow') : $('.burger-wrapper').removeClass('navShadow');

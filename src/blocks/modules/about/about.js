@@ -1,22 +1,33 @@
-import $ from "jquery";
+"use strict";
 
-function countUp(className) {
-    let countBlockTop = $("." + className).offset().top;
-    let windowHeight = window.innerHeight;
-    let show = true;
-    $(window).scroll(function () {
-        if (show && (countBlockTop + 150 < $(window).scrollTop() + windowHeight)) {
-            show = false;
-            $('.' + className).spincrement({
-                from: 0,
-                duration: 3000,
+import ScrollMagic from 'scrollmagic'
+
+export const About = (function () {
+    return {
+        animateCount: function () {
+            $('.js-count').each(function () {
+                const _this = $(this)
+                _this.prop('Counter', 0).animate({
+                    Counter: _this.data('count')
+                }, {
+                    duration: 2500,
+                    easing: 'swing',
+                    step: function (now) {
+                        _this.text(Math.ceil(now));
+                    }
+                });
             });
+        },
+        init: function () {
+            const controller = new ScrollMagic.Controller;
+            new ScrollMagic.Scene({
+                triggerElement: "#about",
+                reverse: false
+            })
+                .on('start', function () {
+                    About.animateCount();
+                })
+                .addTo(controller);
         }
-    })
-}
-countUp("js-count");
-
-// $(function () {
-//
-// });
-
+    };
+})();

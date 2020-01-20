@@ -1,9 +1,14 @@
 import "./import/modules";
 import $ from "jquery";
-import "./libs/jquery.spincrement.min"
-import {TweenMax, gsap} from "gsap"
+import {About} from './../blocks/modules/about/about.js'
+import {TweenMax, gsap } from "gsap/all"
 
-gsap.registerPlugin (TweenMax);
+gsap.registerPlugin(TweenMax);
+
+$(document).ready(function () {
+    About.init()
+});
+
 
 $('#header-wrapper').mousemove(function (e) {
     if (document.documentElement.clientWidth >= 778) {
