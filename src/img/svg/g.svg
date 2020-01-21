@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124.203 124.203">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        font-size: 20px;
+        font-family: Pacifico-Regular, Pacifico;
+      }
+
+      .cls-3, .cls-4 {
+        stroke: none;
+      }
+
+      .cls-4 {
+        fill: #5d5d5d;
+      }
+    </style>
+  </defs>
+  <g id="Group_5" data-name="Group 5" transform="translate(-381 -1239.537)">
+    <g id="Path_5" data-name="Path 5" class="cls-1" transform="translate(381 1239.537)">
+      <path class="cls-3" d="M39.978,0H82.673l28.909,86.456L124.2,124.2H0Z"/>
+      <path class="cls-4" d="M 40.70659637451172 1 L 1.372398376464844 123.203369140625 L 122.8145751953125 123.203369140625 L 110.6332550048828 86.77325439453125 L 81.95281982421875 1 L 40.70659637451172 1 M 39.97795104980469 0 L 82.67286682128906 0 C 82.67286682128906 0 101.1990051269531 55.40530395507813 111.5816345214844 86.45613098144531 C 121.9642715454102 117.5069885253906 124.203369140625 124.203369140625 124.203369140625 124.203369140625 L 0 124.203369140625 L 39.97795104980469 0 Z"/>
+    </g>
+    <text id="Chilly_agency_" data-name="Chilly
+agency
+" class="cls-2" transform="translate(441 1305.537)"><tspan x="-25.35" y="0">Chilly</tspan><tspan x="-26.55" y="20">agency</tspan><tspan x="0" y="40"></tspan></text>
+  </g>
+</svg>

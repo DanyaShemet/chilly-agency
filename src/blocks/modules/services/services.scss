@@ -1,3 +1,10 @@
 .services{
   background-color: $mainColor;
+  & h2{
+    padding-top: 40px;
+    font-size: 1.5rem;
+    & span{
+      color: #fff
+    }
+  }
 }

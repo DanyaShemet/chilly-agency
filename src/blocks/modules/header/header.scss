@@ -210,12 +210,12 @@
     padding: 20px;
     border-radius: 10px;
     color: #fff;
-    font-size: 1.05rem;
+    font-size: 1rem;
     position: relative;
-    @include md(width, 50%);
+    @include md(width, 60%);
     @include xs(width, 80%);
     @include md-block {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
     }
 
     & h1 {
@@ -223,7 +223,7 @@
       font-size: 2.1rem;
       margin-bottom: 20px;
       @include md-block {
-        font-size: 2.6rem;
+        font-size: 3.3rem;
       }
     }
 
@@ -283,12 +283,12 @@
 
   &__button {
     & button {
-      width: 150px;
-      height: 40px;
+      width: 170px;
+      height: 50px;
       background-image: linear-gradient(to right, #13CADF, #1396E2);
       box-shadow: 5px 10px 20px rgba(255, 255, 255, 0.4);
       color: #fff;
-      border-radius: 10px;
+      border-radius: 20px;
       transition: all .5s;
 
       &:hover {
@@ -302,7 +302,7 @@
     min-height: 98%;
     @include md(min-height, 100%);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
     position: relative;
