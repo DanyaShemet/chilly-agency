@@ -1,0 +1,306 @@
+.hide {
+  display: none;
+
+}
+
+.absolute {
+  position: static;
+  @include lg-block {
+    position: absolute;
+  }
+}
+
+.portfolio {
+  position: relative;
+  padding: 20px 0;
+  @include lg-block {
+    height: 100vh;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__filter {
+    display: flex;
+
+    & .filter-item {
+      margin-left: 10px;
+      cursor: pointer;
+      padding: 5px 30px;
+      border: 1px solid black;
+      border-radius: 10px;
+      transition: all .5s;
+
+      &:hover, .active {
+        background-color: $mainColor;
+        border: 1px solid transparent;
+      }
+
+      &.active {
+        background-color: $mainColor;
+        border: 1px solid transparent;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.portfolio__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  @include sm-block {
+    justify-content: stretch;
+    align-items: center;
+  }
+}
+
+.portfolio__item {
+  text-align: center;
+  overflow: hidden;
+  top: 0;
+  color: #fff;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1s;
+  background-image: url("../../../img/dev.jpg");
+  background-position: center;
+  background-size: cover;
+  font-size: 1rem;
+  @include lg-block {
+    border-radius: 50%;
+  }
+  & div{
+    position: relative;
+    z-index: 101;
+  }
+  & .portfolio__item-hidden-text{
+    display: none;
+    transition: display 1s;
+    width: 70%;
+  }
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.04);
+    @include lg-block{
+      transform: scale(2);
+    }
+    animation-play-state: paused;
+    z-index: 1000;
+    background-image: none;
+    background-color: $mainColor;
+
+    & .portfolio__item-hidden-text{
+       display: block;
+     }
+    & .portfolio__item-text{
+      display: none;
+    }
+  }
+
+  &-1 {
+
+    @include lg-block {
+      width: 300px;
+      height: 300px;
+      left: 5%;
+      top: 15%;
+      animation: 5s infinite top;
+    }
+
+  }
+
+  &-2 {
+    @include lg-block {
+      left: 22%;
+      top: 20%;
+      width: 200px;
+      height: 200px;
+    }
+
+  }
+
+  &-3 {
+
+    @include lg-block {
+      width: 200px;
+      height: 200px;
+      left: 35%;
+      top: 30%;
+    }
+
+  }
+
+  &-4 {
+    @include lg-block {
+      left: 52%;
+      top: 15%;
+      width: 350px;
+      height: 350px;
+      animation: 5s infinite top;
+    }
+  }
+
+  &-5 {
+    @include lg-block {
+      left: 75%;
+      top: 22%;
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  &-6 {
+    @include lg-block {
+      left: 30%;
+      top: 50%;
+      width: 200px;
+      height: 200px;
+      animation: 5s infinite middle;
+    }
+  }
+
+  &-7 {
+    @include lg-block {
+      left: 5%;
+      top: 60%;
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  &-8 {
+    @include lg-block {
+      left: 45%;
+      top: 50%;
+      width: 150px;
+      height: 150px;
+      animation: 6s infinite middle;
+    }
+  }
+
+  &-9 {
+    @include lg-block {
+      left: 20%;
+      top: 50%;
+      width: 180px;
+      height: 180px;
+      animation: 3s infinite middle;
+    }
+  }
+
+  &-10 {
+    @include lg-block {
+      left: 40%;
+      top: 10%;
+      width: 200px;
+      height: 200px;
+    }
+
+  }
+
+  &-11 {
+    @include lg-block {
+      left: 70%;
+      top: 50%;
+      width: 250px;
+      height: 250px;
+      animation: 4s infinite middle;
+    }
+  }
+
+  &-12 {
+    @include lg-block {
+      left: 57%;
+      top: 65%;
+      width: 250px;
+      height: 250px;
+    }
+  }
+
+  &-13 {
+    @include lg-block {
+      left: 45%;
+      top: 65%;
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  &-14 {
+    @include lg-block {
+      left: 20%;
+      top: 75%;
+      width: 200px;
+      height: 200px;
+      animation: 4s infinite bottom;
+    }
+  }
+
+  &-15 {
+    @include lg-block {
+      left: 80%;
+      top: 70%;
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  &-16 {
+    @include lg-block {
+      left: 35%;
+      top: 75%;
+      width: 200px;
+      height: 200px;
+      animation: 7s infinite bottom;
+    }
+  }
+}
+
+
+
+@keyframes top {
+  0% {
+    top: 15%
+  }
+  50% {
+    top: 17%;
+  }
+  100% {
+    top: 15%;
+  }
+}
+@keyframes middle {
+  0% {
+    top: 50%
+  }
+  50% {
+    top: 48%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+@keyframes bottom {
+  0% {
+    top: 75%
+  }
+  50% {
+    top: 77%;
+  }
+  100% {
+    top: 75%;
+  }
+}
+
+
