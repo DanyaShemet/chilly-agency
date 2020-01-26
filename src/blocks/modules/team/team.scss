@@ -1,0 +1,131 @@
+.team{
+  &__text{
+    padding: 50px 0;
+    background-image: url("../img/team.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    font-size: 1.3rem;
+    @include md-block{
+      padding: 100px 0;
+      font-size: 1.7rem;
+    }
+    font-weight: 500;
+    color: #fff;
+    &:after{
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: rgba(19,188,223,0.8);
+    }
+    & .container{
+      display: flex;
+      flex-direction: column;
+      @include lg-block{
+        flex-direction: row;
+      }
+      padding-bottom: 50px;
+      & h2{
+        font-size: 1.7rem;
+        margin-bottom: 20px;
+        @include size-lg(3);
+        @include size-xs(12);
+        @include md-block{
+          margin-bottom: 0;
+        }
+      }
+      & p {
+        @include size-xs(12);
+        @include size-lg(9);
+        @include md-block{
+          line-height: 2.5rem;
+        }
+        line-height: 2rem;
+        & span{
+          color: #000;
+        }
+      }
+    }
+  }
+  & .container{
+    z-index: 2;
+    position: relative;
+  }
+  &__heads{
+    @include size-lg(9);
+    @include size-xs(12);
+    @include shift-lg(3);
+    display: flex;
+    margin-top: -60px;
+    @include md-block{
+      margin-top: -90px;
+    }
+    & .employee{
+      & img{
+        max-width: 100%;
+        @include md-block{
+          height: 250px;
+        }
+        @include xs-block{
+          height: 200px;
+        }
+        @include lg-block{
+          height: 410px;
+        }
+        margin-bottom: 20px;
+      }
+      & h4{
+        font-size: 1.2rem;
+        @include md-block{
+          font-size: 1.7rem;
+        }
+        margin-bottom: 5px;
+      }
+      & span{
+        color: $mainColor;
+        font-size: 0.8rem;
+        @include md-block{
+          font-size: 1rem;
+        }
+        font-weight: 500;
+      }
+      & p{
+        font-weight: 400;
+        color: $secondaryText;
+        font-size: 1rem;
+        @include md-block{
+          font-size: 1.2rem;
+          margin: 10px 0 15px 0;
+        }
+        margin: 5px 0 10px 0;
+
+      }
+      & a{
+        margin-right: 10px;
+        font-size: 1rem;
+        @include md-block{
+          font-size: 1.4rem;
+        }
+        transition: all .5s;
+        &:hover{
+          color: $mainColor;
+        }
+      }
+
+      @include size-lg(5);
+      &:last-child{
+        margin-left: 30px;
+        margin-top: 30px;
+        @include md-block{
+          margin-left: 50px;
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+
+}

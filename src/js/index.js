@@ -13,28 +13,23 @@ function randomInteger(min, max) {
     let rand = min + Math.random() * (max + 1 - min);
     return Math.floor(rand);
 }
-
-$('#header-wrapper').mousemove(function (e) {
-    if (document.documentElement.clientWidth >= 778) {
+if (document.documentElement.clientWidth >= 1078) {
+    $('#header-wrapper').mousemove(function (e) {
         parallaxIt(e, ".circle-1", -30, '#header-wrapper');
         parallaxIt(e, ".circle-2", 10, '#header-wrapper');
         parallaxIt(e, ".circle-3", 20, '#header-wrapper');
         parallaxIt(e, ".square-1", -40, '#header-wrapper');
         parallaxIt(e, ".trapezoid-1", -5, '#header-wrapper');
         parallaxIt(e, ".repeat-grid-circles", 20, '#header-wrapper');
-    }
-});
-
-$('#about').mousemove(function (e) {
+    });
+    $('#about').mousemove(function (e) {
         parallaxIt(e, ".repeat-circles", 30, '#about');
-});
-
-// $('#portfolio').mousemove(function (e) {
-//     let item = $(".portfolio__item");
-//     for(let i=0;i<item.length;i++){
-//         parallaxIt(e, item[i], randomInteger(-200, 200), '#portfolio')
-//     }
-// });
+    });
+    $('#services').mousemove(function (e) {
+        parallaxIt(e, ".pentagon-1", 30, '#services');
+        parallaxIt(e, ".pentagon-2", -30, '#services');
+    });
+}
 
 function parallaxIt(e, target, movement, parent) {
     let $this = $(parent);
