@@ -2,7 +2,6 @@ import "./import/modules";
 import $ from "jquery";
 import {About} from './../blocks/modules/about/about.js'
 import {TweenMax, gsap } from "gsap/all"
-
 gsap.registerPlugin(TweenMax);
 
 $(document).ready(function () {

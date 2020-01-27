@@ -30,7 +30,7 @@
       }
       padding-bottom: 50px;
       & h2{
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         margin-bottom: 20px;
         @include size-lg(3);
         @include size-xs(12);
@@ -61,6 +61,7 @@
     @include shift-lg(3);
     display: flex;
     margin-top: -60px;
+
     @include md-block{
       margin-top: -90px;
     }
@@ -127,5 +128,89 @@
       }
     }
   }
+  &__other{
+    display: flex;
+    border-top: 1px solid rgba(0,0,0,.1);
+    margin: 30px 0 0 0;
+    padding: 30px 0 0 0;
+    @include lg-block{
+      margin: 50px 0 0 0;
+      padding: 50px 0 0 0;
+    }
+    flex-direction: column;
+    @include lg-block{
+      flex-direction: row;
+    }
+    & h2{
+      @include size-lg(3);
+      @include size-xs(12);
+      margin-bottom: 30px;
+      font-size: 1.5rem;
+      @include lg-block{
+        margin-bottom: 0px;
+      }
+    }
+  }
+  &__members{
+    @include size-lg(9);
+    @include size-xs(12)
+  }
+  &__member{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    @include lg-block{
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+    }
+    & .team__member-preview{
+      display: flex;
+      align-items: center;
+      & img{
+        width: 100px;
+        height: 100px;
+        margin-right: 20px;
+        @include lg-block{
+          width: 130px;
+          height: 130px;
+        }
+      }
+      & h4{
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+        @include md-block{
+          font-size: 1.7rem;
+          margin-bottom: 10px;
+        }
 
+      }
+      & span{
+        font-size: 0.8rem;
+        @include md-block{
+          font-size: 1rem;
+        }
+        color: $mainColor;
+        font-weight: 500;
+      }
+    }
+    & .team__member-social{
+      & a{
+        font-size: 1rem;
+        @include md-block{
+          font-size: 1.4rem;
+        }
+        transition: all .5s;
+        &:not(:last-child){
+          margin-right: 10px;
+        }
+        &:hover{
+          color: $mainColor
+        }
+      }
+
+    }
+  }
 }
