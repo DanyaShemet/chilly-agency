@@ -61,7 +61,6 @@
     @include shift-lg(3);
     display: flex;
     margin-top: -60px;
-
     @include md-block{
       margin-top: -90px;
     }
@@ -167,19 +166,25 @@
       margin-bottom: 30px;
     }
     & .team__member-preview{
+      width: 80%;
       display: flex;
       align-items: center;
       & img{
-        width: 100px;
-        height: 100px;
-        margin-right: 20px;
+        width: 80px;
+        height: 80px;
+        margin-right: 10px;
+        @include md-block{
+          width: 100px;
+          height: 100px;
+        }
         @include lg-block{
           width: 130px;
           height: 130px;
+          margin-right: 20px;
         }
       }
       & h4{
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin-bottom: 5px;
         @include md-block{
           font-size: 1.7rem;
@@ -188,7 +193,7 @@
 
       }
       & span{
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         @include md-block{
           font-size: 1rem;
         }
@@ -198,14 +203,16 @@
     }
     & .team__member-social{
       & a{
-        font-size: 1rem;
+        font-size: 0.8rem;
         @include md-block{
           font-size: 1.4rem;
+          &:not(:last-child){
+            margin-right: 10px;
+          }
         }
+        margin-right: 3px;
         transition: all .5s;
-        &:not(:last-child){
-          margin-right: 10px;
-        }
+
         &:hover{
           color: $mainColor
         }

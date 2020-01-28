@@ -28,6 +28,14 @@ if (document.documentElement.clientWidth >= 1078) {
         parallaxIt(e, ".pentagon-1", 30, '#services');
         parallaxIt(e, ".pentagon-2", -30, '#services');
     });
+    $('#feedback').mousemove(function (e) {
+        parallaxIt(e, ".f-circle-1", 10, '#feedback');
+        parallaxIt(e, ".f-circle-2", -5, '#feedback');
+        parallaxIt(e, ".f-circle-3", 20, '#feedback');
+        parallaxIt(e, ".f-circle-4", -20, '#feedback');
+        parallaxIt(e, ".f-circle-5", 5, '#feedback');
+        parallaxIt(e, ".f-circle-6", -10, '#feedback');
+    });
 }
 
 function parallaxIt(e, target, movement, parent) {

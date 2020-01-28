@@ -82,7 +82,9 @@
 	}
 
 	&.owl-loaded {
-		display: block;
+		//display: block;
+		display: flex;
+		align-items: center;
 	}
 
 	&.owl-loading {
