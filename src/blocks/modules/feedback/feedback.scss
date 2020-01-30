@@ -14,7 +14,7 @@
     right: 0;
     bottom: 0;
     background-color: $mainColor;
-    opacity: .85;
+    opacity: .9;
   }
   & .container{
     z-index: 2;
@@ -134,7 +134,7 @@
     width: 250px;
     height: 250px;
     @include xl-block{
-      left: 72rem;
+      left: 63rem;
       top: 2rem;
       display: block;
     }

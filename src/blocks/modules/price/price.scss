@@ -1,0 +1,30 @@
+.pricing{
+  padding: 40px 0;
+  &__text{
+    margin-bottom: 40px;
+    @include size(5);
+    & h2{
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      color: $mainColor;
+    }
+    & p{
+      color: $secondaryText;
+      font-weight: 500;
+      line-height: 1.5rem;
+    }
+  }
+  &__cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__card{
+    box-sizing: border-box;
+    background-color: red;
+    @include size-lg(4);
+    text-align: center;
+
+  }
+
+}
