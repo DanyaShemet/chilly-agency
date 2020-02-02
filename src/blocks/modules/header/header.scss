@@ -104,8 +104,8 @@
     border-top: 11px solid transparent;
     border-bottom: 11px solid transparent;
 
-    right :2rem;
-    @include sm(right, 5rem);
+    right: 2rem;
+    @include lg(right, 5rem);
     @include lg(top, 3.6rem);
 
     &:hover {

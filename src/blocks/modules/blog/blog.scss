@@ -1,0 +1,59 @@
+.blog{
+  background-image: url("../img/blog.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  padding: 40px 0;
+  .container{
+    position: relative;
+    z-index: 1;
+    h2{
+      color: white;
+      font-size: 1.5rem;
+    }
+  }
+  &__circles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .circle{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__circle:nth-child(1){
+    @include size-lg(6);
+    @include s
+
+    .circle{
+      height: 565px;
+      width: 565px;
+      border-radius: 50%;
+
+    }
+  }
+  &__circle:nth-child(2){
+    @include size-lg(5);
+    .circle{
+      height: 370px;
+      width: 370px;
+      border-radius: 50%;
+
+    }
+  }
+}
+.blog:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $mainColor;
+  opacity: .8;
+}

@@ -1,8 +1,9 @@
 .services{
   background-image: linear-gradient( 100deg, #13CADF , #13CADF 80%, #1396E2);
   position: relative;
+  padding: 60px 0;
   & h2{
-    padding: 40px 0;
+    margin-bottom: 40px;
     font-size: 1.5rem;
     & span{
       color: #fff
@@ -20,7 +21,41 @@
      @include size-lg(6);
      @include size-xs(12);
     filter: drop-shadow(100px 100px 50px rgba(255, 255, 255, 1));
-    padding: 10px
+
+    @include xl-block{
+      &:nth-child(odd){
+        padding: 10px;
+      }
+      &:nth-child(even){
+        padding: 10px;
+      }
+      &:first-child{
+        padding-left: 0;
+      }
+      &:nth-child(4){
+        padding-left:  0;
+      }
+      &:last-child{
+        padding-right: 0;
+      }
+      &:nth-child(3){
+        padding-right: 0;
+      }
+    }
+
+    @include lg-block{
+      &:nth-child(odd){
+        padding-left: 0;
+        padding-right: 10px;
+      }
+      &:nth-child(even){
+        padding-left: 10px;
+        padding-right: 0;
+      }
+    }
+    @include xs-block{
+      padding: 10px 0;
+    }
   }
   &__item{
     text-align: center;
@@ -29,13 +64,15 @@
     justify-content: center;
     height: 300px;
     background-color: rgba(255,255,255, 0.2);
-    @include lg-block{
+    @include xl-block{
       height: 350px;
+      margin-bottom: 0;
       //border-radius: 10px;
       //clip-path: polygon(50% 0%, 100% 35%, 75% 100%, 25% 100%, 0% 35%);
     }
+
     clip-path: none;
-    margin-bottom: 40px;
+
     transition: all .5s;
     cursor: pointer;
     &:hover{
