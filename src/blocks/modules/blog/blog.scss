@@ -1,3 +1,4 @@
+/*  08 Blog */
 .blog{
   background-image: url("../img/blog.jpg");
   background-position: center;
@@ -11,6 +12,10 @@
     h2{
       color: white;
       font-size: 1.5rem;
+      margin-bottom: 40px;
+      @include lg-block{
+        margin-bottom: 60px;
+      }
     }
   }
   &__circles{
@@ -18,32 +23,123 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+
   }
-  .circle{
-    background-color: white;
+  &__circle{
+    width: 100%;
+    background-color: rgba(255,255,255,0.8);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-  &__circle:nth-child(1){
-    @include size-lg(6);
-    @include s
-
-    .circle{
-      height: 565px;
-      width: 565px;
+    border-radius: 0px;
+    text-align: center;
+    box-shadow: 10px 20px 30px rgba(255,255,255,0.3);
+    transition: all 1s;
+    background-size: cover;
+    margin-bottom: 1px;
+    position: relative;
+    @include lg-block{
+      width: 50%;
       border-radius: 50%;
-
     }
-  }
-  &__circle:nth-child(2){
-    @include size-lg(5);
-    .circle{
-      height: 370px;
-      width: 370px;
-      border-radius: 50%;
+    &:after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(255,255,255, 0.9);
+      @include lg-block{
+        border-radius: 50%;
+      }
+    }
 
+    &:hover{
+      background-position:center;
+      transform: scale(1.05);
+      &:after{
+        background-color: rgba(255,255,255, 0.7);
+      }
+      h4, small{
+        color: transparent;
+      }
+      a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        color: black;
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+    }
+    &:nth-child(1){
+      background-image: url("../img/6.jpg");
+      @include xl-block{
+        width: 565px;
+        height: 565px;
+      }
+      @include lg-block{
+        width: 450px;
+        height: 450px;
+      }
+      height: 300px;
+    }
+    &:nth-child(2){
+      height: 300px;
+      @include lg-block{
+        width: 370px;
+        height: 370px;
+      }
+      background-image: url("../img/1.jpg");
+    }
+    &:nth-child(3){
+      height: 300px;
+      @include lg-block{
+        width: 230px;
+        height: 230px;
+      }
+      background-image: url("../img/des1.jpg");
+    }
+    &:nth-child(4){
+      @include lg-block{
+        width: 260px;
+        height: 260px;
+        margin-top: -30px;
+      }
+      height: 300px;
+      background-image: url("../img/dev1.jpg");
+      h4{
+        font-size: 1.1rem;
+      }
+    }
+    &:nth-child(5){
+      @include lg-block{
+        width: 300px;
+
+      }
+      background-image: url("../img/team.jpg");
+      height: 300px;
+    }
+    h4{
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin-bottom: 20px;
+      z-index: 1;
+    }
+    a{
+      color: $mainColor;
+      font-size: 1rem;
+      margin-bottom: 20px;
+      z-index: 1;
+      transition: all .4s;
+    }
+    small{
+      color: $secondaryText;
+      z-index: 1;
     }
   }
 }
@@ -56,4 +152,7 @@
   bottom: 0;
   background-color: $mainColor;
   opacity: .8;
+}
+.owl-carousel .owl-stage-outer{
+  overflow: unset;
 }

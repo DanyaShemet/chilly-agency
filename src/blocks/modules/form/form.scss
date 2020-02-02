@@ -1,0 +1,94 @@
+/* 09 Form */
+
+.section-form{
+  padding: 30px 0;
+  text-align: center;
+  box-shadow: 10px 0 10px black;
+  @include lg-block{
+    padding: 60px 0;
+  }
+  h2{
+    font-size: 1.5rem;
+    margin-bottom: 60px;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .form__field{
+      position: relative;
+      width: 100%;
+      @include lg-block{
+        width: 60%;
+      }
+      input{
+        background: 0 0;
+        border: none;
+        width: 100%;
+        border-bottom: 1px solid $mainColor;
+        margin-bottom: 40px;
+        box-sizing: border-box;
+        padding: 5px 20px 5px 0;
+        color: black;
+        font-size: 1.1rem;
+        font-weight: 600;
+        outline: none;
+        &:valid{
+          border-color: #00FA9A;
+        }
+
+        &.invalid{
+          border-color: red;
+        }
+        &.active{
+          & + label{
+            top: -10px;
+            font-size: .7rem;
+            color: $mainColor;
+          }
+        }
+        &:focus{
+          & + label{
+            top: -10px;
+            font-size: .7rem;
+            color: $mainColor;
+          }
+        }
+      }
+      label, span{
+        position: absolute;
+        pointer-events: none;
+        display: block;
+        color: $secondaryText;
+        font-size: 1.1rem;
+        font-weight: 500;
+        transition: all ease .3s;
+      }
+      label{
+        left: 0;
+        top: 0;
+      }
+      span{
+        right: 0;
+        top: 10px;
+        font-size: 0.7rem;
+      }
+    }
+    button{
+      background-color: $mainColor;
+      color: white;
+      padding: 8px 50px;
+      border-radius: 20px;
+      transition: all .3s;
+      @include lg-block{
+        padding: 10px 60px;
+      }
+      &:hover{
+        background-color: white;
+        color: $mainColor;
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+      }
+    }
+
+  }
+}

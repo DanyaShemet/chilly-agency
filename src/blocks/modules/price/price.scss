@@ -33,12 +33,14 @@
     @include size-xs(12);
     text-align: center;
     padding: 10px;
+
     @include md-block {
       padding: 5px;
     }
     @include xs-block {
       margin-bottom: 20px;
       padding: 0;
+
     }
 
 

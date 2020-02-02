@@ -1,18 +1,19 @@
 import "./import/modules";
 import $ from "jquery";
-import {About} from './../blocks/modules/about/about.js'
+import {aboutInit} from './../blocks/modules/about/about.js'
 import {TweenMax, gsap } from "gsap/all"
+
 gsap.registerPlugin(TweenMax);
 
 $(document).ready(function () {
-    About.init()
+    aboutInit()
 });
 
 function randomInteger(min, max) {
     let rand = min + Math.random() * (max + 1 - min);
     return Math.floor(rand);
 }
-if (document.documentElement.clientWidth >= 1078) {
+if (document.documentElement.clientWidth >= 1050) {
     $('#header-wrapper').mousemove(function (e) {
         parallaxIt(e, ".circle-1", -30, '#header-wrapper');
         parallaxIt(e, ".circle-2", 10, '#header-wrapper');
