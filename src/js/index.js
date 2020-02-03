@@ -7,6 +7,7 @@ gsap.registerPlugin(TweenMax);
 
 $(document).ready(function () {
     aboutInit()
+    scrollto()
 });
 
 function randomInteger(min, max) {
@@ -37,6 +38,13 @@ if (document.documentElement.clientWidth >= 1050) {
         parallaxIt(e, ".f-circle-5", 5, '#feedback');
         parallaxIt(e, ".f-circle-6", -10, '#feedback');
     });
+    $('#footer').mousemove(function (e) {
+        parallaxIt(e, ".footer-circle-1", 10, '#footer');
+        parallaxIt(e, ".footer-circle-2", -5, '#footer');
+        parallaxIt(e, ".footer-circle-3", 20, '#footer');
+        parallaxIt(e, ".footer-square", -20, '#footer');
+        parallaxIt(e, ".footer-trapezoid", 5, '#footer');
+    });
 }
 
 function parallaxIt(e, target, movement, parent) {
@@ -48,4 +56,18 @@ function parallaxIt(e, target, movement, parent) {
         y: (relY - $this.height() / 2) / $this.height() * movement
     });
 }
+
+
+function scrollto() {
+    $(".scrollto").click(function () {
+        let elementClick = $(this).attr("href")
+        let destination = $(elementClick).offset().top;
+        jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 1500);
+        return false;
+    });
+}
+
+
+
+
 

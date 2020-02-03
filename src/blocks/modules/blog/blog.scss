@@ -63,7 +63,7 @@
         background-color: rgba(255,255,255, 0.7);
       }
       h4, small{
-        color: transparent;
+        display: none;
       }
       a{
         display: flex;
@@ -131,6 +131,7 @@
       z-index: 1;
     }
     a{
+      display: none;
       color: $mainColor;
       font-size: 1rem;
       margin-bottom: 20px;

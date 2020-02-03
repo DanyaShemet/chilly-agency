@@ -6,4 +6,7 @@
 @import "base/general";
 @import "base/media";
 @import "../blocks/modules";
-//@import "~owl.carousel/dist/assets/owl.carousel.min.css";
+
+header, section , footer{
+  max-width: 100%;
+}

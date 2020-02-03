@@ -16,7 +16,7 @@
   }
   &__item-shadow-wrapper{
     box-sizing: border-box;
-    z-index: 101;
+    z-index: 99;
      @include size-xl(4);
      @include size-lg(6);
      @include size-xs(12);

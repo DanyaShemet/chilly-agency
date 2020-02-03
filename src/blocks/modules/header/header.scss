@@ -51,6 +51,16 @@
       }
     }
   }
+  &.overlay-active+.burger-wrapper{
+    &.navShadow{
+      background-color: transparent;
+      border-color: transparent;
+      a{
+        color: transparent;
+        pointer-events: none;
+      }
+    }
+  }
 }
 
 .burger-wrapper {
@@ -60,33 +70,59 @@
   width: 100vw;
   transition: all .4s;
   z-index: 10000;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   @include sm-block {
     justify-content: center;
   }
+  nav {
+    width: 60%;
+    display: none;
+    @include lg-block{
+      display: block;
+    }
+    ul{
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+  &--logo{
+    display: block;
+    @include lg-block{
+      display: none;
+    }
+  }
   & a {
-    font-family: Pacifico;
-    font-size: 20px;
     color: transparent;
-    transition: all .5s;
-    @include sm-block {
-      font-size: 30px;
+    transition: all .3s;
+    font-family: Pacifico;
+    font-size: 1rem;
+    @include lg-block{
+      font-family: Quicksand;
+      font-size: 1.2rem;
+      font-weight: 600;
+      &:hover{
+        color: $mainColor
+      }
     }
   }
   &.navShadow {
-    height: 80px;
-    background-color: rgba(255, 255, 255, 0.5);
-
-    & a {
-      color: #000;
-      padding-left: 1rem;
-      @include sm(padding-left, 0)
+    height: 60px;
+    @include lg-block{
+      height: 80px;
     }
-
+    background-color: rgba(255,255,255,.8);
+    border-bottom: 1px solid rgba(0,0,0, .3);
+    & a {
+      color: black;
+    }
     & .burger-icon {
-      top: 1.75rem;
+      top: 1.2rem;
       background-color: #000;
+      display: block;
+      @include lg-block{
+        display: none;
+      }
     }
   }
 
@@ -103,11 +139,10 @@
     background-clip: content-box;
     border-top: 11px solid transparent;
     border-bottom: 11px solid transparent;
-
     right: 2rem;
-    @include lg(right, 5rem);
-    @include lg(top, 3.6rem);
-
+    @include lg-block{
+      right: 5rem;
+    }
     &:hover {
       width: 40px;
     }
@@ -198,6 +233,7 @@
       font-size: 1.1rem;
       text-align: center;
       user-select: none;
+      width: 70%;
       @include sm-block {
         font-size: 1.5rem;
       }
