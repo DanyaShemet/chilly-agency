@@ -1,34 +1,19 @@
 "use strict";
 
-let formInput = document.querySelectorAll('#form input')
-let email = document.querySelector('#email')
-let counter = document.querySelectorAll('.counter')
+let formInput = $('#form input')
+let email = $('#email')[0]
+let counter = $('.counter')
 
-function active(item, className) {
-    if (item.value.length){
-        item.classList.add(className)
-    }else{
-        item.classList.remove(className)
-    }
-}
-function invalid(item, className) {
-    if (!item.value.length){
-        item.classList.add(className)
-    }else{
-        item.classList.remove(className)
-    }
-}
-
+// form class active/invalid functionality
 for(let i=0;i<formInput.length;i++){
     formInput[i].oninput = () => {
         counter[i].innerHTML = counter[i].innerHTML-1
-        active(formInput[i],'active')
+        addActiveClass(formInput[i],'active')
     };
     formInput[i].onblur = () => {
-        invalid(formInput[i],'invalid')
+        addInvalidClass(formInput[i],'invalid')
     }
 }
-
 email.onblur = () => {
     if (!email.value.includes('@')){
         email.classList.add('invalid')
@@ -37,8 +22,21 @@ email.onblur = () => {
     }
 };
 
-
-
+function addActiveClass(item, className) {
+    if (item.value.length){
+        console.log('1')
+        $(item).addClass(className)
+    }else{
+        $(item).removeClass(className)
+    }
+}
+function addInvalidClass(item, className) {
+    if (!item.value.length){
+        $(item).addClass(className)
+    }else{
+        $(item).removeClass(className)
+    }
+}
 
 
 

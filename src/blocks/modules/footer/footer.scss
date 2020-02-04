@@ -43,8 +43,8 @@
     .footer__logo__trapezoid {
       background-color: rgba(255, 255, 255, .3);
       clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
-      height: 70px;
-      width: 60px;
+      height: 100px;
+      width: 90px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -52,79 +52,13 @@
       & h2 {
         font-family: Pacifico;
         color: #000;
-        font-size: .6rem;
+        font-size: 1rem;
         text-align: center;
         user-select: none;
         width: 70%;
       }
-
-      order: 1;
-      @include lg-block {
-        order: 0;
-
-      }
     }
 
-    form {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      input {
-        width: 70%;
-        border: none;
-        background-color: rgba(255, 255, 255, 0.2);
-        border-radius: 30px;
-        height: 30px;
-        padding-left: 20px;
-        color: white;
-        outline: none;
-        font-size: .8rem;
-        @include lg-block {
-          font-size: 1rem;
-          height: 40px;
-        }
-        transition: all .3s;
-        &::placeholder {
-          color: white;
-        }
-        &:focus {
-          background-color: rgba(255, 255, 255, 0.5);
-          &::placeholder {
-            color: transparent;
-          }
-        }
-      }
-
-      button {
-        height: 30px;
-        padding: 0 20px;
-        font-size: .8rem;
-        @include lg-block {
-          height: 40px;
-          padding: 0 40px;
-          font-size: 1rem;
-        }
-        border-radius: 30px;
-        background-color: $mainColor;
-        color: white;
-        font-weight: 600;
-        transition: all .3s;
-        box-shadow: 5px 10px 20px rgba(255, 255, 255, 0.4);
-
-        &:hover {
-          box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
-        }
-      }
-    }
-  }
-
-  &__subscribe {
-    @include size-lg(9);
-    @include size(12);
-    margin-bottom: 20px;
-    @include lg-block {
-      margin-bottom: 0;
-    }
   }
 
   &__bottom {
@@ -146,7 +80,7 @@
         order: 0;
         margin-bottom: 0;
       }
-      margin-bottom: 0px;
+      margin-bottom: 20px;
       order: 1;
       ul {
         display: flex;
@@ -169,15 +103,15 @@
       @include lg-block {
         margin-bottom: 0px;
       }
-      margin-bottom: 10px;
+      margin-bottom: 20px;
       p, a {
         color: $mainColor;
         font-weight: 500;
         text-align: center;
-        font-size: .8rem;
+        font-size: 1rem;
         @include lg-block {
           text-align: left;
-          font-size: 1rem;
+          font-size: 1.2rem;
         }
       }
       p:first-child {

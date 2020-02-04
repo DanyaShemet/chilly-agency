@@ -1,5 +1,10 @@
 /* 01 Header */
 
+
+/* Animate menu functionality */
+.fixed{
+  overflow: hidden;
+}
 .overlay-navigation {
   position: fixed;
   z-index: 101;
@@ -18,28 +23,32 @@
     & ul {
       display: flex;
       flex-direction: column;
-      @include md(flex-direction, row);
+      @include lg-block{
+        flex-direction: row;
+      }
       & li {
         justify-content: center;
         align-items: center;
         height: 100%;
         overflow: hidden;
         display: none;
-        background-color: rgba(255, 255, 255, 0.7);
-
+        //background-color: rgba(19, 188, 223, 1);
+        background-color: rgba(158, 214, 226, 1);
+        //background-color: rgba(255, 255, 255, 1);
+        //background-color: rgba(0, 0, 0, 1);
+        //border: 1px solid rgba(19, 188, 223, .2);
         &:hover {
-          background-color: rgba(255, 255, 255, .9);
+          background-color: rgba(19, 188, 223, 1);
         }
-
         &:hover a {
           transform: scale(1.15);
         }
-
         & a {
           display: flex;
           justify-content: center;
           align-items: center;
           height: 100%;
+          //color: #fff;
           color: #000;
           text-transform: uppercase;
           font-family: Quicksand;
@@ -47,11 +56,13 @@
           letter-spacing: 4px;
           text-align: center;
           transition: .4s;
+
         }
       }
     }
   }
   &.overlay-active+.burger-wrapper{
+    pointer-events: none;
     &.navShadow{
       background-color: transparent;
       border-color: transparent;
@@ -62,7 +73,6 @@
     }
   }
 }
-
 .burger-wrapper {
   display: flex;
   height: 100px;
@@ -104,6 +114,9 @@
       &:hover{
         color: $mainColor
       }
+      &.active{
+        color: $mainColor
+      }
     }
   }
   &.navShadow {
@@ -118,8 +131,8 @@
     }
     & .burger-icon {
       top: 1.2rem;
-      background-color: #000;
       display: block;
+      background-color: #000;
       @include lg-block{
         display: none;
       }
@@ -150,7 +163,7 @@
     &:before, &:after {
       content: "";
       position: absolute;
-      background-color: #Fff;
+      background-color: #fff;
       height: 2px;
       width: 100%;
       right: 0;
@@ -184,29 +197,39 @@
     }
   }
 }
-
 .burger-wrapper.navShadow > .burger-icon,
 .burger-wrapper.navShadow > .burger-icon:after,
 .burger-wrapper.navShadow > .burger-icon:before {
   background-color: #000;
 }
-
 .burger-icon.active, .navShadow > .burger-icon.active {
   background-color: transparent;
   background-clip: content-box;
 }
+/* End animate menu functionality */
 
+
+/* Main styles for header */
 .header-wrapper {
   overflow-x: hidden;
-  height: 100vh;
+  height: 95vh;
   @include lg(height, 100vh);
-  @include xs(height, 95vh);
   background-image: url("../img/6.jpg");
   background-position: center;
   background-size: cover;
   position: relative;
   background-attachment: fixed;
-
+  &:after{
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: #000;
+    opacity: .5;
+    height: 100%;
+  }
   &__trapezoid {
     background-color: rgba(255, 255, 255, .3);
     clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
@@ -225,12 +248,11 @@
       height: 192px;
       width: 187px;
     }
-
     & h2 {
       font-family: Pacifico;
       z-index: 98;
       color: #000;
-      font-size: 1.1rem;
+      font-size: 1rem;
       text-align: center;
       user-select: none;
       width: 70%;
@@ -260,7 +282,6 @@
         font-size: 3.3rem;
       }
     }
-
     & img {
       position: absolute;
       width: 200px;
@@ -270,15 +291,12 @@
       @include sm(display, block);
     }
   }
-
   &__video {
     align-self: flex-start;
     display: flex;
     align-items: center;
     color: #fff;
-    //height: 150px;
     height: auto;
-
     & a {
       background-image: linear-gradient(to right, #13CADF, #1396E2);
       box-shadow: 10px 20px 40px rgba(255, 255, 255, 0.4);
@@ -295,14 +313,12 @@
         width: 80px;
         height: 80px;
       }
-
       &:hover {
         background-color: $mainColor;
         box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
         transform: scale(1.02);
         margin-right: 30px;
       }
-
       & i {
         font-size: 20px;
         color: white;
@@ -314,7 +330,6 @@
       }
     }
   }
-
   &__button {
     & button {
       width: 170px;
@@ -324,14 +339,12 @@
       color: #fff;
       border-radius: 20px;
       transition: all .5s;
-
       &:hover {
         box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
         transform: translateY(-5%);
       }
     }
   }
-
   &__info {
     min-height: 100%;
     display: flex;
@@ -342,17 +355,14 @@
     z-index: 100;
     overflow: hidden;
   }
-
   &__figure {
     position: absolute;
     z-index: 99;
   }
-
   .circles {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
   }
-
   & .circle-1 {
     width: 400px;
     height: 400px;
@@ -365,7 +375,6 @@
     }
     display: none
   }
-
   & .circle-2 {
     width: 190px;
     height: 190px;
@@ -377,7 +386,6 @@
     }
     display: none
   }
-
   & .circle-3 {
     height: 250px;
     width: 250px;
@@ -390,7 +398,6 @@
     }
     display: none
   }
-
   & .square-1 {
     width: 24px;
     bottom: 10rem;
@@ -401,7 +408,6 @@
     }
     display: none
   }
-
   & .square-1-mobile {
     width: 24px;
     bottom: 10rem;
@@ -409,7 +415,6 @@
     @include sm(display, none);
     @include xs(display, block)
   }
-
   & .trapezoid-1 {
     width: 41px;
     bottom: 8rem;
@@ -419,25 +424,14 @@
     }
     display: none
   }
-
   & .line-1 {
     right: 5rem;
     bottom: 0;
     width: 1px;
   }
 }
+/* Main styles for header */
 
-.header-wrapper:after {
-  content: '';
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  background-color: #000;
-  opacity: .5;
-  height: 100%;
-}
 
 
 

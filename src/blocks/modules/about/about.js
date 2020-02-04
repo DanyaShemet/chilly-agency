@@ -2,6 +2,7 @@
 
 import ScrollMagic from 'scrollmagic'
 
+// animate numbers functionality
 function animateCount() {
     $('.js-count').each(function () {
         const _this = $(this)

@@ -1,8 +1,7 @@
 "use strict";
-
 import "velocity-animate/velocity.min"
 import "velocity-animate/velocity.ui.min"
-
+import Typed from 'typed.js';
 
 let burger = $('.burger-icon');
 let links = $('.header-wrapper__animate-nav ul li a');
@@ -16,16 +15,22 @@ links.click(hideMenu);
 function showMenu() {
     menu.css('flex-basis', `calc(100%/ ${menu.length})`)
     overlay_navigation.toggleClass('overlay-active');
+    $("body").addClass("fixed");
     if (overlay_navigation.hasClass('overlay-active')) {
+        burger.css('pointer-events', 'none')
         burger.addClass('active');
         overlay_navigation.velocity('transition.slideLeftIn', {
             begin: function () {
                 menu.velocity('transition.perspectiveLeftIn', {
                     stagger: 70,
-                    delay: 10,
+                    delay: 0,
                 })
+            },
+            complete: function () {
+                burger.css('pointer-events', 'auto')
             }
         })
+
     } else {
         hideMenu()
     }
@@ -33,13 +38,15 @@ function showMenu() {
 
 function hideMenu() {
     burger.removeClass('active')
+    burger.css('pointer-events', 'none')
     overlay_navigation.removeClass('overlay-active');
-    //$("body").removeClass("fixed");
+    $("body").removeClass("fixed");
     menu.velocity('transition.perspectiveRightOut', {
         stagger: 50,
-        delay: 10,
+        delay: 0,
         complete: function () {
             overlay_navigation.velocity('transition.fadeOut', {});
+            burger.css('pointer-events', 'auto')
         }
     })
 }
@@ -53,5 +60,19 @@ $(window).scroll(function (e) {
         $('#header-wrapper .container').css({"transform": "translate(0%, " + -st / 1.5 + "px"});
     }
 });
+
+
+
+// Type machine Functionality
+
+let options = {
+    strings: ['development', 'marketing', 'adviser', 'design' ],
+    typeSpeed: 40,
+    showCursor: false,
+    loop: true,
+    backSpeed: 40
+};
+
+let typed = new Typed('#main-text', options);
 
 

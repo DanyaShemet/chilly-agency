@@ -1,8 +1,7 @@
 "use strict"
 
 import 'owl.carousel/dist/owl.carousel.min'
-
-
+// slider functionality
 $('.feedback__slider').owlCarousel({
     loop:true,
     margin:10,

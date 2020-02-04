@@ -50,9 +50,10 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: rgba(255,255,255, 0.9);
+      background-color: rgba(255,255,255, 0.6);
       @include lg-block{
         border-radius: 50%;
+        background-color: rgba(255,255,255, 0.8);
       }
     }
 
@@ -69,11 +70,15 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 100%;
-        width: 100%;
+
+        @include lg-block{
+          height: 100%;
+          width: 100%;
+        }
         color: black;
         font-size: 1.2rem;
         font-weight: 700;
+        margin-bottom: 0px;
       }
     }
     &:nth-child(1){
@@ -113,22 +118,24 @@
       height: 300px;
       background-image: url("../img/dev1.jpg");
       h4{
-        font-size: 1.1rem;
+
       }
     }
     &:nth-child(5){
       @include lg-block{
         width: 300px;
-
       }
       background-image: url("../img/team.jpg");
       height: 300px;
     }
     h4{
       font-size: 1.6rem;
-      font-weight: 400;
+      font-weight: 500;
       margin-bottom: 20px;
       z-index: 1;
+      @include lg-block{
+        font-size: 1.1rem;
+      }
     }
     a{
       display: none;
@@ -141,6 +148,7 @@
     small{
       color: $secondaryText;
       z-index: 1;
+      font-weight: 600;
     }
   }
 }
@@ -153,7 +161,4 @@
   bottom: 0;
   background-color: $mainColor;
   opacity: .8;
-}
-.owl-carousel .owl-stage-outer{
-  overflow: unset;
 }
