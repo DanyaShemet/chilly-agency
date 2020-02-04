@@ -64,7 +64,6 @@ $(window).scroll(function (e) {
 
 
 // Type machine Functionality
-
 let options = {
     strings: ['development', 'marketing', 'adviser', 'design' ],
     typeSpeed: 40,
@@ -72,7 +71,6 @@ let options = {
     loop: true,
     backSpeed: 40
 };
-
 let typed = new Typed('#main-text', options);
 
 

@@ -72,14 +72,14 @@ function scrollto() {
 
 //* Для активного блока меню
 // $(function () {
-//     let jqBar = $('#traffic')
+//     let jqBar = $('#about')
 //     // селектор для вашего блока
 //     let jqBarStatus = true
 //     $(window).scroll(function() {
 //         let scrollEvent = ($(window).scrollTop() > (jqBar.position().top - $(window).height()));
 //         if (scrollEvent && jqBarStatus) {
 //             jqBarStatus = false
-//             addClass()
+//
 //         }
 //     })
 // })
