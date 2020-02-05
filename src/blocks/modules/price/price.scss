@@ -1,3 +1,5 @@
+/* 07 Price */
+
 .pricing {
   padding: 40px 0;
 
@@ -6,13 +8,13 @@
     @include size-lg(6);
     @include size-xs(12);
 
-    & h2 {
+    h2 {
       margin-bottom: 20px;
       font-size: 1.5rem;
       color: $mainColor;
     }
 
-    & p {
+    p {
       color: $secondaryText;
       font-weight: 500;
       line-height: 1.5rem;
@@ -58,7 +60,7 @@
     padding: 20px 10px;
     background-color: white;
     box-shadow: 10px 20px 50px rgba(22, 208, 223, .3);
-    @include md-block{
+    @include md-block {
       padding: 40px 20px;
     }
 
@@ -67,16 +69,16 @@
       font-weight: 700;
       color: black;
       margin-bottom: 20px;
-      @include md-block{
-         margin-bottom: 35px;
-       }
+      @include md-block {
+        margin-bottom: 35px;
+      }
     }
 
     .pricing__card-price {
       font-size: 1.8rem;
       font-weight: 700;
       margin-bottom: 20px;
-      @include md-block{
+      @include md-block {
         margin-bottom: 35px;
         font-size: 2.5rem;
       }
@@ -88,23 +90,23 @@
       color: #4A4949;
       font-weight: 500;
       font-size: 1rem;
-      @include md-block{
+      @include md-block {
         font-size: 1.3rem;
       }
     }
 
     .benefits {
       margin-bottom: 30px;
-      @include md-block{
+      @include md-block {
         margin-bottom: 50px;
       }
     }
-
     .price__card-btn {
       border-radius: 20px;
-      background-color: white;
+      background-color: $mainColor;
       font-size: 1rem;
-      @include md-block{
+      color: white;
+      @include md-block {
         font-size: 1.2rem;
         width: 140px;
         height: 45px;
@@ -117,26 +119,29 @@
       transition: all .3s;
 
       &:hover {
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        box-shadow: 0px 0px 0px rgba(0, 0, 0, .3);
+        background-color: white;
+        color: $mainColor;
+        transform: scale(1.05);
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
       }
     }
   }
 
   .pricing__card-main {
     background-color: $mainColor;
-
     h3, button, .benefits p, .pricing__card-price {
       color: white
     }
-
     .price__card-btn {
-      background-color: black;
+      color: $mainColor;
+      background-color: white;
       box-shadow: 0px 3px 6px rgba(255, 255, 255, .7);
       transition: all .3s;
-
       &:hover {
-        box-shadow: 0px 0px 0px rgba(0, 0, 0, .3);
+        background-color: $mainColor;
+        color: white;
+        transform: scale(1.05);
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
       }
     }
   }

@@ -1,12 +1,13 @@
 "use strict";
 import "velocity-animate/velocity.min"
 import "velocity-animate/velocity.ui.min"
-import Typed from 'typed.js';
+import Typed from 'typed.js'
+import $ from "jquery";
 
 let burger = $('.burger-icon');
-let links = $('.header-wrapper__animate-nav ul li a');
-let menu = $('.header-wrapper__animate-nav ul li');
-let overlay_navigation = $('.overlay-navigation');
+let links = $('.header__animate-nav ul li a');
+let menu = $('.header__animate-nav ul li');
+let overlay_navigation = $('.header__overlay-navigation');
 
 // Burger menu functionality
 burger.click(showMenu)
@@ -59,9 +60,20 @@ $(window).scroll(function (e) {
     if (document.documentElement.clientWidth >= 1050) {
         $('#header-wrapper .container').css({"transform": "translate(0%, " + -st / 1.5 + "px"});
     }
+
+    let $sections = $('.section');
+    $sections.each(function(i,el){
+        let top  = $(el).offset().top-90;
+        let bottom = top +$(el).height();
+        let scroll = $(window).scrollTop();
+        let id = $(el).attr('id');
+        if( scroll > top && scroll < bottom){
+            $('a.active').removeClass('active');
+            $('a[href="#'+id+'"]').addClass('active');
+        }
+
+    })
 });
-
-
 
 // Type machine Functionality
 let options = {
@@ -73,4 +85,14 @@ let options = {
 };
 let typed = new Typed('#main-text', options);
 
+
+// scroll to chosen block on page functionality
+export  function scrollto() {
+    $(".scrollto").click(function () {
+        let elementClick = $(this).attr("href")
+        let destination = $(elementClick).offset().top;
+        jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination-80}, 1500);
+        return false;
+    });
+}
 

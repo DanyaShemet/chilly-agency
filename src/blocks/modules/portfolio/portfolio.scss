@@ -1,4 +1,4 @@
-/* Portfolio */
+/* 04 Portfolio */
 
 .portfolio {
   position: relative;
@@ -12,11 +12,11 @@
     @include lg-block {
       flex-direction: row;
     }
-    & h2{
+
+    h2 {
       font-size: 1.5rem;
     }
   }
-
   &__filter {
     display: flex;
     flex-wrap: wrap;
@@ -25,7 +25,7 @@
       justify-content: start;
     }
 
-    & .filter-item {
+    .filter-item {
       margin-top: 10px;
       @include lg-block {
         margin-top: 0px;
@@ -54,159 +54,157 @@
       }
     }
   }
-}
-
-.portfolio__items {
-  display: flex;
-  flex-wrap: wrap;
-  @include sm-block {
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    @include sm-block {
+      align-items: center;
+    }
+  }
+  &__item {
+    text-align: center;
+    overflow: hidden;
+    color: #fff;
+    @include size-xl(4);
+    @include size-lg(6);
+    @include size-xs(12);
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-  }
-}
+    transition: transform 1s;
+    background-position: center;
+    background-size: cover;
+    font-size: 1.2rem;
+    @include lg-block {
+      font-size: .7rem;
+    }
+    div {
+      position: relative;
+      z-index: 101;
+      display: none;
+      width: 70%;
+    }
+    h4 {
+      margin-bottom: 10px;
+    }
+    .portfolio__item-hidden-text {
+      display: none;
+      transition: display 1s;
+      .main-text {
+        margin-bottom: 20px;
+      }
 
-.portfolio__item {
-  text-align: center;
-  overflow: hidden;
-  color: #fff;
-  @include size-xl(4);
-  @include size-lg(6);
-  @include size-xs(12);
-  height: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: transform 1s;
-  background-position: center;
-  background-size: cover;
-  font-size: 1.2rem;
-  @include lg-block {
-    font-size: .7rem;
-    //border-radius: 5px;
-  }
-
-  & div {
-    position: relative;
-    z-index: 101;
-    display: none;
-    width: 70%;
-  }
-
-  & h4 {
-    margin-bottom: 10px;
-  }
-
-  & .portfolio__item-hidden-text {
-    display: none;
-    transition: display 1s;
-
-    & .main-text {
-      margin-bottom: 20px;
     }
 
-  }
+    .portfolio__item-social {
+      display: flex;
+      justify-content: space-evenly;
 
-  & .portfolio__item-social {
-    display: flex;
-    justify-content: space-evenly;
+      span {
+        transition: all .4s;
 
-    & span {
-      transition: all .4s;
-
-      &:hover {
-        color: #1396E2;
+        &:hover {
+          color: #1396E2;
+        }
       }
     }
-  }
 
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.04);
-    @include lg-block {
-      transform: scale(1.2);
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.04);
+      @include lg-block {
+        transform: scale(1.2);
+      }
+      animation-play-state: paused;
+      z-index: 1000;
+      background-image: none;
+      background-color: $mainColor;
+
+      .portfolio__item-hidden-text {
+        display: block;
+        font-size: 1rem;
+      }
+
+      .portfolio__item-text {
+        font-size: 1.3rem;
+        display: block;
+      }
     }
-    animation-play-state: paused;
-    z-index: 1000;
-    background-image: none;
-    background-color: $mainColor;
 
-    & .portfolio__item-hidden-text {
-      display: block;
-      font-size: 1rem;
+    &-1 {
+      background-image: url("../img/des1.jpg");
+
     }
 
-    & .portfolio__item-text {
-      font-size: 1.3rem;
-      display: block;
+    &-2 {
+      background-image: url("../img/dev1.jpg");
+
+    }
+
+    &-3 {
+      background-image: url("../img/smt1.jpg");
+
+    }
+
+    &-4 {
+      background-image: url("../img/des1.jpg");
+    }
+
+    &-5 {
+      background-image: url("../img/dev1.jpg");
+    }
+
+    &-6 {
+      background-image: url("../img/dev1.jpg");
+    }
+
+    &-7 {
+      background-image: url("../img/dev1.jpg");
+    }
+
+    &-8 {
+      background-image: url("../img/dev1.jpg");
+    }
+
+    &-9 {
+      background-image: url("../img/smt1.jpg");
+    }
+
+    &-10 {
+      background-image: url("../img/des1.jpg");
+    }
+
+    &-11 {
+      background-image: url("../img/smt1.jpg");
+    }
+
+    &-12 {
+      background-image: url("../img/dev1.jpg");
+    }
+
+    &-13 {
+      background-image: url("../img/smt1.jpg");
+    }
+
+    &-14 {
+      background-image: url("../img/dev1.jpg");
+    }
+
+    &-15 {
+      background-image: url("../img/des1.jpg");
+    }
+
+    &-16 {
+      background-image: url("../img/smt1.jpg");
     }
   }
+}
 
-  &-1 {
-    background-image: url("../img/des1.jpg");
 
-  }
+.portfolio__item {
 
-  &-2 {
-    background-image: url("../img/dev1.jpg");
-
-  }
-
-  &-3 {
-    background-image: url("../img/smt1.jpg");
-
-  }
-
-  &-4 {
-    background-image: url("../img/des1.jpg");
-  }
-
-  &-5 {
-    background-image: url("../img/dev1.jpg");
-  }
-
-  &-6 {
-    background-image: url("../img/dev1.jpg");
-  }
-
-  &-7 {
-    background-image: url("../img/dev1.jpg");
-  }
-
-  &-8 {
-    background-image: url("../img/dev1.jpg");
-  }
-
-  &-9 {
-    background-image: url("../img/smt1.jpg");
-  }
-
-  &-10 {
-    background-image: url("../img/des1.jpg");
-  }
-
-  &-11 {
-    background-image: url("../img/smt1.jpg");
-  }
-
-  &-12 {
-    background-image: url("../img/dev1.jpg");
-  }
-
-  &-13 {
-    background-image: url("../img/smt1.jpg");
-  }
-
-  &-14 {
-    background-image: url("../img/dev1.jpg");
-  }
-
-  &-15 {
-    background-image: url("../img/des1.jpg");
-  }
-
-  &-16 {
-    background-image: url("../img/smt1.jpg");
-  }
 }
 
 

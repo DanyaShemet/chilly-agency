@@ -1,5 +1,6 @@
-.team{
-  &__text{
+/* 05 Team */
+.team {
+  &__text {
     padding: 50px 0;
     background-image: url("../img/team.jpg");
     background-position: center;
@@ -7,217 +8,239 @@
     background-attachment: fixed;
     position: relative;
     font-size: 1.3rem;
-    @include md-block{
+    @include md-block {
       padding: 100px 0;
       font-size: 1.7rem;
     }
     font-weight: 500;
     color: #fff;
-    &:after{
+
+    &:after {
       position: absolute;
       content: '';
       top: 0;
       left: 0;
       bottom: 0;
       right: 0;
-      background-color: rgba(19,188,223,0.9);
+      background-color: rgba(19, 188, 223, 0.9);
     }
-    & .container{
+
+    & .container {
       display: flex;
       flex-direction: column;
-      @include lg-block{
+      @include lg-block {
         flex-direction: row;
       }
       padding-bottom: 50px;
-      & h2{
+
+      & h2 {
         font-size: 1.5rem;
         margin-bottom: 20px;
         @include size-lg(3);
         @include size-xs(12);
-        @include md-block{
+        @include md-block {
           margin-bottom: 0;
         }
       }
+
       & p {
         @include size-xs(12);
         @include size-lg(9);
-        @include md-block{
+        @include md-block {
           line-height: 2.5rem;
         }
         line-height: 2rem;
-        & span{
+
+        & span {
           color: #000;
         }
       }
     }
   }
-  & .container{
+
+  & .container {
     z-index: 2;
     position: relative;
   }
-  &__heads{
+
+  &__heads {
     @include size-lg(9);
     @include size-xs(12);
     @include shift-lg(3);
     display: flex;
     margin-top: -60px;
-    @include md-block{
+    @include md-block {
       margin-top: -90px;
     }
-    & .employee{
-      & img{
+
+    .team__heads-preview {
+      img {
         max-width: 100%;
-        @include md-block{
+        @include md-block {
           height: 250px;
         }
-        @include xs-block{
+        @include xs-block {
           height: 200px;
         }
-        @include lg-block{
+        @include lg-block {
           height: 410px;
         }
         margin-bottom: 20px;
       }
-      & h4{
+
+      h4 {
         font-size: 1.2rem;
-        @include md-block{
+        @include md-block {
           font-size: 1.7rem;
         }
         margin-bottom: 5px;
       }
-      & span{
+
+      span {
         color: $mainColor;
         font-size: 0.8rem;
-        @include md-block{
+        @include md-block {
           font-size: 1rem;
         }
         font-weight: 500;
       }
-      & p{
+
+      p {
         font-weight: 400;
         color: $secondaryText;
         font-size: 1rem;
-        @include md-block{
+        @include md-block {
           font-size: 1.2rem;
           margin: 10px 0 15px 0;
         }
         margin: 5px 0 10px 0;
 
       }
-      & a{
+
+      a {
         margin-right: 10px;
         font-size: 1rem;
-        @include md-block{
+        @include md-block {
           font-size: 1.4rem;
         }
         transition: all .5s;
-        &:hover{
+
+        &:hover {
           color: $mainColor;
         }
       }
 
       @include size-lg(5);
-      &:last-child{
+
+      &:last-child {
         margin-left: 30px;
         margin-top: 30px;
-        @include md-block{
+        @include md-block {
           margin-left: 50px;
           margin-top: 50px;
         }
       }
     }
   }
-  &__other{
+
+  &__other {
     display: flex;
-    border-top: 1px solid rgba(0,0,0,.1);
+    border-top: 1px solid rgba(0, 0, 0, .1);
     margin: 30px 0 0 0;
     padding: 30px 0 0 0;
-    @include lg-block{
+    @include lg-block {
       margin: 50px 0 0 0;
       padding: 50px 0 0 0;
     }
     flex-direction: column;
-    @include lg-block{
+    @include lg-block {
       flex-direction: row;
     }
-    & h2{
+
+    h2 {
       @include size-lg(3);
       @include size-xs(12);
       margin-bottom: 30px;
       font-size: 1.5rem;
-      @include lg-block{
+      @include lg-block {
         margin-bottom: 0px;
       }
     }
   }
-  &__members{
+
+  &__members {
     @include size-lg(9);
     @include size-xs(12)
   }
-  &__member{
+
+  &__member {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(0,0,0,.1);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
     padding-bottom: 15px;
     margin-bottom: 15px;
-    @include lg-block{
+    @include lg-block {
       padding-bottom: 30px;
       margin-bottom: 30px;
     }
-    & .team__member-preview{
+
+    .team__member-preview {
       width: 80%;
       display: flex;
       align-items: center;
-      & img{
+
+      img {
         width: 80px;
         height: 80px;
         margin-right: 10px;
-        @include md-block{
+        @include md-block {
           width: 100px;
           height: 100px;
         }
-        @include lg-block{
+        @include lg-block {
           width: 130px;
           height: 130px;
           margin-right: 20px;
         }
       }
-      & h4{
+
+      h4 {
         font-size: 1rem;
         margin-bottom: 5px;
-        @include md-block{
+        @include md-block {
           font-size: 1.7rem;
           margin-bottom: 10px;
         }
 
       }
-      & span{
+
+      span {
         font-size: 0.7rem;
-        @include md-block{
+        @include md-block {
           font-size: 1rem;
         }
         color: $mainColor;
         font-weight: 500;
       }
     }
-    & .team__member-social{
-      & a{
+
+    .team__member-social {
+      a {
         font-size: 0.8rem;
-        @include md-block{
+        @include md-block {
           font-size: 1.4rem;
-          &:not(:last-child){
+          &:not(:last-child) {
             margin-right: 10px;
           }
         }
         margin-right: 3px;
         transition: all .5s;
 
-        &:hover{
+        &:hover {
           color: $mainColor
         }
       }
-
     }
   }
 }

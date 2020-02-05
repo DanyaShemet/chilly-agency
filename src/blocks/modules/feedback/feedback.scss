@@ -1,3 +1,4 @@
+/* 06 Feedback */
 .feedback{
   padding: 40px 0;
   background-image: url("../img/1.jpg");
@@ -16,10 +17,10 @@
     background-color: $mainColor;
     opacity: .9;
   }
-  & .container{
+  .container{
     z-index: 2;
     position: relative;
-    & h2{
+    h2{
       color: white;
       font-size: 1.5rem;
       margin-bottom: 30px;
@@ -44,7 +45,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    & .feedback__photo{
+    .feedback__photo{
       width: 100px;
       height: 100px;
       border-radius: 50%;
@@ -53,7 +54,7 @@
         margin-bottom: 40px;
       }
     }
-    & p {
+    p {
       color: white;
       text-align: center;
       font-size: 1rem;
@@ -63,18 +64,18 @@
         line-height: 2.2rem;
       }
     }
-    & .feedback__text{
+    .feedback__text{
       margin-bottom: 20px;
     }
-    & .feedback__name{
+    .feedback__name{
       font-weight: 500;
     }
-    & span{
+    span{
       font-weight: 600;
       font-size: 1rem;
       margin-bottom: 30px;
     }
-    & .feedback__logo{
+    .feedback__logo{
       width: 50px;
       height: 50px;
       border-radius: 50%;
@@ -88,7 +89,7 @@
   .circles {
     background-color: rgba(255, 255, 255, 0.3);
   }
-  & .f-circle-1 {
+  .feedback-circle-1 {
     width: 29px;
     height: 29px;
     left: 4rem;
@@ -97,7 +98,7 @@
       bottom: 2rem;
     }
   }
-  & .f-circle-2 {
+  .feedback-circle-2 {
     width: 50px;
     height: 50px;
     left: 20rem;
@@ -107,7 +108,7 @@
       bottom: 8rem;
     }
   }
-  & .f-circle-3 {
+  .feedback-circle-3 {
     background-color: rgba(255, 255, 255, 0.18);
     width: 100px;
     height: 100px;
@@ -118,7 +119,7 @@
       bottom: 16rem;
     }
   }
-  & .f-circle-4 {
+  .feedback-circle-4 {
     background-color: rgba(255, 255, 255, 0.05);
     width: 150px;
     height: 150px;
@@ -129,7 +130,7 @@
     }
     display: none;
   }
-  & .f-circle-5 {
+  .feedback-circle-5 {
     background-color: rgba(255, 255, 255, 0.15);
     width: 250px;
     height: 250px;
@@ -141,7 +142,7 @@
     display: none;
 
   }
-  & .f-circle-6 {
+  .feedback-circle-6 {
     width: 400px;
     height: 400px;
     @include lg-block{
@@ -151,9 +152,5 @@
     }
     display: none;
   }
-
-
 }
-.feedback__slider.owl-carousel .owl-stage-outer{
-  overflow: hidden !important;
-}
+
