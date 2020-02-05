@@ -14,7 +14,6 @@
     }
     font-weight: 500;
     color: #fff;
-
     &:after {
       position: absolute;
       content: '';
@@ -24,8 +23,7 @@
       right: 0;
       background-color: rgba(19, 188, 223, 0.9);
     }
-
-    & .container {
+    .container {
       display: flex;
       flex-direction: column;
       @include lg-block {
@@ -33,7 +31,7 @@
       }
       padding-bottom: 50px;
 
-      & h2 {
+      h2 {
         font-size: 1.5rem;
         margin-bottom: 20px;
         @include size-lg(3);
@@ -43,7 +41,7 @@
         }
       }
 
-      & p {
+      p {
         @include size-xs(12);
         @include size-lg(9);
         @include md-block {
@@ -58,7 +56,7 @@
     }
   }
 
-  & .container {
+  .container {
     z-index: 2;
     position: relative;
   }
@@ -74,19 +72,32 @@
     }
 
     .team__heads-preview {
-      img {
-        max-width: 100%;
+      .team__head-img-wrap{
+        overflow: hidden;
+        font-size: 0;
+        margin-bottom: 20px;
         @include md-block {
           height: 250px;
+          width: 200px;
         }
         @include xs-block {
           height: 200px;
+          width: 150px;
         }
         @include lg-block {
           height: 410px;
+          width: 320px;
         }
-        margin-bottom: 20px;
+        img {
+          max-width: 100%;
+          transition: all .3s;
+          overflow: hidden;
+          &:hover{
+            transform: scale(1.06);
+          }
+        }
       }
+
 
       h4 {
         font-size: 1.2rem;
