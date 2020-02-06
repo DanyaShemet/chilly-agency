@@ -101,6 +101,7 @@
         margin-bottom: 50px;
       }
     }
+
     .price__card-btn {
       border-radius: 20px;
       background-color: $mainColor;
@@ -122,26 +123,29 @@
         background-color: white;
         color: $mainColor;
         transform: scale(1.05);
-        box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
       }
     }
   }
 
   .pricing__card-main {
     background-color: $mainColor;
+
     h3, button, .benefits p, .pricing__card-price {
       color: white
     }
+
     .price__card-btn {
       color: $mainColor;
       background-color: white;
       box-shadow: 0px 3px 6px rgba(255, 255, 255, .7);
       transition: all .3s;
+
       &:hover {
         background-color: $mainColor;
         color: white;
         transform: scale(1.05);
-        box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
       }
     }
   }

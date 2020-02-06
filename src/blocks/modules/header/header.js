@@ -36,7 +36,6 @@ function showMenu() {
         hideMenu()
     }
 }
-
 function hideMenu() {
     burger.removeClass('active')
     burger.css('pointer-events', 'none')
@@ -87,7 +86,7 @@ let typed = new Typed('#main-text', options);
 
 
 // scroll to chosen block on page functionality
-export  function scrollto() {
+export function scrollto() {
     $(".scrollto").click(function () {
         let elementClick = $(this).attr("href")
         let destination = $(elementClick).offset().top;

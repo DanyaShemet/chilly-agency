@@ -4,12 +4,15 @@
 .header {
   overflow-x: hidden;
   height: 95vh;
-  @include lg(height, 100vh);
-  background-image: url("../img/6.jpg");
+  background-image: url("../img/6.webp");
   background-position: center;
   background-size: cover;
   position: relative;
-  background-attachment: fixed;
+
+  @include lg-block{
+    background-attachment: fixed;
+    height: 100vh;
+  }
   &:after{
     content: '';
     left: 0;
@@ -21,7 +24,7 @@
     opacity: .5;
     height: 100%;
   }
-  &__trapezoid {
+  &__logo {
     background-color: rgba(255, 255, 255, .3);
     clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
     height: 100px;

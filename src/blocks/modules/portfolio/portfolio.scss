@@ -17,7 +17,8 @@
       font-size: 1.5rem;
     }
   }
-  &__filter {
+
+  &__categories{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -54,6 +55,7 @@
       }
     }
   }
+
   &__items {
     display: flex;
     flex-wrap: wrap;
@@ -61,50 +63,64 @@
       align-items: center;
     }
   }
+
   &__item {
     text-align: center;
     overflow: hidden;
     color: #fff;
+    position: relative;
     @include size-xl(4);
     @include size-lg(6);
     @include size-xs(12);
     height: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: transform 1s;
-    background-position: center;
-    background-size: cover;
-    font-size: 1.2rem;
-    @include lg-block {
-      font-size: .7rem;
+    transition: transform .5s;
+    img{
+      width: 100%;
+      height: 100%;
     }
-    div {
-      position: relative;
-      z-index: 101;
-      display: none;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $mainColor;
+      transform: scale(0);
+    }
+    .portfolio__overlay-text {
+      position: absolute;
+      left: 0;
+      opacity: 0;
+      top: 20%;
+      @include lg-block{
+        top: 25%;
+      }
+
+      right: 0;
       width: 70%;
+      z-index: 3;
+      text-align: center;
+      margin: 0 auto;
+      transition: all .3s ease;
     }
-    h4 {
-      margin-bottom: 10px;
-    }
-    .portfolio__item-hidden-text {
-      display: none;
-      transition: display 1s;
+
+    .overlay-description {
+      font-size: 1rem;
       .main-text {
         margin-bottom: 20px;
       }
-
     }
-
+    .overlay-name {
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
     .portfolio__item-social {
       display: flex;
       justify-content: space-evenly;
-
-      span {
+      a {
         transition: all .4s;
-
+        color: white;
         &:hover {
           color: #1396E2;
         }
@@ -117,95 +133,20 @@
       @include lg-block {
         transform: scale(1.2);
       }
-      animation-play-state: paused;
       z-index: 1000;
       background-image: none;
-      background-color: $mainColor;
-
-      .portfolio__item-hidden-text {
-        display: block;
-        font-size: 1rem;
+      &:after {
+        transform: scale(1);
+      }
+      .portfolio__overlay-text{
+        opacity: 1;
       }
 
-      .portfolio__item-text {
-        font-size: 1.3rem;
-        display: block;
-      }
-    }
-
-    &-1 {
-      background-image: url("../img/des1.jpg");
-
-    }
-
-    &-2 {
-      background-image: url("../img/dev1.jpg");
-
-    }
-
-    &-3 {
-      background-image: url("../img/smt1.jpg");
-
-    }
-
-    &-4 {
-      background-image: url("../img/des1.jpg");
-    }
-
-    &-5 {
-      background-image: url("../img/dev1.jpg");
-    }
-
-    &-6 {
-      background-image: url("../img/dev1.jpg");
-    }
-
-    &-7 {
-      background-image: url("../img/dev1.jpg");
-    }
-
-    &-8 {
-      background-image: url("../img/dev1.jpg");
-    }
-
-    &-9 {
-      background-image: url("../img/smt1.jpg");
-    }
-
-    &-10 {
-      background-image: url("../img/des1.jpg");
-    }
-
-    &-11 {
-      background-image: url("../img/smt1.jpg");
-    }
-
-    &-12 {
-      background-image: url("../img/dev1.jpg");
-    }
-
-    &-13 {
-      background-image: url("../img/smt1.jpg");
-    }
-
-    &-14 {
-      background-image: url("../img/dev1.jpg");
-    }
-
-    &-15 {
-      background-image: url("../img/des1.jpg");
-    }
-
-    &-16 {
-      background-image: url("../img/smt1.jpg");
     }
   }
 }
 
 
-.portfolio__item {
-
-}
 
 
 

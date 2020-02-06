@@ -1,28 +1,15 @@
 /* 11 Footer */
 .footer {
-  height: 50vh;
+  height: 40vh;
   padding: 0;
-  background-image: url("../img/footer.jpg");
-  background-position: 50% 35%;
-  background-size: cover;
   position: relative;
+  background-color: #006D8F;
   overflow: hidden;
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, .5);
-  }
   @include lg-block {
-    padding: 60px 0 20px 0;
-    height: 40vh;
+    padding: 30px 0 20px 0;
+    height: 25vh;
   }
   .container {
-    z-index: 3;
-    position: relative;
     height: inherit;
     display: flex;
     justify-content: space-around;
@@ -33,14 +20,8 @@
   }
   &__top {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex-direction: column;
     align-items: center;
-    @include lg-block {
-      flex-direction: row;
-    }
-
+    justify-content: center;
     .footer__logo--trapezoid {
       background-color: rgba(255, 255, 255, .3);
       clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
@@ -50,11 +31,10 @@
       align-items: center;
       justify-content: center;
       @include lg-block{
-        height: 100px;
-        width: 90px;
+        height: 80px;
+        width: 70px;
       }
-
-      & h2 {
+      span {
         font-family: Pacifico;
         color: #000;
         font-size: .7rem;
@@ -62,7 +42,7 @@
         user-select: none;
         width: 70%;
         @include lg-block{
-          font-size: 1rem;
+          font-size: .7rem;
         }
       }
     }
@@ -70,7 +50,7 @@
   }
 
   &__bottom {
-    &-info {
+    .footer__info {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -101,19 +81,18 @@
             font-size: 1.2rem;
           }
           &:hover {
-            color: $mainColor
+            color: $mainColor;
           }
         }
       }
     }
-
     .footer__address {
       @include lg-block {
         margin-bottom: 0px;
       }
       margin-bottom: 20px;
       p, a {
-        color: $mainColor;
+        color: white;
         font-weight: 500;
         text-align: center;
         @include lg-block {
@@ -121,13 +100,13 @@
           font-size: 1rem;
         }
       }
-      p:first-child {
-        margin-bottom: 10px;
+      p{
+        margin-top: 10px;
       }
       a {
         transition: all .3s;
         &:hover {
-          color: white
+          color: $mainColor
         }
       }
     }
@@ -136,7 +115,7 @@
   &__copyright {
     text-align: center;
     font-weight: 400;
-    color: whitesmoke;
+    color: white;
     font-size: .6rem;
     @include lg-block{
       font-size: .8rem;
@@ -171,7 +150,7 @@
     &.footer-circle-1{
       width: 300px;
       height: 300px;
-      right: -12%;
+      right: -5%;
       top: 5%;
     }
     &.footer-circle-2{

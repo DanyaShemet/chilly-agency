@@ -4,6 +4,7 @@ let categories = $('.filter-item');
 let elem = $(".portfolio__item");
 categories.click(applyFilter);
 
+// filter functionality
 function applyFilter(){
     let value = $(this).attr("data-filter");
     categories.removeClass('active');

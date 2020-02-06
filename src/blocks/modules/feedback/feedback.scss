@@ -1,5 +1,5 @@
 /* 06 Feedback */
-.feedback{
+.feedback {
   padding: 40px 0;
   background-image: url("../img/1.jpg");
   background-attachment: fixed;
@@ -7,6 +7,7 @@
   background-position: center;
   position: relative;
   overflow: hidden;
+
   &:after {
     content: '';
     position: absolute;
@@ -17,124 +18,141 @@
     background-color: $mainColor;
     opacity: .9;
   }
-  .container{
+
+  .container {
     z-index: 2;
     position: relative;
-    h2{
+
+    h2 {
       color: white;
       font-size: 1.5rem;
       margin-bottom: 30px;
-      @include md-block{
+      @include md-block {
         margin-bottom: 60px;
       }
     }
   }
-  &__slider{
+
+  &__slider {
     display: flex;
     align-items: center;
   }
-  &__item{
+
+  &__item {
     @include size-xs(10);
     @include size-lg(7);
     @include size-md(8);
     margin: 10px auto;
-    @include md-block{
+    @include md-block {
       margin: 30px auto;
     }
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .feedback__photo{
+
+    .feedback__photo {
       width: 100px;
       height: 100px;
       border-radius: 50%;
       margin-bottom: 20px;
-      @include md-block{
+      @include md-block {
         margin-bottom: 40px;
       }
     }
-    p {
+
+    p{
       color: white;
       text-align: center;
       font-size: 1rem;
       line-height: 1.6rem;
-      @include md-block{
+      @include md-block {
         font-size: 1.3rem;
         line-height: 2.2rem;
       }
     }
-    .feedback__text{
+
+    .feedback__text {
       margin-bottom: 20px;
     }
-    .feedback__name{
+
+    .feedback__name {
       font-weight: 500;
     }
-    span{
+
+    span {
       font-weight: 600;
       font-size: 1rem;
       margin-bottom: 30px;
     }
-    .feedback__logo{
+
+    .feedback__logo {
       width: 50px;
       height: 50px;
       border-radius: 50%;
     }
   }
+
   &__figures {
     position: absolute;
     z-index: 1;
     border-radius: 50%;
   }
+
   .circles {
     background-color: rgba(255, 255, 255, 0.3);
   }
+
   .feedback-circle-1 {
     width: 29px;
     height: 29px;
     left: 4rem;
     bottom: 10rem;
-    @include lg-block{
+    @include lg-block {
       bottom: 2rem;
     }
   }
+
   .feedback-circle-2 {
     width: 50px;
     height: 50px;
     left: 20rem;
     bottom: 15rem;
-    @include lg-block{
+    @include lg-block {
       left: 16rem;
       bottom: 8rem;
     }
   }
+
   .feedback-circle-3 {
     background-color: rgba(255, 255, 255, 0.18);
     width: 100px;
     height: 100px;
     left: 38rem;
     bottom: 30rem;
-    @include lg-block{
+    @include lg-block {
       left: 32rem;
       bottom: 16rem;
     }
   }
+
   .feedback-circle-4 {
     background-color: rgba(255, 255, 255, 0.05);
     width: 150px;
     height: 150px;
-    @include lg-block{
+    @include lg-block {
       left: 48rem;
       bottom: 24rem;
       display: block;
     }
     display: none;
   }
+
   .feedback-circle-5 {
     background-color: rgba(255, 255, 255, 0.15);
     width: 250px;
     height: 250px;
-    @include xl-block{
+    @include xl-block {
       left: 63rem;
       top: 2rem;
       display: block;
@@ -142,10 +160,11 @@
     display: none;
 
   }
+
   .feedback-circle-6 {
     width: 400px;
     height: 400px;
-    @include lg-block{
+    @include lg-block {
       right: -10rem;
       top: -10rem;
       display: block;

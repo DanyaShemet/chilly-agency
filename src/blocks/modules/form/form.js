@@ -1,7 +1,6 @@
 "use strict";
 
 let formInput = $('#form input')
-let email = $('#email')[0]
 let counter = $('.counter')
 
 // form class active/invalid functionality
@@ -14,24 +13,16 @@ for(let i=0;i<formInput.length;i++){
         addInvalidClass(formInput[i],'invalid')
     }
 }
-email.onblur = () => {
-    if (!email.value.includes('@')){
-        email.classList.add('invalid')
-    }else{
-        email.classList.remove('invalid')
-    }
-};
 
 function addActiveClass(item, className) {
-    if (item.value.length){
-        console.log('1')
+    if ($(item).val()){
         $(item).addClass(className)
     }else{
         $(item).removeClass(className)
     }
 }
 function addInvalidClass(item, className) {
-    if (!item.value.length){
+    if (!$(item).val()){
         $(item).addClass(className)
     }else{
         $(item).removeClass(className)

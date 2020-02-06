@@ -2,17 +2,19 @@
 .about {
   padding: 30px 0;
   position: relative;
-  &__figure{
+
+  &__figure {
     position: absolute;
-    bottom:  -20%;
+    bottom: -20%;
     right: -20%;
     width: 500px;
     display: none;
     z-index: 100;
-    @include xl-block{
+    @include xl-block {
       display: block;
     }
   }
+
   &__text-items {
     margin-bottom: 40px;
     @include row-flex();
@@ -33,26 +35,13 @@
       padding: 0;
       font-size: 1rem;
 
-      & .about__heading {
-        display: flex;
+      h2 {
         margin-bottom: 0;
-        align-items: center;
+        font-weight: 600;
         @include lg(margin-bottom, 30px);
-
-        & h2 {
-          font-weight: 600;
-        }
-        & span {
-          height: 5px;
-          width: 5px;
-          display: block;
-          margin-right: 5px;
-          clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
-          background-color: black;
-        }
       }
 
-      & .about__img {
+      .about__img {
         display: none;
         @include lg-block {
           position: relative;
@@ -85,10 +74,12 @@
       }
     }
   }
+
   &__card-items {
     display: flex;
     flex-wrap: wrap;
   }
+
   &__card-item {
     position: relative;
     box-sizing: border-box;
@@ -96,6 +87,7 @@
     @include size-md(6);
     @include size-lg(4);
     padding: 40px 0 40px 0;
+
     &:first-child {
       &:after {
         content: '';
@@ -110,6 +102,7 @@
         transition: all .3s;
         z-index: 5;
       }
+
       &:before {
         content: '';
         display: block;
@@ -123,6 +116,7 @@
         transition: all .3s;
       }
     }
+
     &:nth-child(2) {
       &:after {
         content: ' ';
@@ -151,6 +145,7 @@
         transition: all .3s;
       }
     }
+
     &:nth-child(3) {
       &:after {
         content: ' ';
@@ -208,6 +203,7 @@
         transition: all .3s;
       }
     }
+
     &:nth-child(n+5) {
       &::after {
         content: '';
@@ -221,6 +217,7 @@
         transition: all .3s;
         z-index: 5;
       }
+
       &::before {
         content: '';
         display: block;
@@ -233,8 +230,7 @@
         transition: all .3s;
       }
     }
-
-    @include lg-block{
+    @include lg-block {
       border: none;
       &:nth-child(-n+3) {
         border-bottom: $border;
@@ -242,7 +238,7 @@
       &:not(:nth-child(3n+1)) {
         border-left: $border;
       }
-      &:nth-child(4){
+      &:nth-child(4) {
         border-left: none;
         border-bottom: none;
       }
@@ -253,7 +249,7 @@
         width: 100%;
       }
     }
-    @include md-block{
+    @include md-block {
       border-bottom: none;
       &:nth-child(-n+4) {
         border-bottom: $border;
@@ -261,28 +257,35 @@
       &:not(:nth-child(2n+1)) {
         border-left: $border;
       }
-      &:nth-child(odd){border-left: none}
-      &:nth-child(even){border-right: none}
+      &:nth-child(odd) {
+        border-left: none
+      }
+      &:nth-child(even) {
+        border-right: none
+      }
     }
-    @include xs-block{
+    @include xs-block {
       border-bottom: $border;
-      &:nth-child(odd){
+      &:nth-child(odd) {
         border-left: $border;
       }
-      &:nth-child(even){
+      &:nth-child(even) {
         border-right: $border;
       }
     }
-    & p, div {
+
+    p, div {
       padding-left: 20px;
     }
-    & p {
+
+    p {
       font-size: 2rem;
       font-weight: 600;
       margin-bottom: 40px;
       color: $mainColor;
     }
-    & div {
+
+    div {
       font-size: 1.5rem;
       font-weight: 400;
       max-width: 50%;
