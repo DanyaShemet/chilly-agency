@@ -14,6 +14,7 @@ owl-carousel
 09 Form
 10 Map
 11 Footer
+
 */
 
 @import "helpers/variables";
@@ -43,8 +44,10 @@ header, section , footer{
   background-color: white;
   opacity: 1;
   transition: all 1s;
+  visibility: visible;
   &.done{
     opacity: 0;
+    visibility: hidden;
   }
 }
 .loader
@@ -115,8 +118,7 @@ header, section , footer{
   100% { background-color: #23D3FB; }
 }
 
-@for $i from 1 to 5
-{
+@for $i from 1 to 5 {
   @keyframes flip-#{$i} {
   0%, #{$i * 15}% {
     transform: rotate(0);
