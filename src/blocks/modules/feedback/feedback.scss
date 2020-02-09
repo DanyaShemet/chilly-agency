@@ -1,7 +1,7 @@
 /* 06 Feedback */
 .feedback {
   padding: 40px 0;
-  background-image: url("../img/1.jpg");
+  background-image: url("../img/feedbackBg.webp");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -78,6 +78,7 @@
 
     .feedback__name {
       font-weight: 500;
+      margin-bottom: 10px;
     }
 
     span {

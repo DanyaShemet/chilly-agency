@@ -2,7 +2,7 @@
 .team {
   &__text {
     padding: 50px 0;
-    background-image: url("../img/team.jpg");
+    background-image: url("../img/teamBgImage.webp");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -93,14 +93,15 @@
         }
 
         img {
-          max-width: 100%;
-          transition: all .3s;
+          width: 100%;
+          transition: transform .3s;
           overflow: hidden;
-
           &:hover {
             transform: scale(1.06);
           }
+
         }
+
       }
 
 

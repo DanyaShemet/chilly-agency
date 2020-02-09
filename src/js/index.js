@@ -2,11 +2,12 @@
 
 import "./import/modules";
 import $ from "jquery";
-import {aboutInit} from './../blocks/modules/about/about.js'
+import {aboutInit} from '../blocks/modules/about/about.js'
 import {TweenMax, gsap} from "gsap/all"
 import {scrollto} from "%modules%/header/header";
 
 gsap.registerPlugin(TweenMax);
+
 
 $(document).ready(function () {
     aboutInit()

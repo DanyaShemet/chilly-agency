@@ -1,6 +1,6 @@
 /*  08 Blog */
 .blog{
-  background-image: url("../img/blog.jpg");
+  background-image: url("../img/blogBg.webp");
   background-position: center;
   background-size: cover;
   position: relative;
@@ -95,7 +95,7 @@
     }
     &:nth-child(1){
       /*first image of blog*/
-      background-image: url("../img/6.jpg");
+      background-image: url("../img/post1.webp");
       @include xl-block{
         width: 565px;
         height: 565px;
@@ -108,7 +108,7 @@
     }
     &:nth-child(2){
       /*second image of blog*/
-      background-image: url("../img/1.jpg");
+      background-image: url("../img/post2.webp");
       @include lg-block{
         width: 370px;
         height: 370px;
@@ -118,7 +118,7 @@
     }
     &:nth-child(3){
       /*third image of blog*/
-      background-image: url("../img/des1.jpg");
+      background-image: url("../img/post3.webp");
       height: 300px;
       @include lg-block{
         width: 230px;
@@ -128,7 +128,7 @@
     }
     &:nth-child(4){
       /*fourth image of blog*/
-      background-image: url("../img/dev1.jpg");
+      background-image: url("../img/post4.webp");
       @include lg-block{
         width: 260px;
         height: 260px;
@@ -139,7 +139,7 @@
     }
     &:nth-child(5){
       /*fourth image of blog*/
-      background-image: url("../img/team.jpg");
+      background-image: url("../img/post5.webp");
       @include lg-block{
         width: 300px;
       }

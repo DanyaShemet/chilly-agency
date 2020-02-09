@@ -3,6 +3,7 @@ import "velocity-animate/velocity.min"
 import "velocity-animate/velocity.ui.min"
 import Typed from 'typed.js'
 import $ from "jquery";
+import ModalVideo from "modal-video/js/modal-video.min"
 
 let burger = $('.burger-icon');
 let links = $('.header__animate-nav ul li a');
@@ -94,4 +95,7 @@ export function scrollto() {
         return false;
     });
 }
+
+// Video functionality
+new ModalVideo('.open-video');
 

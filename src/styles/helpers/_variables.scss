@@ -1,8 +1,10 @@
 $mainColor:  #13BCDF;
 $secondaryText: #5D5D5D;
 $border: 1px solid rgba(0, 0, 0, .1);
+$errorInput: #FF0000;
+$successInput: #00FA9A;
 
-$duration:  1.5s;
-$container-size: 250px;
-$box-size: 33px;
-$box-border-radius: 15%;
+$preloaderDuration:  1.5s;
+$preloaderSize: 250px;
+$preloaderElementSize: 33px;
+$preloaderElementBorderRadius: 15%;
