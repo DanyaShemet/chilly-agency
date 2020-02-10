@@ -1,28 +1,32 @@
 /* 09 Form */
 
-.section-form{
+.section-form {
   padding: 30px 0 10px 0;
   text-align: center;
   box-shadow: 10px 0 10px black;
   position: relative;
-  @include lg-block{
+  @include lg-block {
     padding: 40px 0 20px 0;
   }
-  h2{
+
+  h2 {
     font-size: 1.5rem;
     margin-bottom: 60px;
   }
-  .form__contact-form{
+
+  .form__contact-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    .form__field{
+
+    .form__field {
       position: relative;
       width: 100%;
-      @include lg-block{
+      @include lg-block {
         width: 60%;
       }
-      input{
+
+      input {
         background: 0 0;
         border: none;
         width: 100%;
@@ -33,37 +37,39 @@
         color: black;
         font-size: .9rem;
         padding: 2px 20px 2px 0;
-        @include lg-block{
+        @include lg-block {
           font-size: 1.1rem;
           padding: 5px 20px 5px 0;
         }
         font-weight: 600;
         outline: none;
-        &:valid{
+
+        &:valid {
           border-color: $successInput;
         }
-        &.invalid{
+
+        &.invalid {
           border-color: $errorInput;
         }
-        //&:invalid{
-        //  border-color: $errorInput;
-        //}
-        &.active{
-          & + label{
+
+        &.active {
+          & + label {
             top: -10px;
             font-size: .7rem;
             color: $mainColor;
           }
         }
-        &:focus{
-          & + label{
+
+        &:focus {
+          & + label {
             top: -10px;
             font-size: .7rem;
             color: $mainColor;
           }
         }
       }
-      label, span{
+
+      label, span {
         position: absolute;
         pointer-events: none;
         display: block;
@@ -71,24 +77,27 @@
         font-weight: 500;
         transition: all ease .3s;
       }
-      label{
+
+      label {
         left: 0;
         top: 0;
         font-size: .9rem;
-        @include lg-block{
+        @include lg-block {
           font-size: 1.1rem;
         }
       }
-      span{
+
+      span {
         right: 0;
         top: 3px;
-        @include lg-block{
+        @include lg-block {
           top: 10px;
         }
         font-size: 0.7rem;
       }
     }
-    button{
+
+    button {
       background-color: $mainColor;
       color: white;
       padding: 8px 50px;
@@ -96,14 +105,15 @@
       transition: all .3s;
       z-index: 10;
       margin-bottom: 10px;
-      @include lg-block{
+      @include lg-block {
         padding: 10px 60px;
       }
-      &:hover{
+
+      &:hover {
         background-color: white;
         color: $mainColor;
         transform: scale(1.05);
-        box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
       }
     }
   }
@@ -134,9 +144,8 @@
 }
 
 .message {
-  margin: auto;
   margin-bottom: 10px;
-  @include lg-block{
+  @include lg-block {
     font-size: 1.2rem;
   }
   font-size: 1rem;
@@ -145,20 +154,21 @@
   opacity: 0;
   height: 30px;
 }
+
 .email-error {
   border-color: $errorInput !important;
 }
 
 
 @keyframes blink {
-   from {
-     opacity: 1;
-   }
-   50% {
-     opacity: 0.5;
-   }
-   to {
-     opacity: 1;
-   }
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
 }
 

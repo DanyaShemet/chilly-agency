@@ -24,6 +24,9 @@
     opacity: .5;
     height: 100%;
   }
+  &__shadow{
+    filter: drop-shadow(10px 20px 10px rgba(255, 255, 255, 0.8));
+  }
   &__logo {
     background-color: rgba(255, 255, 255, .3);
     clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
@@ -39,7 +42,7 @@
     align-items: center;
     justify-content: center;
 
-    & h2 {
+    h2 {
       font-family: Pacifico;
       z-index: 98;
       color: #000;
@@ -60,6 +63,7 @@
     align-items: center;
     position: relative;
     z-index: 100;
+
   }
 
   &__block-text {
@@ -308,7 +312,8 @@
         &:hover a {
           transform: scale(1.15);
         }
-        & a {
+        a {
+
           display: flex;
           justify-content: center;
           align-items: center;
@@ -349,10 +354,13 @@
     justify-content: center;
   }
   nav {
-    width: 58%;
+    width: 70%;
     display: none;
     @include lg-block{
       display: block;
+    }
+    @include xl-block{
+      width: 58%;
     }
     ul{
       display: flex;
@@ -370,6 +378,7 @@
     transition: all .3s;
     font-family: Pacifico;
     font-size: 1rem;
+    user-select: none;
     @include lg-block{
       font-family: Quicksand;
       font-size: 1.2rem;

@@ -5,6 +5,7 @@ import Typed from 'typed.js'
 import $ from "jquery";
 import ModalVideo from "modal-video/js/modal-video.min"
 
+
 let burger = $('.burger-icon');
 let links = $('.header__animate-nav ul li a');
 let menu = $('.header__animate-nav ul li');
@@ -58,7 +59,7 @@ $(window).scroll(function (e) {
     let st = $(this).scrollTop();
     st > 200 ? $('.burger-wrapper').addClass('navShadow') : $('.burger-wrapper').removeClass('navShadow');
     if (document.documentElement.clientWidth >= 1050) {
-        $('#header-wrapper .container').css({"transform": "translate(0%, " + -st / 1.5 + "px"});
+        $('#header .container').css({"transform": "translate(0%, " + -st / 2 + "px"});
     }
 
     let $sections = $('.section');

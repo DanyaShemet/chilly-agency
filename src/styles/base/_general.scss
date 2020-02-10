@@ -32,5 +32,13 @@ button{
     @include xl(max-width, rem(1110));
 }
 
+header, section, footer {
+    max-width: 100%;
+}
+main{
+    overflow: hidden;
+}
+
+
 
 
