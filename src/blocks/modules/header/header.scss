@@ -449,7 +449,6 @@
 
     &.active:after {
       transform: rotate(-135deg);
-      background: #000;
       width: 110%;
       top: 0;
     }
@@ -457,7 +456,6 @@
     &.active:before {
       transform: rotate(135deg);
       top: 0;
-      background: #000;
       width: 110%;
     }
   }
