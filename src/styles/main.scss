@@ -1,4 +1,5 @@
 /*
+Import fonts
 Normalize.css
 Modal-video.css
 Font Awesome
@@ -20,8 +21,9 @@ Owl carousel
 @import "helpers/variables";
 @import "helpers/mixins";
 @import "helpers/functions";
-@import "vendor/libs";
 @import "base/fonts";
+@import "vendor/libs";
+
 @import "base/general";
 @import "base/media";
 @import "base/preloader";

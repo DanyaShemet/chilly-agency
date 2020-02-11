@@ -37,7 +37,7 @@
         justify-content: center;
 
         h2 {
-            font-family: Pacifico, serif;
+            font-family: Pacifico, cursive;
             z-index: 2;
             color: #000;
             font-size: .8rem;
@@ -315,7 +315,7 @@
                     height: 100%;
                     color: #fff;
                     text-transform: uppercase;
-                    font-family: Quicksand, serif;
+                    font-family: Quicksand, sans-serif;
                     font-weight: 700;
                     letter-spacing: 4px;
                     text-align: center;
@@ -371,11 +371,11 @@
     & a {
         color: transparent;
         transition: all .3s;
-        font-family: Pacifico, serif;
+        font-family: Pacifico, cursive;
         font-size: 1rem;
         user-select: none;
         @include lg-block{
-            font-family: Quicksand;
+            font-family: Quicksand, sans-serif;
             font-size: 1.2rem;
             font-weight: 600;
             &:hover{
