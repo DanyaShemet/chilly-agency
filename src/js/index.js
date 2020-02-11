@@ -15,11 +15,19 @@ $(document).ready(function () {
     initialParallax();
     setTimeout(function () {
         let preloader = document.querySelector('#preloader');
-        if(!preloader.classList.contains('done')){
+        if (!preloader.classList.contains('done')) {
             preloader.classList.add('done')
         }
     }, 2000)
+    setCompanyName()
 });
+
+const companyName = 'Chilly Agency';
+function setCompanyName() {
+    $('.company-name').each(function () {
+        $('.company-name').text(companyName)
+    })
+}
 
 // parallax on page functionality
 function initialParallax() {
@@ -56,6 +64,7 @@ function initialParallax() {
         });
     }
 }
+
 function parallaxIt(e, target, movement, parent) {
     let $this = $(parent);
     let relX = e.pageX - $this.offset().left;

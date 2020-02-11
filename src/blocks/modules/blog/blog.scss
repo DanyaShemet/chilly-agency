@@ -1,169 +1,166 @@
 /*  08 Blog */
 .blog{
-  background-image: url("../img/blogBg.webp");
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  background-attachment: fixed;
-  padding: 40px 0;
-  &:after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: $mainColor;
-    opacity: .8;
-  }
-  .container{
-    position: relative;
-    z-index: 1;
-    h2{
-      color: white;
-      font-size: 1.5rem;
-      margin-bottom: 40px;
-      @include lg-block{
-        margin-bottom: 60px;
-      }
-    }
-  }
-  &__items{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-
-  }
-  &__item{
-    width: 100%;
-    background-color: rgba(255,255,255,0.8);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0px;
-    text-align: center;
-    box-shadow: 10px 20px 30px rgba(255,255,255,0.3);
-    transition: all 1s;
+    background-image: url("../img/blogBg.webp");
+    background-position: center;
     background-size: cover;
-    margin-bottom: 1px;
     position: relative;
-    padding: 0 20px;
-    @include lg-block{
-      width: 50%;
-      border-radius: 50%;
-      padding: 0;
-    }
+    background-attachment: fixed;
+    padding-top: 40px;
+    padding-bottom: 40px;
     &:after{
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(255,255,255, 0.7);
-      @include lg-block{
-        border-radius: 50%;
-        background-color: rgba(255,255,255, 0.8);
-      }
+        @include overlay-block();
+        background-color: $primary-color;
+        opacity: .8;
     }
-
-    &:hover{
-      background-position:center;
-      transform: scale(1.05);
-      &:after{
-        background-color: rgba(255,255,255, 0.4);
-      }
-      h4, small{
-        display: none;
-      }
-      a{
+    .container{
+        position: relative;
+        z-index: 1;
+        h2{
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            @include lg-block{
+                margin-bottom: 60px;
+            }
+        }
+    }
+    &__items{
         display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    &__item{
+        width: 100%;
+        background-color: rgba(255,255,255,0.8);
+        display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
+        border-radius: 0;
+        text-align: center;
+        box-shadow: 10px 20px 30px rgba(255,255,255,0.3);
+        transition: all 1s;
+        background-size: cover;
+        margin-bottom: 1px;
+        position: relative;
+        padding-left: 20px;
+        padding-right: 20px;
         @include lg-block{
-          height: 100%;
-          width: 100%;
-          font-size: 1.2rem;
+            width: 50%;
+            border-radius: 50%;
+            padding: 0;
         }
-        color: black;
-        font-size: 1.8rem;
-        font-weight: 700;
-        margin-bottom: 0px;
-      }
-    }
-    &:nth-child(1){
-      /*first image of blog*/
-      background-image: url("../img/post1.webp");
-      @include xl-block{
-        width: 565px;
-        height: 565px;
-      }
-      @include lg-block{
-        width: 450px;
-        height: 450px;
-      }
-      height: 300px;
-    }
-    &:nth-child(2){
-      /*second image of blog*/
-      background-image: url("../img/post2.webp");
-      @include lg-block{
-        width: 370px;
-        height: 370px;
-      }
-      height: 300px;
+        &:after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255,255,255, 0.7);
+            @include lg-block{
+                border-radius: 50%;
+                background-color: rgba(255,255,255, 0.8);
+            }
+        }
 
-    }
-    &:nth-child(3){
-      /*third image of blog*/
-      background-image: url("../img/post3.webp");
-      height: 300px;
-      @include lg-block{
-        width: 230px;
-        height: 230px;
-      }
+        &:hover{
+            background-position:center;
+            transform: scale(1.05);
+            &:after{
+                background-color: rgba(255,255,255, 0.4);
+            }
+            h4, small{
+                display: none;
+            }
+            a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include lg-block{
+                    height: 100%;
+                    width: 100%;
+                    font-size: 1.2rem;
+                }
+                color: #000;
+                font-size: 1.8rem;
+                font-weight: 700;
+                margin-bottom: 0;
+            }
+        }
+        &:nth-child(1){
+            /*first image of blog*/
+            background-image: url("../img/post1.webp");
+            @include xl-block{
+                width: 565px;
+                height: 565px;
+            }
+            @include lg-block{
+                width: 450px;
+                height: 450px;
+            }
+            height: 300px;
+        }
+        &:nth-child(2){
+            /*second image of blog*/
+            background-image: url("../img/post2.webp");
+            @include lg-block{
+                width: 370px;
+                height: 370px;
+            }
+            height: 300px;
 
-    }
-    &:nth-child(4){
-      /*fourth image of blog*/
-      background-image: url("../img/post4.webp");
-      @include lg-block{
-        width: 260px;
-        height: 260px;
-        margin-top: -30px;
-      }
-      height: 300px;
+        }
+        &:nth-child(3){
+            /*third image of blog*/
+            background-image: url("../img/post3.webp");
+            height: 300px;
+            @include lg-block{
+                width: 230px;
+                height: 230px;
+            }
 
+        }
+        &:nth-child(4){
+            /*fourth image of blog*/
+            background-image: url("../img/post4.webp");
+            @include lg-block{
+                width: 260px;
+                height: 260px;
+                margin-top: -30px;
+            }
+            height: 300px;
+
+        }
+        &:nth-child(5){
+            /*fourth image of blog*/
+            background-image: url("../img/post5.webp");
+            @include lg-block{
+                width: 300px;
+            }
+            height: 300px;
+        }
+        h4{
+            font-size: 1.6rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            z-index: 1;
+            @include lg-block{
+                font-size: 1.2rem;
+            }
+        }
+        a{
+            display: none;
+            z-index: 1;
+            transition: all .4s;
+        }
+        small{
+            color: $secondary-text-color;
+            z-index: 1;
+            font-weight: 600;
+        }
     }
-    &:nth-child(5){
-      /*fourth image of blog*/
-      background-image: url("../img/post5.webp");
-      @include lg-block{
-        width: 300px;
-      }
-      height: 300px;
-    }
-    h4{
-      font-size: 1.6rem;
-      font-weight: 500;
-      margin-bottom: 20px;
-      z-index: 1;
-      @include lg-block{
-        font-size: 1.2rem;
-      }
-    }
-    a{
-      display: none;
-      z-index: 1;
-      transition: all .4s;
-    }
-    small{
-      color: $secondaryText;
-      z-index: 1;
-      font-weight: 600;
-    }
-  }
 }
 

@@ -1,117 +1,119 @@
 /* 03 Services */
 
 .services{
-  background-image: linear-gradient( 100deg, #13CADF , #13CADF 80%, #1396E2);
-  position: relative;
-  padding: 60px 0;
-  overflow: hidden;
-  h2{
-    margin-bottom: 40px;
-    font-size: 1.5rem;
-    span{
-      color: #fff
+    background-image: linear-gradient( 100deg, #13CADF , #13CADF 80%, #1396E2);
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    overflow: hidden;
+    h2{
+        margin-bottom: 40px;
+        font-size: 1.5rem;
+        span{
+            color: #fff
+        }
     }
-  }
-  &__items{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  &__item-shadow-wrapper{
-    box-sizing: border-box;
-    z-index: 99;
-     @include size-xl(4);
-     @include size-lg(6);
-     @include size-xs(12);
+    &__items{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__item-shadow-wrapper{
+        box-sizing: border-box;
+        z-index: 2;
+        @include size-xl(4);
+        @include size-lg(6);
+        @include size-xs(12);
 
 
-    @include xl-block{
-      &:nth-child(odd){
-        padding: 10px;
-      }
-      &:nth-child(even){
-        padding: 10px;
-      }
-      &:first-child{
-        padding-left: 0;
-      }
-      &:nth-child(4){
-        padding-left:  0;
-      }
-      &:last-child{
-        padding-right: 0;
-      }
-      &:nth-child(3){
-        padding-right: 0;
-      }
-    }
+        @include xl-block{
+            &:nth-child(odd){
+                padding: 10px;
+            }
+            &:nth-child(even){
+                padding: 10px;
+            }
+            &:first-child{
+                padding-left: 0;
+            }
+            &:nth-child(4){
+                padding-left:  0;
+            }
+            &:last-child{
+                padding-right: 0;
+            }
+            &:nth-child(3){
+                padding-right: 0;
+            }
+        }
 
-    @include lg-block{
-      &:nth-child(odd){
-        padding-left: 0;
-        padding-right: 10px;
-      }
-      &:nth-child(even){
-        padding-left: 10px;
-        padding-right: 0;
-      }
+        @include lg-block{
+            &:nth-child(odd){
+                padding-left: 0;
+                padding-right: 10px;
+            }
+            &:nth-child(even){
+                padding-left: 10px;
+                padding-right: 0;
+            }
+        }
+        @include xs-block{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
     }
-    @include xs-block{
-      padding: 10px 0;
-    }
-  }
-  &__item{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 300px;
-    background-color: rgba(255,255,255, 0.2);
-    @include xl-block{
-      height: 350px;
-      margin-bottom: 0;
+    &__item{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 300px;
+        background-color: rgba(255,255,255, 0.2);
+        @include xl-block{
+            height: 350px;
+            margin-bottom: 0;
 
+        }
+        box-shadow: 10px 10px 20px rgba(255, 255, 255, .4);
+        transition: all .5s;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.01);
+            background-color: rgba(255,255,255, 0.4);
+        }
+        p {
+            width: 70%;
+            margin: 0 auto;
+            color: $secondary-text-color;
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+        .icon{
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+        }
+        h3{
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
     }
-    box-shadow: 10px 10px 20px rgba(255, 255, 255, .4);
-    transition: all .5s;
-    cursor: pointer;
-    &:hover{
-      transform: scale(1.01);
-      background-color: rgba(255,255,255, 0.4);
+    &__figures{
+        @include figures();
+        display: none;
+        @include xl-block{
+            display: block;
+        }
     }
-    p {
-      width: 70%;
-      margin: 0 auto;
-      color: $secondaryText;
-      font-size: 1.1rem;
-      line-height: 1.4rem;
+    .pentagon-1{
+        width: 800px;
+        height: 800px;
+        top: 15%;
+        left: -25%;
     }
-    .icon{
-      font-size: 40px;
-      margin-bottom: 40px;
+    .pentagon-2{
+        width: 200px;
+        height: 200px;
+        top: 15%;
+        left: 10%;
     }
-    h3{
-      font-size: 1.6rem;
-      margin-bottom: 20px;
-    }
-  }
-  &__figures{
-    position: absolute;
-    display: none;
-    @include xl-block{
-      display: block;
-    }
-  }
-  .pentagon-1{
-    width: 800px;
-    height: 800px;
-    top: 15%;
-    left: -25%;
-  }
-  .pentagon-2{
-    width: 200px;
-    height: 200px;
-    top: 15%;
-    left: 10%;
-  }
 }

@@ -1,5 +1,41 @@
 @mixin button-starter(){
-  border: none;
-  outline: none;
-  cursor: pointer;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+@mixin figures(){
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+}
+
+@mixin about-number-vertical-line{
+    content: '';
+    display: block;
+    position: absolute;
+    background: $primary-color;
+    width: 1px;
+    height: 0;
+    transition: all .3s;
+    z-index: 5;
+}
+
+@mixin about-number-horizon-line{
+    content: '';
+    display: block;
+    position: absolute;
+    background: $primary-color;
+    height: 1px;
+    width: 0;
+    transition: all .3s;
+}
+
+@mixin overlay-block{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
 }

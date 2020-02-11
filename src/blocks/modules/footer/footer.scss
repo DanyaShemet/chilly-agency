@@ -1,14 +1,17 @@
 /* 11 Footer */
 .footer {
-  height: 40vh;
-  padding: 0;
+  height: 50vh;
+  padding-top: 0;
+  padding-bottom: 0;
   position: relative;
   background-image: linear-gradient( 100deg, #006D8F , #23A4CC 80%, #1396E2);
- // background-color: #006D8F;
   overflow: hidden;
   @include lg-block {
-    padding: 30px 0 20px 0;
-    height: 30vh;
+    height: 40vh;
+    padding-top: 30px;
+    padding-right: 0;
+    padding-bottom: 20px;
+    padding-left: 0;
   }
   .container {
     height: inherit;
@@ -23,10 +26,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    filter: drop-shadow(10px 10px 5px rgba(255, 255, 255, 0.5));
+    flex-direction: column;
     @include lg-block{
-      align-items: flex-start;
-      justify-content: flex-start;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer__shadow{
+      @include size-lg(4);
+      filter: drop-shadow(10px 10px 5px rgba(255, 255, 255, 0.5));
+
     }
     .footer__logo--trapezoid {
       background-color: rgba(255, 255, 255, .3);
@@ -35,6 +44,7 @@
       width: 60px;
       display: flex;
       align-items: center;
+      margin-bottom: 20px;
       justify-content: center;
       @include lg-block{
         height: 80px;
@@ -52,7 +62,26 @@
         }
       }
     }
-
+    .footer__nav{
+      @include size-lg(8);
+      @include size-xs(12);
+      ul{
+        display: flex;
+        justify-content: space-between;
+        li a{
+          font-weight: 500;
+          font-size: .9rem;
+          color: #fff;
+          transition: all .3s;
+          @include lg-block{
+            font-size: 1.2rem;
+          }
+          &:hover{
+            color: $primary-color
+          }
+        }
+      }
+    }
   }
 
   &__bottom {
@@ -80,28 +109,28 @@
         display: flex;
         justify-content: space-between;
         li a {
-          color: white;
+          color: #fff;
           font-size: 1.2rem;
           transition: all .3s;
           @include lg-block {
             font-size: 1.5rem;
           }
           &:hover {
-            color: $mainColor;
+            color: $primary-color;
           }
         }
       }
     }
     .footer__address {
       @include lg-block {
-        margin-bottom: 0px;
+        margin-bottom: 0
       }
       margin-bottom: 20px;
       p, a {
-        color: white;
+        color: #fff;
         font-weight: 500;
         text-align: center;
-        font-size: 1.1rem;
+        font-size: .9rem;
         @include lg-block {
           text-align: left;
           font-size: 1.3rem;
@@ -112,8 +141,9 @@
       }
       a {
         transition: all .3s;
+        z-index: 10000;
         &:hover {
-          color: $mainColor
+          color: $primary-color
         }
       }
     }
@@ -122,7 +152,7 @@
   &__copyright {
     text-align: center;
     font-weight: 400;
-    color: white;
+    color: #fff;
     font-size: .6rem;
     @include lg-block{
       font-size: .8rem;
@@ -130,11 +160,7 @@
   }
 
   &__figure{
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
+    @include figures();
     &.footer-trapezoid{
       width: 30px;
       right: 10%;

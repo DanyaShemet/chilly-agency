@@ -10,7 +10,7 @@
   top: 0;
   left: 0;
   z-index: 100000;
-  background-color: white;
+  background-color: #fff;
   opacity: 1;
   transition: all 1.5s;
   visibility: visible;
@@ -20,19 +20,19 @@
     visibility: hidden;
   }
   .loader {
-    width: $preloaderSize;
+    width: $preloader-size;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
   }
   .preloader__element {
-    width: $preloaderElementSize;
-    height: $preloaderElementSize;
+    width: $preloader-element-size;
+    height: $preloader-element-size;
     position: relative;
     display: block;
     transform-origin: -50% center;
-    border-radius: $preloaderElementBorderRadius;
+    border-radius: $preloader-element-border-radius;
 
     &:after {
       content: '';
@@ -41,25 +41,25 @@
       position: absolute;
       top: 0;
       right: 0;
-      background-color: $mainColor;
-      border-radius: $preloaderElementBorderRadius;
+      background-color: $primary-color;
+      border-radius: $preloader-element-border-radius;
       box-shadow: 0px 0px 10px 0px rgba(#1C9FFF, 0.4);
     }
 
     &:nth-child(1) {
-      animation: slide $preloaderDuration ease-in-out infinite alternate;
+      animation: slide $preloader-duration ease-in-out infinite alternate;
 
       &:after {
-        animation: color-change $preloaderDuration ease-in-out infinite alternate;
+        animation: color-change $preloader-duration ease-in-out infinite alternate;
       }
     }
 
     @for $i from 1 to 5 {
       &:nth-child(#{$i + 1}) {
-        animation: flip-#{$i} $preloaderDuration ease-in-out infinite alternate;
+        animation: flip-#{$i} $preloader-duration ease-in-out infinite alternate;
 
         &:after {
-          animation: squidge-#{$i} $preloaderDuration ease-in-out infinite alternate;
+          animation: squidge-#{$i} $preloader-duration ease-in-out infinite alternate;
         }
       }
     }
@@ -92,7 +92,7 @@
     background-color: #23D3FB;
   }
   100% {
-    transform: translatex($preloaderSize - ($preloaderElementSize * 1.25));
+    transform: translatex($preloader-size - ($preloader-element-size * 1.25));
   }
 }
 

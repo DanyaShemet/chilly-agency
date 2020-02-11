@@ -58,10 +58,7 @@ function hideMenu() {
 $(window).scroll(function (e) {
     let st = $(this).scrollTop();
     st > 200 ? $('.burger-wrapper').addClass('navShadow') : $('.burger-wrapper').removeClass('navShadow');
-    if (document.documentElement.clientWidth >= 1050) {
-        $('#header .container').css({"transform": "translate(0%, " + -st / 2 + "px"});
-    }
-
+    
     let $sections = $('.section');
     $sections.each(function(i,el){
         let top  = $(el).offset().top-90;
