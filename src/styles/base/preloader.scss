@@ -19,69 +19,71 @@
     opacity: 0;
     visibility: hidden;
   }
-  .loader {
-    width: $preloader-size;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-  }
-  .preloader__element {
-    width: $preloader-element-size;
-    height: $preloader-element-size;
-    position: relative;
-    display: block;
-    transform-origin: -50% center;
+}
+
+.loader {
+  width: $preloader-size;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.preloader__element {
+  width: $preloader-element-size;
+  height: $preloader-element-size;
+  position: relative;
+  display: block;
+  transform-origin: -50% center;
+  border-radius: $preloader-element-border-radius;
+
+  &:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $primary-color;
     border-radius: $preloader-element-border-radius;
+    box-shadow: 0px 0px 10px 0px rgba(#1C9FFF, 0.4);
+  }
+
+  &:nth-child(1) {
+    animation: slide $preloader-duration ease-in-out infinite alternate;
 
     &:after {
-      content: '';
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      right: 0;
-      background-color: $primary-color;
-      border-radius: $preloader-element-border-radius;
-      box-shadow: 0px 0px 10px 0px rgba(#1C9FFF, 0.4);
-    }
-
-    &:nth-child(1) {
-      animation: slide $preloader-duration ease-in-out infinite alternate;
-
-      &:after {
-        animation: color-change $preloader-duration ease-in-out infinite alternate;
-      }
-    }
-
-    @for $i from 1 to 5 {
-      &:nth-child(#{$i + 1}) {
-        animation: flip-#{$i} $preloader-duration ease-in-out infinite alternate;
-
-        &:after {
-          animation: squidge-#{$i} $preloader-duration ease-in-out infinite alternate;
-        }
-      }
-    }
-
-    &:nth-child(2):after {
-      background-color: #1C9FFF;
-    }
-
-    &:nth-child(3):after {
-      background-color: #1FB1FD;
-    }
-
-    &:nth-child(4):after {
-      background-color: #22C7FB;
-    }
-
-    &:nth-child(5):after {
-      background-color: #23D3FB;
+      animation: color-change $preloader-duration ease-in-out infinite alternate;
     }
   }
 
+  @for $i from 1 to 5 {
+    &:nth-child(#{$i + 1}) {
+      animation: flip-#{$i} $preloader-duration ease-in-out infinite alternate;
+
+      &:after {
+        animation: squidge-#{$i} $preloader-duration ease-in-out infinite alternate;
+      }
+    }
+  }
+
+  &:nth-child(2):after {
+    background-color: #1C9FFF;
+  }
+
+  &:nth-child(3):after {
+    background-color: #1FB1FD;
+  }
+
+  &:nth-child(4):after {
+    background-color: #22C7FB;
+  }
+
+  &:nth-child(5):after {
+    background-color: #23D3FB;
+  }
 }
+
 
 @keyframes slide {
   0% {

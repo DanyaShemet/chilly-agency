@@ -9,7 +9,7 @@ import ModalVideo from "modal-video/js/modal-video.min"
 let burger = $('.burger-icon');
 let links = $('.header__animate-nav ul li a');
 let menu = $('.header__animate-nav ul li');
-let overlay_navigation = $('.header__overlay-navigation');
+let overlay_navigation = $('.header__navigation-overlay');
 
 // Burger menu functionality
 burger.click(showMenu)
@@ -33,11 +33,11 @@ function showMenu() {
                 burger.css('pointer-events', 'auto')
             }
         })
-
     } else {
         hideMenu()
     }
 }
+
 function hideMenu() {
     burger.removeClass('active')
     burger.css('pointer-events', 'none')
@@ -58,24 +58,23 @@ function hideMenu() {
 $(window).scroll(function (e) {
     let st = $(this).scrollTop();
     st > 200 ? $('.burger-wrapper').addClass('navShadow') : $('.burger-wrapper').removeClass('navShadow');
-    
+
     let $sections = $('.section');
-    $sections.each(function(i,el){
-        let top  = $(el).offset().top-90;
-        let bottom = top +$(el).height();
+    $sections.each(function (i, el) {
+        let top = $(el).offset().top - 90;
+        let bottom = top + $(el).height();
         let scroll = $(window).scrollTop();
         let id = $(el).attr('id');
-        if( scroll > top && scroll < bottom){
+        if (scroll > top && scroll < bottom) {
             $('a.active').removeClass('active');
-            $('a[href="#'+id+'"]').addClass('active');
+            $('a[href="#' + id + '"]').addClass('active');
         }
-
     })
 });
 
 // Type machine Functionality
 let options = {
-    strings: ['development', 'marketing', 'adviser', 'design' ],
+    strings: ['Chilly Agency', 'Developers', 'Designers', 'Strategists', 'Marketers'],
     typeSpeed: 40,
     showCursor: false,
     loop: true,
@@ -89,7 +88,7 @@ export function scrollto() {
     $(".scrollto").click(function () {
         let elementClick = $(this).attr("href")
         let destination = $(elementClick).offset().top;
-        jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination-80}, 1500);
+        jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination - 80}, 1500);
         return false;
     });
 }

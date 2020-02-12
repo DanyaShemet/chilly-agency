@@ -10,15 +10,15 @@ gsap.registerPlugin(TweenMax);
 
 
 $(document).ready(function () {
-    aboutInit()
-    scrollto()
+    aboutInit();
+    scrollto();
     initialParallax();
     setTimeout(function () {
         let preloader = document.querySelector('#preloader');
         if (!preloader.classList.contains('done')) {
             preloader.classList.add('done')
         }
-    }, 2000)
+    }, 2000);
     setCompanyName()
 });
 
