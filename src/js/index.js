@@ -14,18 +14,19 @@ $(document).ready(function () {
     scrollto();
     initialParallax();
     setTimeout(function () {
-        let preloader = document.querySelector('#preloader');
-        if (!preloader.classList.contains('done')) {
-            preloader.classList.add('done')
+        let preloader = $('#preloader');
+        if (!preloader.hasClass('done')) {
+            preloader.addClass('done');
         }
     }, 2000);
     setCompanyName()
 });
 
 const companyName = 'Chilly Agency';
+
 function setCompanyName() {
     $('.company-name').each(function () {
-        $('.company-name').text(companyName)
+        $(this).text(companyName)
     })
 }
 

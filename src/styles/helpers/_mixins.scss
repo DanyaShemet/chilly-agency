@@ -39,3 +39,7 @@
     right: 0;
     height: 100%;
 }
+
+@mixin hover-links(){
+    color: $primary-color;
+}

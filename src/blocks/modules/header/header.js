@@ -16,11 +16,11 @@ burger.click(showMenu)
 links.click(hideMenu);
 
 function showMenu() {
-    menu.css('flex-basis', `calc(100%/ ${menu.length})`)
+    menu.css('flex-basis', `calc(100%/ ${menu.length})`);
     overlay_navigation.toggleClass('overlay-active');
     $("body").addClass("fixed");
     if (overlay_navigation.hasClass('overlay-active')) {
-        burger.css('pointer-events', 'none')
+        burger.css('pointer-events', 'none');
         burger.addClass('active');
         overlay_navigation.velocity('transition.slideLeftIn', {
             begin: function () {
@@ -39,8 +39,8 @@ function showMenu() {
 }
 
 function hideMenu() {
-    burger.removeClass('active')
-    burger.css('pointer-events', 'none')
+    burger.removeClass('active');
+    burger.css('pointer-events', 'none');
     overlay_navigation.removeClass('overlay-active');
     $("body").removeClass("fixed");
     menu.velocity('transition.perspectiveRightOut', {
@@ -86,7 +86,7 @@ let typed = new Typed('#main-text', options);
 // scroll to chosen block on page functionality
 export function scrollto() {
     $(".scrollto").click(function () {
-        let elementClick = $(this).attr("href")
+        let elementClick = $(this).attr("href");
         let destination = $(elementClick).offset().top;
         jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination - 80}, 1500);
         return false;

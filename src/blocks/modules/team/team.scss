@@ -134,7 +134,7 @@
                 transition: all .5s;
 
                 &:hover {
-                    color: $primary-color;
+                    @include hover-links()
                 }
             }
 
@@ -239,7 +239,7 @@
                 margin-right: 3px;
                 transition: all .5s;
                 &:hover {
-                    color: $primary-color
+                    @include hover-links()
                 }
             }
         }

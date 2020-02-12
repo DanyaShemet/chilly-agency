@@ -5,7 +5,7 @@ import ScrollMagic from 'scrollmagic'
 // animate numbers functionality
 
 function animateCount() {
-    $('.js-count').each(function () {
+    $('.about__animated-numbers').each(function () {
         const _this = $(this)
         _this.prop('Counter', 0).animate({
             Counter: _this.data('count')

@@ -31,14 +31,6 @@ const requireDir = require("require-dir"),
                 "./src/js/**/*.js"
             ]
         },
-        // images: {
-        //     src: [
-        //         "./src/img/**/*.{jpg,jpeg,png,gif,tiff,svg}",
-        //         "!./src/img/favicon/*.{jpg,jpeg,png,gif,tiff}"
-        //     ],
-        //     dist: "./dist/img/",
-        //     watch: "./src/img/**/*.{jpg,jpeg,png,gif,svg,tiff}"
-        // },
         php:{
             src: "./src/phpmailer/*.php",
             dist: "./dist/phpmailer/",
