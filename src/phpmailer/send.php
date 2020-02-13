@@ -18,7 +18,7 @@ try {
     $mail->CharSet = "UTF-8";
     $mail->SMTPAuth   = true;
 
-    // Настройки вашей почты
+
     $mail->Host       = 'smtp.gmail.com'; // SMTP server
     $mail->Username   = 'shemetwork@gmail.com'; // Login email
     $mail->Password   = 'chicipici1234'; //Email Password
@@ -38,7 +38,6 @@ try {
     <b>Message:</b><br>$text";
 
 
-    // Проверяем отравленность сообщения
     if ($mail->send()) {
         echo "$msg";
     } else {

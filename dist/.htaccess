@@ -75,6 +75,7 @@ AddType text/vtt .vtt
         AddOutputFilterByType DEFLATE application/x-javascript
         AddOutputFilterByType DEFLATE application/x-httpd-php
         AddOutputFilterByType DEFLATE application/x-httpd-fastphp
+
         AddOutputFilterByType DEFLATE application/atom+xml
         AddOutputFilterByType DEFLATE application/json
         AddOutputFilterByType DEFLATE application/ld+json
