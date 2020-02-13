@@ -48,13 +48,37 @@ $(function () {
         $('input').removeClass('email-error');
         loadingAnimation.play();
         e.preventDefault();
-        $.ajax({
-            url: 'phpmailer/send.php',
-            type: 'POST',
-            contentType: false,
-            processData: false,
-            data: new FormData(this),
-            success: function (message) {
+        // $.ajax({
+        //     url: 'phpmailer/send.php',
+        //     type: 'POST',
+        //     contentType: false,
+        //     processData: false,
+        //     data: new FormData(this),
+        //     success: function (message) {
+        //         if (message === 'ok') {
+        //             $('#form').trigger('reset')
+        //             $('input').removeClass('active');
+        //             for (let i = 0; i < formInput.length; i++) {
+        //                 counter[i].innerHTML = counter[i].dataset.counter - formInput[i].value.length
+        //             }
+        //             $('.message').text('Message sent successfully, we will answer you soon').addClass('success');
+        //             showMessage.restart();
+        //             loadingAnimation.duration(0.3).reverse();
+        //         } else {
+        //             if (message === 'mailerror') {
+        //                 $("#email").addClass('email-error');
+        //             }
+        //             $('.message').text('Error, check the entered data').addClass('error');
+        //             showMessage.restart();
+        //             loadingAnimation.duration(0.3).reverse();
+        //         }
+        //     }
+        // });
+
+        $.post(
+            'phpmailer/send.php', // адрес обработчика
+            $('#form').serialize(), // отправляемые данные
+            function (message) {
                 if (message === 'ok') {
                     $('#form').trigger('reset')
                     $('input').removeClass('active');
@@ -73,7 +97,8 @@ $(function () {
                     loadingAnimation.duration(0.3).reverse();
                 }
             }
-        });
+        );
+
     });
 });
 
