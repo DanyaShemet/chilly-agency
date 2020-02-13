@@ -79,7 +79,10 @@
         @include size-xl(4);
         @include size-lg(6);
         @include size-xs(12);
-        height: 250px;
+        height: 350px;
+        @include lg-block{
+            height: 250px;
+        }
         transition: transform .5s;
         img{
             width: 100%;
@@ -99,7 +102,7 @@
             position: absolute;
             left: 0;
             opacity: 0;
-            top: 20%;
+            top: 30%;
             @include lg-block{
                 top: 25%;
             }
