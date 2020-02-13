@@ -1,6 +1,7 @@
-<?php echo '123'; die();?>
+
 
 <!DOCTYPE html>
+<?php echo '123'; die();?>
 <html lang="zxx">
 <head>
     <meta charset="utf-8">
