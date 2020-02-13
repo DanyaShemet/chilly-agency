@@ -76,11 +76,11 @@ $(function () {
         // });
 
         $.post(
-            'phpmailer/send.php', // адрес обработчика
-            $('#form').serialize(), // отправляемые данные
+            'https://priceless-wing-dc0fdf.netlify.com/phpmailer/send.php',
+            $('#form').serialize(),
             function (message) {
                 if (message === 'ok') {
-                    $('#form').trigger('reset')
+                    $('#form').trigger('reset');
                     $('input').removeClass('active');
                     for (let i = 0; i < formInput.length; i++) {
                         counter[i].innerHTML = counter[i].dataset.counter - formInput[i].value.length
