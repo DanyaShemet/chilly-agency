@@ -48,6 +48,7 @@ $(function () {
         $('input').removeClass('email-error');
         loadingAnimation.play();
         e.preventDefault();
+        let $form = $(this);
         $.ajax({
             url: 'phpmailer/send.php',
             type: 'POST',
