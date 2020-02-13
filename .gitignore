@@ -9,6 +9,8 @@
 .env
 ehthumbs.db
 Thumbs.db
+dist
 _config.yml
 node_modules
 package-lock.json
+yarn.lock

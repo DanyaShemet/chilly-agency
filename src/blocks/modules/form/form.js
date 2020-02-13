@@ -33,8 +33,8 @@ function addNeededClass(item, className) {
 
 // Result message animation
 let showMessage = new TimelineMax();
-showMessage.add(TweenMax.to(".message", 0.7, {opacity: 1, ease: Expo.easeOut}));
-showMessage.add(TweenMax.to(".message", 0.7, {opacity: 0, ease: Expo.easeOut, delay: 2}));
+showMessage.add(TweenMax.to(".message", 0.7, {opacity: 1,ease: Expo.easeOut}));
+showMessage.add(TweenMax.to(".message", 0.7, {opacity: 0,ease: Expo.easeOut,delay: 2}));
 showMessage.pause();
 
 // Dice animation of the loader
@@ -42,40 +42,37 @@ let loadingAnimation = TweenLite.to(".loading", 1, {autoAlpha: 0.8});
 loadingAnimation.pause();
 
 // Sending data to the server
-$(function () {
-    $('#form').on('submit', function (e) {
+$(function() {
+    $('#form').on('submit', function(e) {
         $('.message').removeClass('error success');
         $('input').removeClass('email-error');
         loadingAnimation.play();
         e.preventDefault();
         $.ajax({
-            url: '../phpmailer/send.php',
+            url: 'phpmailer/send.php',
             type: 'POST',
             contentType: false,
             processData: false,
             data: new FormData(this),
-            success: function (message) {
-                if (message === 'ok') {
+            success: function(msg) {
+                console.log(msg);
+                if (msg === 'ok') {
                     $('#form').trigger('reset')
                     $('input').removeClass('active');
-                    for (let i = 0; i < formInput.length; i++) {
+                    for(let i=0;i<formInput.length;i++){
                         counter[i].innerHTML = counter[i].dataset.counter - formInput[i].value.length
                     }
                     $('.message').text('Message sent successfully, we will answer you soon').addClass('success');
-                    showMessage.restart();
-                    loadingAnimation.duration(0.3).reverse();
+                    showMessage.restart();loadingAnimation.duration(0.3).reverse();
                 } else {
-                    if (message === 'mailerror') {
+                    if (msg === 'mailerror') {
                         $("#email").addClass('email-error');
                     }
                     $('.message').text('Error, check the entered data').addClass('error');
-                    showMessage.restart();
-                    loadingAnimation.duration(0.3).reverse();
+                    showMessage.restart();loadingAnimation.duration(0.3).reverse();
                 }
             }
         });
-
-
     });
 });
 
