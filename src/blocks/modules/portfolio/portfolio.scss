@@ -81,7 +81,7 @@
         @include size-xs(12);
         height: 350px;
         @include lg-block{
-            height: 251px;
+            height: 250px;
         }
         transition: transform .5s;
         img{
