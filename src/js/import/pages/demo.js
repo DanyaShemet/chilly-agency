@@ -1,17 +1,11 @@
-"use strict"
-
-import "./import/modules";
+import "%modules%/demo/header/header";
 import $ from "jquery";
-import {aboutInit} from '../blocks/modules/landing-01/about/about.js'
 import {TweenMax, gsap} from "gsap/all"
-import {scrollto} from "%modules%/landing-01/header/header";
 
 gsap.registerPlugin(TweenMax);
 
 
 $(document).ready(function () {
-    aboutInit();
-    scrollto();
     initialParallax();
     setTimeout(function () {
         let preloader = $('#preloader');
@@ -41,21 +35,7 @@ function initialParallax() {
             parallaxIt(e, ".h-trapezoid-1", -5, '#header');
             parallaxIt(e, ".repeat-grid-circles", 20, '#header');
         });
-        $('#about').mousemove(function (e) {
-            parallaxIt(e, ".repeat-circles", 30, '#about');
-        });
-        $('#services').mousemove(function (e) {
-            parallaxIt(e, ".pentagon-1", 30, '#services');
-            parallaxIt(e, ".pentagon-2", -30, '#services');
-        });
-        $('#feedback').mousemove(function (e) {
-            parallaxIt(e, ".feedback-circle-1", 10, '#feedback');
-            parallaxIt(e, ".feedback-circle-2", -5, '#feedback');
-            parallaxIt(e, ".feedback-circle-3", 20, '#feedback');
-            parallaxIt(e, ".feedback-circle-4", -20, '#feedback');
-            parallaxIt(e, ".feedback-circle-5", 5, '#feedback');
-            parallaxIt(e, ".feedback-circle-6", -10, '#feedback');
-        });
+
         $('#footer').mousemove(function (e) {
             parallaxIt(e, ".footer-circle-1", 10, '#footer');
             parallaxIt(e, ".footer-circle-2", -5, '#footer');
@@ -75,9 +55,4 @@ function parallaxIt(e, target, movement, parent) {
         y: (relY - $this.height() / 2) / $this.height() * movement
     });
 }
-
-
-
-
-
 
