@@ -21,7 +21,7 @@ try {
 
     $mail->Host       = 'smtp.gmail.com'; // SMTP server
     $mail->Username   = 'shemetwork@gmail.com'; // Login email
-    $mail->Password   = 'chicipici1234'; //Email Password
+    $mail->Password   = 'w1AAC%8cP6ClXFP58TqT8nqI'; //Email Password
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
     $mail->setFrom('shemetwork@gmail.com', 'Request from site'); // Mail address
@@ -41,13 +41,13 @@ try {
     if ($mail->send()) {
         echo "$msg";
     } else {
-    echo "Message has not been sent. Your email settings are incorrect";
+    echo "Message has not been sent. Your email settings are incorrect {$mail->ErrorInfo}";
     }
 
-    } catch (Exception $e) {
-        echo "Message has not been sent. Cause of error: {$mail->ErrorInfo}";
-    }
+} catch (Exception $e) {
+    echo "Message has not been sent. Cause of error: {$mail->ErrorInfo}";
+}
 
-    } else {
-        echo 'mailerror';
-    }
+} else {
+    echo 'mailerror';
+}

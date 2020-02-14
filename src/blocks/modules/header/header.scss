@@ -2,7 +2,7 @@
 
 /* Main styles for header */
 .header {
-  overflow-x: hidden;
+  overflow: hidden;
   background-image: url("../img/headerMainImage.webp");
   background-position: center;
   background-size: cover;
@@ -384,6 +384,7 @@
   }
 
   nav {
+    pointer-events: none;
     width: 95%;
     display: none;
     @include lg-block {
@@ -432,6 +433,7 @@
     }
 
     nav {
+      pointer-events: auto;
       a.active {
         @include hover-links()
       }
