@@ -47,6 +47,7 @@ $(function() {
         $('.message').removeClass('error success');
         $('input').removeClass('email-error');
         loadingAnimation.play();
+        $("#email").trim();
         e.preventDefault();
         $.ajax({
             url: 'phpmailer/send.php',
