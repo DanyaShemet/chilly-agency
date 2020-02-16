@@ -3,9 +3,20 @@
 /* Main styles for header */
 .header {
   overflow: hidden;
-  background-color: $primary-color-landing-2;
+  background-image: url("../img/headerMainImage.webp");
+  background-position: center;
+  background-size: cover;
   position: relative;
   height: 100vh;
+  @include lg-block {
+    background-attachment: fixed;
+  }
+
+  &:after {
+    @include overlay-block();
+    background-color: #000;
+    opacity: .5;
+  }
 
   &__shadow {
     filter: drop-shadow(10px 20px 10px rgba(255, 255, 255, 0.8));
@@ -62,7 +73,7 @@
     }
 
     h1 {
-      color: #fff;
+      color: $primary-color;
       font-size: 1.9rem;
       margin-bottom: 20px;
       @include lg-block {
@@ -79,9 +90,9 @@
       color: #DCDCDC;
       font-size: .9rem;
       line-height: 1.1;
-      font-weight: 500;
+      font-weight: 300;
       @include lg-block {
-        font-size: 1rem;
+        font-size: 1.2rem;
         line-height: 1.4;
       }
     }
@@ -102,10 +113,9 @@
       padding-bottom: 10px;
       padding-left: 40px;
       padding-right: 40px;
-      background-color: #fff;
+      background-image: linear-gradient(to right, #13CADF, #1396E2);
       box-shadow: 5px 10px 20px rgba(255, 255, 255, 0.4);
-      color: $primary-color-landing-2;
-      font-weight: 700;
+      color: #fff;
       border-radius: 20px;
       transition: all .5s;
       &:hover {
@@ -128,7 +138,7 @@
     height: auto;
 
     a {
-      background-color: #fff;
+      background-image: linear-gradient(to right, #13CADF, #1396E2);
       box-shadow: 10px 20px 40px rgba(255, 255, 255, 0.4);
       width: 60px;
       height: 60px;
@@ -152,7 +162,7 @@
 
       i {
         font-size: 1.1rem;
-        color: $primary-color-landing-2;
+        color: #fff;
         padding-left: 5px;
         @include md-block {
           font-size: 1.5rem;
@@ -207,8 +217,8 @@
   }
 
   .h-circle-1 {
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     top: -10rem;
     @include md(left, -15rem);
     @include xl(left, -10rem);
@@ -317,24 +327,23 @@
         height: 100%;
         overflow: hidden;
         display: none;
-        background-color: rgba(255, 255, 255, 0.84);
+        background-color: rgba(19, 188, 223, 0.84);
         border: 1px solid rgba(255, 255, 255, .1);
+
         &:hover {
-          background-color: rgba(0, 109, 143, 1);
-          a{
-            color: #fff
-          }
+          background-color: rgba(19, 188, 223, 1);
         }
 
         &:hover a {
           transform: scale(1.15);
         }
+
         a {
           display: flex;
           justify-content: center;
           align-items: center;
           height: 100%;
-          color: #000;
+          color: #fff;
           text-transform: uppercase;
           font-family: Quicksand, sans-serif;
           font-weight: 700;
@@ -426,7 +435,7 @@
     nav {
       pointer-events: auto;
       a.active {
-        color: $primary-color-landing-2
+        @include hover-links()
       }
     }
 
@@ -495,14 +504,12 @@
       transform: rotate(-135deg);
       width: 110%;
       top: 0;
-      background-color: #000;
     }
 
     &.active:before {
       transform: rotate(135deg);
       top: 0;
       width: 110%;
-      background-color: #000;
     }
   }
 }
@@ -512,7 +519,6 @@
 .burger-wrapper.navShadow > .burger-icon:before {
   background-color: #000;
 }
-
 
 .burger-icon.active, .navShadow > .burger-icon.active {
   background-color: transparent;
