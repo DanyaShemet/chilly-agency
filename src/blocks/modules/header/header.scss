@@ -453,6 +453,15 @@
       @include lg-block {
         display: none;
       }
+      &.active{
+        top: 2rem;
+        &:after{
+          background-color: #fff;
+        }
+        &:before{
+          background-color: #fff;
+        }
+      }
     }
   }
 
