@@ -14,6 +14,7 @@ for (let i = 0; i < formInput.length; i++) {
     formInput[i].oninput = () => {
         counter[i].innerHTML = counter[i].dataset.counter - formInput[i].value.length;
         addNeededClass(formInput[i], 'active')
+        formInput[i].value = formInput[i].value.trim();
     };
     formInput[i].onblur = () => {
         addNeededClass(formInput[i], 'invalid')
@@ -47,7 +48,6 @@ $(function() {
         $('.message').removeClass('error success');
         $('input').removeClass('email-error');
         loadingAnimation.play();
-        $("#email").trim();
         e.preventDefault();
         $.ajax({
             url: '../phpmailer/send.php',
