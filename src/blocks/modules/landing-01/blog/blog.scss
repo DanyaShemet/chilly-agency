@@ -111,6 +111,12 @@
                 height: 370px;
             }
             height: 300px;
+            h4{
+                @include lg-block{
+                    font-size: 1.7rem;
+                }
+
+            }
 
         }
         &:nth-child(3){
@@ -120,6 +126,12 @@
             @include lg-block{
                 width: 230px;
                 height: 230px;
+            }
+            h4{
+                @include lg-block{
+                    font-size: 1.4rem;
+                }
+
             }
 
         }
@@ -132,7 +144,11 @@
                 margin-top: -30px;
             }
             height: 300px;
-
+            h4{
+                @include lg-block{
+                    font-size: 1.2rem;
+                }
+            }
         }
         &:nth-child(5){
             /*fourth image of blog*/
@@ -141,14 +157,20 @@
                 width: 300px;
             }
             height: 300px;
+            h4{
+                @include lg-block{
+                    font-size: 1.4rem;
+                }
+
+            }
         }
         h4{
             font-size: 1.6rem;
-            font-weight: 500;
+            font-weight: 600;
             margin-bottom: 20px;
             z-index: 1;
             @include lg-block{
-                font-size: 1.2rem;
+                font-size: 2rem;
             }
         }
         a{
