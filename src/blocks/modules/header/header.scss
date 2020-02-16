@@ -453,6 +453,15 @@
       @include lg-block {
         display: none;
       }
+      &.active{
+        top: 2rem;
+        &:after{
+          background-color: #fff;
+        }
+        &:before{
+          background-color: #fff;
+        }
+      }
     }
   }
 
@@ -519,6 +528,7 @@
 .burger-wrapper.navShadow > .burger-icon:before {
   background-color: #000;
 }
+
 
 .burger-icon.active, .navShadow > .burger-icon.active {
   background-color: transparent;
