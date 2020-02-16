@@ -1,7 +1,7 @@
 "use strict";
 import "velocity-animate/velocity.min"
 import "velocity-animate/velocity.ui.min"
-import Typed from '../../../../../node_modules/typed.js/lib/typed'
+import Typed from 'typed.js'
 import $ from "jquery";
 import ModalVideo from "modal-video/js/modal-video.min"
 
@@ -71,16 +71,6 @@ $(window).scroll(function (e) {
         }
     })
 });
-
-// Type machine Functionality
-let options = {
-    strings: ['Chilly Agency', 'Developers', 'Designers', 'Strategists', 'Marketers'],
-    typeSpeed: 40,
-    showCursor: false,
-    loop: true,
-    backSpeed: 40
-};
-let typed = new Typed('#main-text', options);
 
 
 // scroll to chosen block on page functionality

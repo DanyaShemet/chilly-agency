@@ -22,7 +22,7 @@
     <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
 <div class="preloader" id="preloader">
@@ -35,19 +35,25 @@
     </div>
 </div>
 
-@@include("../blocks/modules/demo/header/header.html")
+@@include("../blocks/modules/header/header.html")
 <!--Main content-->
 <main>
-    @@include("../blocks/modules/demo/portfolio/portfolio.html")
-    <a href="pages/landing-01.html">pages/landing-01.htm</a>
-    <a href="pages/landing-02.html">pages/landing-02.htm</a>
+    @@include("../blocks/modules/about/about.html")
+    @@include("../blocks/modules/services/services.html")
+    @@include("../blocks/modules/portfolio/portfolio.html")
+    @@include("../blocks/modules/team/team.html")
+    @@include("../blocks/modules/feedback/feedback.html")
+    @@include("../blocks/modules/price/price.html")
+    @@include("../blocks/modules/blog/blog.html")
+    @@include("../blocks/modules/form/form.html")
+    @@include("../blocks/modules/map/map.html")
 
 </main> <!--Main content-->
-@@include("../blocks/modules/demo/footer/footer.html")
+@@include("../blocks/modules/footer/footer.html")
 
 
-<script src="js/demo.js"></script>
-<script src="js/vendor.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/vendor.js"></script>
 
 </body>
 </html>
