@@ -453,6 +453,9 @@
       @include lg-block {
         display: none;
       }
+      &.active{
+        top: 2rem;
+      }
     }
   }
 
@@ -518,6 +521,10 @@
 .burger-wrapper.navShadow > .burger-icon:after,
 .burger-wrapper.navShadow > .burger-icon:before {
   background-color: #000;
+}
+.burger-wrapper.navShadow > .burger-icon.active:after,
+.burger-wrapper.navShadow > .burger-icon.active:before {
+  background-color: #fff;
 }
 
 .burger-icon.active, .navShadow > .burger-icon.active {

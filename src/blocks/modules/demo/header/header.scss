@@ -377,6 +377,9 @@
       @include lg-block {
         display: none;
       }
+      &.active{
+        top: 2rem;
+      }
     }
   }
 
@@ -428,12 +431,13 @@
       transform: rotate(-135deg);
       width: 110%;
       top: 0;
-    }
+  }
 
     &.active:before {
       transform: rotate(135deg);
       top: 0;
       width: 110%;
+
     }
   }
 }
@@ -442,6 +446,10 @@
 .burger-wrapper.navShadow > .burger-icon:after,
 .burger-wrapper.navShadow > .burger-icon:before {
   background-color: #000;
+}
+.burger-wrapper.navShadow > .burger-icon.active:after,
+.burger-wrapper.navShadow > .burger-icon.active:before {
+  background-color: #fff;
 }
 
 .burger-icon.active, .navShadow > .burger-icon.active {
