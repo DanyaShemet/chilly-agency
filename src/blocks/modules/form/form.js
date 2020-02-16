@@ -69,7 +69,7 @@ $(function() {
                     if (msg === 'mailerror') {
                         $("#email").addClass('email-error');
                     }
-                    $('.message').text('Error, check the entered data').addClass('error');
+                    $('.message').text('Error, check the entered data or try again later').addClass('error');
                     showMessage.restart();loadingAnimation.duration(0.3).reverse();
                 }
             }
