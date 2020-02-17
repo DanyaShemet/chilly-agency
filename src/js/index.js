@@ -2,9 +2,9 @@
 
 import "./import/modules";
 import $ from "jquery";
-import {aboutInit} from '../blocks/modules/landing-01/about/about.js'
+import {aboutInit} from '../blocks/modules/about/about-text/about-text.js'
 import {TweenMax, gsap} from "gsap/all"
-import {scrollto} from "%modules%/landing-01/header/header";
+import {scrollto} from "%modules%/header/header";
 
 gsap.registerPlugin(TweenMax);
 
@@ -33,16 +33,16 @@ function setCompanyName() {
 // parallax on page functionality
 function initialParallax() {
     if (document.documentElement.clientWidth >= 1050) {
-        $('#header').mousemove(function (e) {
-            parallaxIt(e, ".h-circle-1", -30, '#header');
-            parallaxIt(e, ".h-circle-2", 10, '#header');
-            parallaxIt(e, ".h-circle-3", 20, '#header');
-            parallaxIt(e, ".h-square-1", -40, '#header');
-            parallaxIt(e, ".h-trapezoid-1", -5, '#header');
-            parallaxIt(e, ".repeat-grid-circles", 20, '#header');
+        $('#header-header').mousemove(function (e) {
+            parallaxIt(e, ".h-circle-1", -30, '#header-header');
+            parallaxIt(e, ".h-circle-2", 10, '#header-header');
+            parallaxIt(e, ".h-circle-3", 20, '#header-header');
+            parallaxIt(e, ".h-square-1", -40, '#header-header');
+            parallaxIt(e, ".h-trapezoid-1", -5, '#header-header');
+            parallaxIt(e, ".repeat-grid-circles", 20, '#header-header');
         });
-        $('#about').mousemove(function (e) {
-            parallaxIt(e, ".repeat-circles", 30, '#about');
+        $('#about-text').mousemove(function (e) {
+            parallaxIt(e, ".repeat-circles", 30, '#about-text');
         });
         $('#services').mousemove(function (e) {
             parallaxIt(e, ".pentagon-1", 30, '#services');
