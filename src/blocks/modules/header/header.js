@@ -57,29 +57,7 @@ function hideMenu() {
 $(window).scroll(function (e) {
     let st = $(this).scrollTop();
     st > 200 ? $('.burger-wrapper').addClass('navShadow') : $('.burger-wrapper').removeClass('navShadow');
-
-    let $sections = $('.section');
-    $sections.each(function (i, el) {
-        let top = $(el).offset().top - 90;
-        let bottom = top + $(el).height();
-        let scroll = $(window).scrollTop();
-        let id = $(el).attr('id');
-        if (scroll > top && scroll < bottom) {
-            $('a.active').removeClass('active');
-            $('a[href="#' + id + '"]').addClass('active');
-        }
-    })
 });
-
-// scroll to chosen block on page functionality
-export function scrollto() {
-    $(".scrollto").click(function () {
-        let elementClick = $(this).attr("href");
-        let destination = $(elementClick).offset().top;
-        jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination - 80}, 1500);
-        return false;
-    });
-}
 
 // Video functionality
 new ModalVideo('.open-video');

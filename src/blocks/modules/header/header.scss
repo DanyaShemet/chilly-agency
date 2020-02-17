@@ -67,7 +67,7 @@
   &__block-text {
     width: 100%;
     @include md-block{
-      height: 80%;
+      width: 80%;
     }
     h1 {
       color: #fff;
@@ -78,7 +78,6 @@
         font-size: 4.375rem;
       }
     }
-
     img {
       position: absolute;
       width: 200px;
@@ -314,6 +313,12 @@
         border: 1px solid rgba(0, 109, 143, .4);
         &:hover {
           background-color: rgba(255, 255, 255, 1);
+        }
+        &.active{
+          background-color: rgba(255, 255, 255, 1);
+          a{
+            transform: scale(1.15);
+          }
         }
 
         &:hover a {

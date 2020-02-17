@@ -1,16 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 247.182 251.558">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 247.181 251.558">
   <defs>
     <style>
       .cls-1 {
-        fill: #fff;
+        fill: none;
         opacity: 0.25;
       }
 
-      .cls-2 {
+      .cls-2, .cls-3 {
+        stroke: none;
+      }
+
+      .cls-3 {
+        fill: #006477;
+      }
+
+      .cls-4 {
         filter: url(#Path_14);
       }
     </style>
-    <filter id="Path_14" x="0" y="0" width="247.182" height="251.558" filterUnits="userSpaceOnUse">
+    <filter id="Path_14" x="0" y="0" width="247.181" height="251.558" filterUnits="userSpaceOnUse">
       <feOffset dx="20" dy="30" input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="25" result="blur"/>
       <feFlood flood-color="#fff" flood-opacity="0.851"/>
@@ -18,7 +26,10 @@
       <feComposite in="SourceGraphic"/>
     </filter>
   </defs>
-  <g class="cls-2" transform="matrix(1, 0, 0, 1, 0, 0)">
-    <path id="Path_14-2" data-name="Path 14" class="cls-1" d="M97.888,0l49.293,37.291-22.706,64.267H72.706L50,37.291Z" transform="translate(5 45)"/>
+  <g class="cls-4" transform="matrix(1, 0, 0, 1, 0, 0)">
+    <g id="Path_14-2" data-name="Path 14" class="cls-1" transform="translate(5 45)">
+      <path class="cls-2" d="M97.888,0l49.293,37.291-22.706,64.267H72.706L50,37.291Z"/>
+      <path class="cls-3" d="M 97.89713287353516 1.260581970214844 L 51.18295288085938 37.63700866699219 L 73.41323089599609 100.5577011108398 L 123.7683486938477 100.5577011108398 L 145.9950561523438 37.64706420898438 L 97.89713287353516 1.260581970214844 M 97.88833618164063 0 L 147.1815185546875 37.29071807861328 L 124.4756164550781 101.5577011108398 L 72.70596313476563 101.5577011108398 L 50.00003051757813 37.29071807861328 L 97.88833618164063 0 Z"/>
+    </g>
   </g>
 </svg>

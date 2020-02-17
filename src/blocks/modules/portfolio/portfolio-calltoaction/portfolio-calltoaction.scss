@@ -1,0 +1,57 @@
+/* 04 Portfolio */
+
+.calltoaction{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @include lg-block{
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    &__content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        p {
+            font-weight: 600;
+            font-size: .7rem;
+            @include sm-block{
+                font-size: 1rem;
+            }
+            @include lg-block{
+                font-size: 2.2rem;
+            }
+        }
+        a{
+            font-weight: 600;
+            font-size: .7rem;
+            color: #000;
+            background-color: #fff;
+            border: 1px solid $primary-color;
+            padding-top: 9px;
+            padding-left: 14px;
+            padding-right: 14px;
+            padding-bottom: 9px;
+            border-radius: 10px;
+            transition: all .3s;
+            @include sm-block{
+                font-size: 1rem;
+            }
+            @include lg-block{
+                font-size: 1.2rem;
+                padding-top: 14px;
+                padding-left: 24px;
+                padding-right: 24px;
+                padding-bottom: 14px;
+            }
+            &:hover{
+                color: #fff;
+                background-color: $primary-color;
+                border-color: transparent;
+            }
+        }
+    }
+}
+
+
+
+
