@@ -58,7 +58,6 @@ function hideMenu() {
 $(window).scroll(function (e) {
     let st = $(this).scrollTop();
     st > 200 ? $('.burger-wrapper').addClass('navShadow') : $('.burger-wrapper').removeClass('navShadow');
-
     let $sections = $('.section');
     $sections.each(function (i, el) {
         let top = $(el).offset().top - 90;
