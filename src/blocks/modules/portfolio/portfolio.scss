@@ -79,7 +79,10 @@
         @include size-xl(4);
         @include size-lg(6);
         @include size-xs(12);
-        height: 350px;
+        height: 250px;
+        @include sm-block{
+            height: 350px;
+        }
         @include lg-block{
             height: 250px;
         }
@@ -102,8 +105,8 @@
             position: absolute;
             left: 0;
             opacity: 0;
-            top: 30%;
-            @include lg-block{
+            top: 18%;
+            @include sm-block{
                 top: 25%;
             }
             right: 0;

@@ -70,14 +70,15 @@
             .team__head-img-wrap {
                 overflow: hidden;
                 font-size: 0;
-                margin-bottom: 20px;
+                margin-bottom: 10px;
                 @include md-block {
                     height: 250px;
                     width: 200px;
+                    margin-bottom: 20px;
                 }
                 @include xs-block {
-                    height: 200px;
-                    width: 150px;
+                    height: 190px;
+                    width: 130px;
                 }
                 @include lg-block {
                     height: 410px;
