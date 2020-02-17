@@ -317,14 +317,12 @@
         height: 100%;
         overflow: hidden;
         display: none;
-        background-color: rgba(255, 255, 255, 0.84);
-        border: 1px solid rgba(255, 255, 255, .1);
+        background-color: rgba(255, 255, 255, 0.75);
+        border: 1px solid rgba(0, 109, 143, .4);
         &:hover {
-          background-color: rgba(0, 109, 143, 1);
-          a{
-            color: #fff
-          }
+          background-color: rgba(255, 255, 255, 1);
         }
+
 
         &:hover a {
           transform: scale(1.15);
