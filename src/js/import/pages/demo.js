@@ -1,5 +1,6 @@
 import "%modules%/demo/header/header";
 import $ from "jquery";
+import {scrollto} from "%modules%/demo/header/header";
 import {TweenMax, gsap} from "gsap/all"
 
 gsap.registerPlugin(TweenMax);
@@ -7,6 +8,7 @@ gsap.registerPlugin(TweenMax);
 
 $(document).ready(function () {
     initialParallax();
+    scrollto();
     setTimeout(function () {
         let preloader = $('#preloader');
         if (!preloader.hasClass('done')) {
