@@ -2,7 +2,10 @@
 
 .pricing {
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
+    @include lg-block{
+        padding-bottom: 40px;
+    }
     &__text {
         margin-bottom: 40px;
         @include size-lg(6);
