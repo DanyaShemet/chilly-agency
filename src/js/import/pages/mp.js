@@ -5,6 +5,7 @@ import "%modules%/multipage-01/about/about-text/about-text";
 import "%modules%/multipage-01/portfolio/portfolio-content/portfolio-content";
 import "%modules%/multipage-01/portfolio/portfolio-feedback/portfolio-feedback";
 import "%modules%/multipage-01/contact/contact-form/contact-form";
+
 import $ from "jquery";
 import {aboutInit} from '../../../blocks/modules/multipage-01/about/about-text/about-text'
 import {TweenMax, gsap} from "gsap/all"

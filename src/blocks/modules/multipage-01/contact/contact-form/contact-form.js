@@ -44,7 +44,7 @@ loadingAnimation.pause();
 
 // Sending data to the server
 $(function() {
-    $('#section-form').on('submit', function(e) {
+    $('#form').on('submit', function(e) {
         $('.message').removeClass('error success');
         $('input').removeClass('email-error');
         loadingAnimation.play();
@@ -57,7 +57,7 @@ $(function() {
             data: new FormData(this),
             success: function(msg) {
                 if (msg === 'ok') {
-                    $('#section-form').trigger('reset')
+                    $('#form').trigger('reset')
                     $('input').removeClass('active');
                     for(let i=0;i<formInput.length;i++){
                         counter[i].innerHTML = counter[i].dataset.counter - formInput[i].value.length
