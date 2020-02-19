@@ -81,11 +81,15 @@
                     font-size: .9rem;
                     color: #fff;
                     transition: all .3s;
+                    border-bottom: 1px solid transparent;
                     @include lg-block{
                         font-size: 1.2rem;
                     }
                     &:hover{
-                        @include hover-links()
+                        border-bottom: 1px solid rgba(255,255,255, 1);
+                    }
+                    &.active{
+                        border-bottom: 1px solid rgba(255,255,255, 1);
                     }
                 }
             }
@@ -120,11 +124,12 @@
                     color: #fff;
                     font-size: 1.2rem;
                     transition: all .3s;
+                    border-bottom: 1px solid transparent;
                     @include lg-block {
                         font-size: 1.5rem;
                     }
                     &:hover {
-                        @include hover-links()
+                        border-bottom: 1px solid rgba(255,255,255, 1);
                     }
                 }
             }
@@ -148,10 +153,11 @@
                 margin-top: 10px;
             }
             a {
+                border-bottom: 1px solid transparent;
                 transition: all .3s;
                 z-index: 10000;
                 &:hover {
-                    @include hover-links()
+                    border-bottom: 1px solid rgba(255,255,255, 1);
                 }
             }
         }

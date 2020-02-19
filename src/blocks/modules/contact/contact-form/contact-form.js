@@ -6,10 +6,10 @@ gsap.registerPlugin(TimelineMax);
 gsap.registerPlugin(TweenLite);
 
 
-let formInput = $('#form input');
+let formInput = $('#section-form input');
 let counter = $('.counter');
 
-// form class active/invalid functionality
+// contact-form class active/invalid functionality
 for (let i = 0; i < formInput.length; i++) {
     formInput[i].oninput = () => {
         counter[i].innerHTML = counter[i].dataset.counter - formInput[i].value.length;
@@ -44,20 +44,20 @@ loadingAnimation.pause();
 
 // Sending data to the server
 $(function() {
-    $('#form').on('submit', function(e) {
+    $('#section-form').on('submit', function(e) {
         $('.message').removeClass('error success');
         $('input').removeClass('email-error');
         loadingAnimation.play();
         e.preventDefault();
         $.ajax({
-            url: '../phpmailer/send.php',
+            url: 'phpmailer/send.php',
             type: 'POST',
             contentType: false,
             processData: false,
             data: new FormData(this),
             success: function(msg) {
                 if (msg === 'ok') {
-                    $('#form').trigger('reset')
+                    $('#section-form').trigger('reset')
                     $('input').removeClass('active');
                     for(let i=0;i<formInput.length;i++){
                         counter[i].innerHTML = counter[i].dataset.counter - formInput[i].value.length

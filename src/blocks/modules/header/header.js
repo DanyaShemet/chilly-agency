@@ -15,6 +15,7 @@ burger.click(showMenu)
 links.click(hideMenu);
 
 function showMenu() {
+    document.onwheel = null;
     menu.css('flex-basis', `calc(100%/ ${menu.length})`);
     overlay_navigation.toggleClass('overlay-active');
     $("body").addClass("fixed");
@@ -48,6 +49,7 @@ function hideMenu() {
         complete: function () {
             overlay_navigation.velocity('transition.fadeOut', {});
             burger.css('pointer-events', 'auto')
+            document.onwheel = onWheel;
         }
     })
 }
@@ -58,6 +60,14 @@ $(window).scroll(function (e) {
     let st = $(this).scrollTop();
     st > 200 ? $('.burger-wrapper').addClass('navShadow') : $('.burger-wrapper').removeClass('navShadow');
 });
+
+// opening menu in main page
+document.onwheel = onWheel;
+function onWheel(){
+    if (document.body.clientHeight <= 760){
+        showMenu();
+    }
+}
 
 // Video functionality
 new ModalVideo('.open-video');

@@ -37,7 +37,6 @@ function initialParallax() {
             parallaxIt(e, ".h-circle-3", 20, '#header');
             parallaxIt(e, ".h-square-1", -40, '#header');
             parallaxIt(e, ".h-trapezoid-1", -5, '#header');
-            parallaxIt(e, ".repeat-grid-circles", 20, '#header');
         });
         $('#services').mousemove(function (e) {
             parallaxIt(e, ".pentagon-1", 30, '#services');
