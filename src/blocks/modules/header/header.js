@@ -64,7 +64,7 @@ $(window).scroll(function (e) {
 // opening menu in main page
 document.onwheel = onWheel;
 function onWheel(){
-    if (document.body.clientHeight <= 760){
+    if (document.body.clientHeight <= 1020 && document.body.clientHeight >= 800){
         showMenu();
     }
 }

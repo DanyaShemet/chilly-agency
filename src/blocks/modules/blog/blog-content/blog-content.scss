@@ -1,4 +1,4 @@
-/*  08 Blog */
+/*  06 Blog */
 .blog {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -188,20 +188,6 @@
         &:nth-child(7) {
             /*7 image of blog-content*/
             background-image: url("../img/post7.webp");
-            @include xl-block {
-                width: 565px;
-                height: 565px;
-            }
-            @include lg-block {
-                width: 450px;
-                height: 450px;
-            }
-            height: 300px;
-        }
-
-        &:nth-child(8) {
-            /*8 image of blog-content*/
-            background-image: url("../img/post8.webp");
             height: 300px;
             @include lg-block {
                 width: 230px;
@@ -215,9 +201,9 @@
             }
         }
 
-        &:nth-child(9) {
-            /*9 image of blog-content*/
-            background-image: url("../img/post9.webp");
+        &:nth-child(8) {
+            /*8 image of blog-content*/
+            background-image: url("../img/post8.webp");
             @include lg-block {
                 width: 260px;
                 height: 260px;
@@ -232,9 +218,9 @@
             }
         }
 
-        &:nth-child(10) {
-            /*10 image of blog-content*/
-            background-image: url("../img/post10.webp");
+        &:nth-child(9) {
+            /*9 image of blog-content*/
+            background-image: url("../img/post9.webp");
             @include lg-block {
                 width: 300px;
             }
@@ -245,6 +231,21 @@
                     font-size: 1.4rem;
                 }
             }
+
+        }
+
+        &:nth-child(10) {
+            /*10 image of blog-content*/
+            background-image: url("../img/post10.webp");
+            @include xl-block {
+                width: 565px;
+                height: 565px;
+            }
+            @include lg-block {
+                width: 450px;
+                height: 450px;
+            }
+            height: 300px;
         }
 
         h4 {
@@ -269,6 +270,44 @@
             font-weight: 700;
             font-size: 1rem;
         }
+    }
+
+    &__figures{
+        @include figures();
+        display: none;
+        @include xl-block{
+            display: block;
+        }
+    }
+    .pentagon-1{
+        width: 200px;
+        height: 200px;
+        top: 15%;
+        left: 10%;
+    }
+    .pentagon-2{
+        width: 200px;
+        height: 200px;
+        top: 65%;
+        left: 5%;
+    }
+    .pentagon-3{
+        width: 200px;
+        height: 200px;
+        top: 45%;
+        left: 7%;
+    }
+    .pentagon-4{
+        width: 200px;
+        height: 200px;
+        top: 75%;
+        right: 5%;
+    }
+    .pentagon-5{
+        width: 500px;
+        height: 500px;
+        top: 30%;
+        right: -10%;
     }
 }
 

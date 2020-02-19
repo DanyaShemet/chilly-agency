@@ -43,13 +43,20 @@ function initialParallax() {
             parallaxIt(e, ".pentagon-2", -30, '#services');
             parallaxIt(e, ".pentagon-3", -30, '#services');
         });
-        $('#portfolio').mousemove(function (e) {
-            parallaxIt(e, ".portfolio-feedback-circle-1", 10, '#portfolio');
-            parallaxIt(e, ".portfolio-feedback-circle-2", -5, '#portfolio');
-            parallaxIt(e, ".portfolio-feedback-circle-3", 20, '#portfolio');
-            parallaxIt(e, ".portfolio-feedback-circle-4", -20, '#portfolio');
-            parallaxIt(e, ".portfolio-feedback-circle-5", 5, '#portfolio');
-            parallaxIt(e, ".portfolio-feedback-circle-6", -10, '#portfolio');
+        $('#feedback').mousemove(function (e) {
+            parallaxIt(e, ".feedback-circle-1", 10, '#feedback');
+            parallaxIt(e, ".feedback-circle-2", -5, '#feedback');
+            parallaxIt(e, ".feedback-circle-3", 20, '#feedback');
+            parallaxIt(e, ".feedback-circle-4", -20, '#feedback');
+            parallaxIt(e, ".feedback-circle-5", 5, '#feedback');
+            parallaxIt(e, ".feedback-circle-6", -10, '#feedback');
+        });
+        $('#blog').mousemove(function (e) {
+            parallaxIt(e, ".pentagon-1", 20, '#blog');
+            parallaxIt(e, ".pentagon-2", -10, '#blog');
+            parallaxIt(e, ".pentagon-3", 40, '#blog');
+            parallaxIt(e, ".pentagon-4", -40, '#blog');
+            parallaxIt(e, ".pentagon-5", 10, '#blog');
         });
         $('#footer').mousemove(function (e) {
             parallaxIt(e, ".footer-circle-1", 10, '#footer');
