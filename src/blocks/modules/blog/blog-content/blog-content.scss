@@ -66,6 +66,7 @@
             background-position: center;
             transform: scale(1.05);
             z-index: 1;
+
             &:after {
                 background-color: rgba(255, 255, 255, 0.8);
             }
@@ -169,8 +170,8 @@
         }
 
         &:nth-child(6) {
-            /*second image of blog-content*/
-            background-image: url("../img/post2.webp");
+            /*6 image of blog-content*/
+            background-image: url("../img/post6.webp");
             @include lg-block {
                 width: 370px;
                 height: 370px;
@@ -185,8 +186,8 @@
         }
 
         &:nth-child(7) {
-            /*first image of blog-content*/
-            background-image: url("../img/post1.webp");
+            /*7 image of blog-content*/
+            background-image: url("../img/post7.webp");
             @include xl-block {
                 width: 565px;
                 height: 565px;
@@ -199,8 +200,8 @@
         }
 
         &:nth-child(8) {
-            /*third image of blog-content*/
-            background-image: url("../img/post3.webp");
+            /*8 image of blog-content*/
+            background-image: url("../img/post8.webp");
             height: 300px;
             @include lg-block {
                 width: 230px;
@@ -215,8 +216,8 @@
         }
 
         &:nth-child(9) {
-            /*fourth image of blog-content*/
-            background-image: url("../img/post4.webp");
+            /*9 image of blog-content*/
+            background-image: url("../img/post9.webp");
             @include lg-block {
                 width: 260px;
                 height: 260px;
@@ -232,8 +233,8 @@
         }
 
         &:nth-child(10) {
-            /*fourth image of blog-content*/
-            background-image: url("../img/post5.webp");
+            /*10 image of blog-content*/
+            background-image: url("../img/post10.webp");
             @include lg-block {
                 width: 300px;
             }
