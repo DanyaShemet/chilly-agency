@@ -50,7 +50,7 @@ $(function() {
         loadingAnimation.play();
         e.preventDefault();
         $.ajax({
-            url: 'phpmailer/send.php',
+            url: '../../phpmailer/send.php',
             type: 'POST',
             contentType: false,
             processData: false,

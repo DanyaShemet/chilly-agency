@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 848.118 879.555">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        opacity: 0.25;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: none;
+      }
+
+      .cls-3 {
+        fill: #006477;
+      }
+
+      .cls-4 {
+        filter: url(#Path_26);
+      }
+    </style>
+    <filter id="Path_26" x="0" y="0" width="848.118" height="879.555" filterUnits="userSpaceOnUse">
+      <feOffset dx="20" dy="30" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="25" result="blur"/>
+      <feFlood flood-color="#fff" flood-opacity="0.851"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g class="cls-4" transform="matrix(1, 0, 0, 1, 0, 0)">
+    <g id="Path_26-2" data-name="Path 26" class="cls-1" transform="translate(5 45)">
+      <path class="cls-2" d="M394.013,0l354.1,267.883L585.007,729.555h-371.9L50,267.883Z"/>
+      <path class="cls-3" d="M 394.0216979980469 1.26055908203125 L 51.18292236328125 268.2296142578125 L 213.8187866210938 728.5546875 L 584.29931640625 728.5546875 L 746.9313354492188 268.2396850585938 L 394.0216979980469 1.26055908203125 M 394.012939453125 0 L 748.1178588867188 267.8833312988281 L 585.006591796875 729.5546875 L 213.1114501953125 729.5546875 L 50 267.8833312988281 L 394.012939453125 0 Z"/>
+    </g>
+  </g>
+</svg>
