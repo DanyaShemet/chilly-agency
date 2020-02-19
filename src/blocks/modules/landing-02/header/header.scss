@@ -3,7 +3,7 @@
 /* Main styles for header */
 .header {
   overflow: hidden;
-  background-color: $primary-color-landing-2;
+  background-image: linear-gradient(50deg, #006D8F  10%, #23A4CC 80%);
   position: relative;
   height: 100vh;
 
@@ -409,7 +409,7 @@
       font-size: 1.2rem;
       font-weight: 600;
       &:hover {
-        @include hover-links()
+        @include hover-links-2()
       }
     }
   }

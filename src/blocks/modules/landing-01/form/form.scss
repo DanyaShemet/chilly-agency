@@ -55,7 +55,7 @@
                     & + label {
                         top: -10px;
                         font-size: .7rem;
-                        color: $primary-color;
+                        color: $primary-color-landing-2;
                     }
                 }
 
@@ -63,7 +63,7 @@
                     & + label {
                         top: -10px;
                         font-size: .7rem;
-                        color: $primary-color;
+                        color: $primary-color-landing-2;
                     }
                 }
             }
@@ -72,7 +72,7 @@
                 position: absolute;
                 pointer-events: none;
                 display: block;
-                color: $secondary-text-color;
+                color: $secondary-text-color-lending-2;
                 font-weight: 500;
                 transition: all ease .3s;
             }
@@ -97,7 +97,7 @@
         }
 
         button {
-            background-color: $primary-color;
+            background-color: $primary-color-landing-2;
             color: #fff;
             padding: 8px 50px;
             border-radius: 20px;
@@ -110,7 +110,7 @@
 
             &:hover {
                 background-color: #fff;
-                color: $primary-color;
+                color: $primary-color-landing-2;
                 transform: scale(1.05);
                 box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
             }

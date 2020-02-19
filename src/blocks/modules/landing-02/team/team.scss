@@ -135,7 +135,7 @@
                 transition: all .5s;
 
                 &:hover {
-                    @include hover-links()
+                    @include hover-links-2()
                 }
             }
 
@@ -240,7 +240,7 @@
                 margin-right: 3px;
                 transition: all .5s;
                 &:hover {
-                    @include hover-links()
+                    @include hover-links-2()
                 }
             }
         }

@@ -1,0 +1,25 @@
+/* 04 Calltoaction-portfolio */
+
+.calltoaction-portfolio{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @include lg-block{
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    &__content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        p {
+            @include calltoactiontext()
+        }
+        a{
+            @include calltoactionBtn()
+        }
+    }
+}
+
+
+
+
