@@ -13,7 +13,7 @@
     content: '';
     display: block;
     position: absolute;
-    background: $primary-color-landing-2;
+    background: $primary-color;
     width: 1px;
     height: 0;
     transition: all .3s;
@@ -24,7 +24,7 @@
     content: '';
     display: block;
     position: absolute;
-    background: $primary-color-landing-2;
+    background: $primary-color;
     height: 1px;
     width: 0;
     transition: all .3s;

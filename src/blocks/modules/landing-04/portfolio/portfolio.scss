@@ -1,40 +1,74 @@
-/* 04 portfolio__demo */
+/* 04 Portfolio */
 
-.portfolio__demo {
+.portfolio {
     position: relative;
     padding-top: 40px;
     padding-bottom: 40px;
     &__top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        flex-direction: column;
+        @include lg-block {
+            flex-direction: row;
+        }
         h2 {
             font-size: 1.5rem;
-            color: #000;
-            text-align: center;
-            margin-bottom: 10px;
         }
-        p {
-            color: $primary-color;
-            text-align: center;
-        }
-        padding-bottom: 20px;
-        border-bottom: 1px solid rgba(0,0,0,.2);
     }
 
+    &__categories{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        @include md-block {
+            justify-content: start;
+
+        }
+
+
+        .filter-item {
+            margin-top: 10px;
+            @include lg-block {
+                margin-top: 0;
+
+            }
+            margin-right: 10px;
+            @include md-block {
+                &:not(:first-child) {
+                    margin-left: 10px;
+                }
+                margin-right: 0;
+            }
+            cursor: pointer;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 30px;
+            padding-right: 30px;
+            border: 1px solid #000;
+            border-radius: 10px;
+            transition: all .5s;
+
+            &:hover, .active {
+                background-color: $primary-color;
+                border: 1px solid transparent;
+                color: #fff;
+            }
+
+            &.active {
+                background-color: $primary-color;
+                border: 1px solid transparent;
+                color: #fff;
+            }
+        }
+    }
 
     &__items {
         display: flex;
         flex-wrap: wrap;
-        justify-content: flex-start;
-        border-bottom: 1px solid rgba(0,0,0,.2);
-        padding-bottom: 30px;
         @include sm-block {
             align-items: center;
         }
-    }
-    h4{
-        font-size: 1.2rem;
-        text-align: center;
-        margin: 10px 0 20px 0;
-        color: $secondary-text-color
     }
 
     &__item {
@@ -43,12 +77,16 @@
         color: #fff;
         position: relative;
         @include size-xl(4);
-        @include size-lg(6);
+        @include size-md(6);
         @include size-xs(12);
-        height: 300px;
-        @include lg-block{
-            height: 400px;
+        height: 250px;
+        @include sm-block{
+            height: 350px;
         }
+        @include lg-block{
+            height: 250px;
+        }
+
         transition: transform .5s;
         img{
             width: 100%;
@@ -64,13 +102,13 @@
             background-color: $primary-color;
             transform: scale(0);
         }
-        .portfolio__demo__overlay-text {
+        .portfolio__overlay-text {
             position: absolute;
             left: 0;
             opacity: 0;
-            top: 30%;
-            @include lg-block{
-                top: 35%;
+            top: 18%;
+            @include sm-block{
+                top: 25%;
             }
             right: 0;
             width: 70%;
@@ -78,34 +116,26 @@
             text-align: center;
             margin: 0 auto;
             transition: all .3s ease;
-            h4{
-                font-size: 1.2rem;
-                text-align: center;
-                margin: 10px 0 20px 0;
-                color: #fff;
-            }
         }
 
         .overlay-description {
             font-size: 1rem;
             .main-text {
                 margin-bottom: 20px;
-                color: #000;
             }
         }
         .overlay-name {
             margin-bottom: 10px;
             font-size: 1.3rem;
         }
-        .portfolio__demo__item-social {
+        .portfolio__item-social {
             display: flex;
             justify-content: space-evenly;
             a {
                 transition: all .4s;
                 color: #fff;
-                font-size: 3rem;
                 &:hover {
-                    color: #000;
+                    color: #1396E2;
                 }
             }
         }
@@ -114,14 +144,14 @@
             cursor: pointer;
             transform: scale(1.04);
             @include lg-block {
-                transform: scale(1.1);
+                transform: scale(1.2);
             }
             z-index: 3;
             background-image: none;
             &:after {
                 transform: scale(1);
             }
-            .portfolio__demo__overlay-text{
+            .portfolio__overlay-text{
                 opacity: 1;
             }
         }

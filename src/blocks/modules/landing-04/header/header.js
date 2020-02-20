@@ -1,15 +1,15 @@
 "use strict";
 import "velocity-animate/velocity.min"
 import "velocity-animate/velocity.ui.min"
-import Typed from '../../../../../node_modules/typed.js/lib/typed'
+import Typed from 'typed.js'
 import $ from "jquery";
 import ModalVideo from "modal-video/js/modal-video.min"
 
 
 let burger = $('.burger-icon');
-let links = $('.header__demo__animate-nav ul li a');
-let menu = $('.header__demo__animate-nav ul li');
-let overlay_navigation = $('.header__demo__navigation-overlay');
+let links = $('.header__animate-nav ul li a');
+let menu = $('.header__animate-nav ul li');
+let overlay_navigation = $('.header__navigation-overlay');
 
 // Burger menu functionality
 burger.click(showMenu)
@@ -58,6 +58,7 @@ function hideMenu() {
 $(window).scroll(function (e) {
     let st = $(this).scrollTop();
     st > 200 ? $('.burger-wrapper').addClass('navShadow') : $('.burger-wrapper').removeClass('navShadow');
+
     let $sections = $('.section');
     $sections.each(function (i, el) {
         let top = $(el).offset().top - 90;
@@ -71,15 +72,6 @@ $(window).scroll(function (e) {
     })
 });
 
-// Type machine Functionality
-let options = {
-    strings: ['Onepage Animated', 'Onepage solid color','Onepage video', 'Multipage version'],
-    typeSpeed: 40,
-    showCursor: false,
-    loop: true,
-    backSpeed: 40
-};
-let typed = new Typed('#main-text-demo', options);
 
 // scroll to chosen block on page functionality
 export function scrollto() {
