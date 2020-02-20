@@ -2,8 +2,6 @@
 .about {
     padding-top: 30px;
     padding-bottom: 30px;
-    position: relative;
-
     &__text-items {
         margin-bottom: 40px;
         @include row-flex();
