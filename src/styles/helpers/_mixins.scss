@@ -30,27 +30,6 @@
     transition: all .3s;
 }
 
-@mixin about-number-vertical-line-2{
-    content: '';
-    display: block;
-    position: absolute;
-    background: $primary-color-landing-2;
-    width: 1px;
-    height: 0;
-    transition: all .3s;
-    z-index: 5;
-}
-
-@mixin about-number-horizon-line-2{
-    content: '';
-    display: block;
-    position: absolute;
-    background: $primary-color-landing-2;
-    height: 1px;
-    width: 0;
-    transition: all .3s;
-}
-
 @mixin overlay-block{
     position: absolute;
     content: '';
@@ -63,47 +42,4 @@
 
 @mixin hover-links(){
     color: $primary-color;
-}
-@mixin hover-links-2(){
-    color: $primary-color-landing-2;
-}
-
-
-@mixin calltoactiontext(){
-    font-weight: 600;
-    font-size: .9rem;
-    @include sm-block{
-        font-size: 1rem;
-    }
-    @include lg-block{
-        font-size: 2.2rem;
-    }
-}
-@mixin calltoactionBtn(){
-    font-weight: 600;
-    font-size: .7rem;
-    color: #000;
-    background-color: #fff;
-    border: 1px solid $primary-color-landing-2;
-    padding-top: 8px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 8px;
-    border-radius: 10px;
-    transition: all .3s;
-    @include sm-block{
-        font-size: 1rem;
-    }
-    @include lg-block{
-        font-size: 1.2rem;
-        padding-top: 14px;
-        padding-left: 24px;
-        padding-right: 24px;
-        padding-bottom: 14px;
-    }
-    &:hover{
-        color: #fff;
-        background-color: $primary-color-landing-2;
-        border-color: transparent;
-    }
 }

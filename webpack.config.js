@@ -15,9 +15,6 @@ module.exports = {
     
     entry: {
         main: "./src/js/index.js",
-        demo: "./src/js/import/pages/demo.js",
-        l3: "./src/js/import/pages/l3.js",
-        mp: "./src/js/import/pages/mp.js",
     },
 
     output: {
