@@ -3,7 +3,6 @@
 .services{
     position: relative;
     padding-top: 60px;
-    overflow: hidden;
     h2{
         margin-bottom: 40px;
         font-size: 1.5rem;
@@ -67,18 +66,10 @@
         flex-direction: column;
         justify-content: center;
         height: 200px;
-        border: 1px solid $primary-color-landing-2;
+        border: 1px solid $primary-color;
         @include xl-block{
             height: 250px;
             margin-bottom: 0;
-
-        }
-        p {
-            width: 70%;
-            margin: 0 auto;
-            color: $secondary-text-color-lending-2;
-            font-size: 1.1rem;
-            line-height: 1.4;
         }
         .icon{
             font-size: 2.2rem;
@@ -87,26 +78,6 @@
         h3{
             font-size: 1.6rem;
             margin-bottom: 20px;
-        }
-    }
-    &__questions {
-        p {
-            font-size: 1rem;
-            font-weight: 500;
-            text-align: center;
-            @include lg-block{
-                font-size: 1.2rem;
-            }
-            a{
-                color: $primary-color-landing-2;
-                transition: all .3s;
-                &:hover{
-                    text-decoration: underline;
-                }
-            }
-            &:first-child{
-                margin-bottom: 10px;
-            }
         }
     }
     &__figures{

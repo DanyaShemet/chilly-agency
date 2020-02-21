@@ -4,13 +4,13 @@
     padding-top: 0;
     padding-bottom: 0;
     position: relative;
-    background-image: linear-gradient( 100deg, #006D8F , #23A4CC 80%, #1396E2);
+    background-color: $primary-color;
     overflow: hidden;
     @include lg-block {
         height: 40vh;
-        padding-top: 30px;
+        padding-top: 50px;
         padding-right: 0;
-        padding-bottom: 20px;
+        padding-bottom: 50px;
         padding-left: 0;
     }
     .container {
@@ -75,17 +75,27 @@
             @include size-xs(12);
             ul{
                 display: flex;
-                justify-content: space-between;
-                li a{
-                    font-weight: 500;
-                    font-size: .9rem;
-                    color: #fff;
-                    transition: all .3s;
-                    @include lg-block{
-                        font-size: 1.2rem;
+                justify-content: center;
+                @include lg-block{
+                    justify-content: flex-end;
+                }
+                li{
+
+                    &:not(:last-child){
+                        margin-right: 20px;
                     }
-                    &:hover{
-                        @include hover-links()
+                    a{
+                        font-weight: 500;
+                        font-size: .9rem;
+                        color: #fff;
+                        transition: all .3s;
+                        @include lg-block{
+                            font-size: 1.2rem;
+                        }
+                        border-bottom: 1px solid transparent;
+                        &:hover{
+                            border-bottom: 1px solid rgba(255,255,255, 1);
+                        }
                     }
                 }
             }
@@ -105,28 +115,37 @@
             flex-direction: column;
         }
         .footer__social {
-            @include size-lg(4);
-            @include size-xs(6);
             @include lg-block {
                 order: 0;
                 margin-bottom: 0;
             }
+            @include size-lg(6);
+            @include size-xs(12);
             margin-bottom: 20px;
             order: 1;
             ul {
                 display: flex;
-                justify-content: space-between;
-                li a {
-                    color: #fff;
-                    font-size: 1.2rem;
-                    transition: all .3s;
-                    @include lg-block {
-                        font-size: 1.5rem;
-                    }
-                    &:hover {
-                        @include hover-links()
+                justify-content: center;
+                @include lg-block{
+                    justify-content: initial;
+                }
+                li{
+                    margin-right: 30px;
+                    a {
+                        color: #fff;
+                        font-size: 1.2rem;
+                        transition: all .3s;
+                        border-bottom: 1px solid transparent;
+                        @include lg-block {
+                            font-size: 1.5rem;
+                        }
+                        &:hover{
+                            border-bottom: 1px solid rgba(255,255,255, 1);
+                        }
                     }
                 }
+
+
             }
         }
         .footer__address {
@@ -150,8 +169,9 @@
             a {
                 transition: all .3s;
                 z-index: 10000;
-                &:hover {
-                    @include hover-links()
+                border-bottom: 1px solid transparent;
+                &:hover{
+                    border-bottom: 1px solid rgba(255,255,255, 1);
                 }
             }
         }

@@ -2,7 +2,7 @@
 
 .portfolio__demo {
     position: relative;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     &__top {
         h2 {
             font-size: 1.5rem;
@@ -30,7 +30,7 @@
         font-size: 1.2rem;
         text-align: center;
         margin: 10px 0 20px 0;
-        color: $secondary-text-color
+        color: #000;
     }
 
     &__item {
@@ -38,7 +38,6 @@
         overflow: hidden;
         color: #fff;
         position: relative;
-        @include size-xl(4);
         @include size-lg(6);
         @include size-xs(12);
         height: 300px;
@@ -57,7 +56,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: $primary-color;
+            background-color: rgba(0,0,0,0.8);
             transform: scale(0);
         }
         .portfolio__demo__overlay-text {
@@ -75,10 +74,13 @@
             margin: 0 auto;
             transition: all .3s ease;
             h4{
-                font-size: 1.2rem;
+                font-size: 1.5rem;
                 text-align: center;
                 margin: 10px 0 20px 0;
                 color: #fff;
+                @include lg-block{
+                    font-size: 2rem;
+                }
             }
         }
 
@@ -94,20 +96,17 @@
             font-size: 1.3rem;
         }
         .portfolio__demo__item-social {
-            display: flex;
-            justify-content: space-evenly;
             a {
                 transition: all .4s;
-                color: #fff;
                 font-size: 3rem;
+                color: #fff;
                 &:hover {
-                    color: #000;
+                    color: $primary-color;
                 }
             }
         }
 
         &:hover {
-            cursor: pointer;
             transform: scale(1.04);
             @include lg-block {
                 transform: scale(1.1);
