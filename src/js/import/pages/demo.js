@@ -37,7 +37,11 @@ function initialParallax() {
             parallaxIt(e, ".h-trapezoid-1", -5, '#header');
             parallaxIt(e, ".repeat-grid-circles", 20, '#header');
         });
-
+        $('#services').mousemove(function (e) {
+            parallaxIt(e, ".pentagon-1", 30, '#services');
+            parallaxIt(e, ".pentagon-2", -30, '#services');
+            parallaxIt(e, ".pentagon-3", -30, '#services');
+        });
         $('#footer').mousemove(function (e) {
             parallaxIt(e, ".footer-circle-1", 10, '#footer');
             parallaxIt(e, ".footer-circle-2", -5, '#footer');

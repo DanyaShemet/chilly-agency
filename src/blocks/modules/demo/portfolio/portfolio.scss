@@ -2,18 +2,14 @@
 
 .portfolio__demo {
     position: relative;
-    padding-top: 40px;
     padding-bottom: 40px;
     &__top {
         h2 {
             font-size: 1.5rem;
-            color: #000;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-        p {
             color: $primary-color;
             text-align: center;
+            margin-bottom: 10px;
+            font-weight: 700;
         }
         padding-bottom: 20px;
         border-bottom: 1px solid rgba(0,0,0,.2);

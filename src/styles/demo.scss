@@ -1,0 +1,26 @@
+/*
+Import fonts
+Normalize.css
+Modal-video.css
+Font Awesome
+Owl carousel
+01 Header
+02 About
+03 Services
+04 Portfolio
+05 Pricing plan
+06 Blog
+07 Contacts
+08 Footer
+*/
+
+
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+@import "base/fonts";
+@import "vendor/libs";
+@import "base/general";
+@import "../blocks/demo";
+@import "base/media";
+@import "base/preloader";
