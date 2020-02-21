@@ -3,7 +3,7 @@
 /* Main styles for header-header */
 .header {
   overflow: hidden;
-  background-image: linear-gradient(50deg, #006D8F  10%, #23A4CC 80%);
+  background-image: $gradient;
   position: relative;
   height: 100vh;
 
