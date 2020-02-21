@@ -1,7 +1,7 @@
 /* 03 Services */
 
 .services{
-    background-image: linear-gradient( 100deg, #006D8F , #23A4CC 80%);
+    background-image: $gradient;
     position: relative;
     padding-top: 60px;
     padding-bottom: 60px;
@@ -74,7 +74,7 @@
             margin-bottom: 0;
 
         }
-        box-shadow: 10px 10px 20px rgba(255, 255, 255, .2);
+        box-shadow: 3px 5px 10px rgba(255, 255, 255, .2);
         transition: all .5s;
         cursor: pointer;
         &:hover{
