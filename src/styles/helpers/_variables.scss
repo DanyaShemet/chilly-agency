@@ -1,4 +1,9 @@
 $primary-color: #13BCDF;
+
+$gradient-color-first: #13CADF;
+$gradient-color-second: #1396E2;
+$gradient: linear-gradient(100deg, $gradient-color-first , $gradient-color-first 80%, $gradient-color-second);
+
 $secondary-text-color: #5D5D5D;
 $border-on-about-page: 1px solid rgba(0, 0, 0, .1);
 $error-input: #FF0000;
