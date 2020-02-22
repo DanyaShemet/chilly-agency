@@ -4,11 +4,13 @@ import "./import/modules";
 import $ from "jquery";
 import {aboutInit} from '../blocks/modules/about/about-text/about-text.js'
 import {TweenMax, gsap} from "gsap/all"
+import {mobileDisplayInBrowser} from "%modules%/header/header";
 
 gsap.registerPlugin(TweenMax);
 
 
 $(document).ready(function () {
+    mobileDisplayInBrowser();
     aboutInit();
     initialParallax();
     setTimeout(function () {
