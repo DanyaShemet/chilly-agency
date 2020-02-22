@@ -3,11 +3,44 @@
 /* Main styles for header-header */
 .header {
   overflow: hidden;
-  background-image: $gradient;
   position: relative;
+  background-image: url("../../img/headerMainImage.webp");
+  background-position: center;
+  background-size: cover;
   height: calc(var(--vh, 1vh) * 100);
   @include lg-block{
     height: 100vh;
+    background-attachment: fixed;
+  }
+
+  &-about {
+    background-image: url("../../img/headerAboutImage.webp");
+  }
+
+  &-contact {
+    background-image: url("../../img/headerContactImage.webp");
+  }
+
+  &-portfolio {
+    background-image: url("../../img/headerPortfolioImage.webp");
+  }
+
+  &-services {
+    background-image: url("../../img/headerServicesImage.webp");
+  }
+
+  &-blog {
+    background-image: url("../../img/headerBlogImage.webp");
+  }
+
+  &-price {
+    background-image: url("../../img/headerPriceImage.webp");
+  }
+
+  &:after {
+    @include overlay-block();
+    background-color: #000;
+    opacity: .6;
   }
   &__shadow {
     filter: drop-shadow(10px 20px 10px rgba(255, 255, 255, 0.8));
