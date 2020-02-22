@@ -388,17 +388,21 @@
 
     nav {
         pointer-events: none;
-        width: 95%;
+        width: 70%;
         display: none;
         @include lg-block {
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-between;
         }
 
         ul {
             display: flex;
-            width: 58%;
-            justify-content: space-between;
+            justify-content: flex-end;
+            li{
+                &:not(:last-child){
+                    margin-right: 20px;
+                }
+            }
         }
 
         .header__top-menu-logo a {

@@ -107,3 +107,33 @@
         border-color: transparent;
     }
 }
+
+
+@mixin calltoactionBtn2(){
+    font-weight: 600;
+    font-size: .7rem;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid $primary-color;
+    padding-top: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 8px;
+    border-radius: 10px;
+    transition: all .3s;
+    @include sm-block{
+        font-size: 1rem;
+    }
+    @include lg-block{
+        font-size: 1.2rem;
+        padding-top: 14px;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-bottom: 14px;
+    }
+    &:hover{
+        color: #fff;
+        background-color: $primary-color;
+        border-color: transparent;
+    }
+}
