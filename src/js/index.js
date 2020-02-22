@@ -4,12 +4,13 @@ import "./import/modules";
 import $ from "jquery";
 import {aboutInit} from '../blocks/modules/landing-01/about/about.js'
 import {TweenMax, gsap} from "gsap/all"
-import {scrollto} from "%modules%/landing-01/header/header";
+import {mobileDisplayInBrowser, scrollto} from "%modules%/landing-01/header/header";
 
 gsap.registerPlugin(TweenMax);
 
 
 $(document).ready(function () {
+    mobileDisplayInBrowser()
     aboutInit();
     scrollto();
     initialParallax();

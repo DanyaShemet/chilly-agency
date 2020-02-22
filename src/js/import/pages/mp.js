@@ -9,11 +9,14 @@ import "%modules%/multipage-01/contact/contact-form/contact-form";
 import $ from "jquery";
 import {aboutInit} from '../../../blocks/modules/multipage-01/about/about-text/about-text'
 import {TweenMax, gsap} from "gsap/all"
+import {mobileDisplayInBrowser} from "%modules%/multipage-01/header/header";
+
 
 gsap.registerPlugin(TweenMax);
 
 
 $(document).ready(function () {
+    mobileDisplayInBrowser();
     aboutInit();
     initialParallax();
     setTimeout(function () {

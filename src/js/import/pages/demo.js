@@ -1,12 +1,14 @@
 import "%modules%/demo/header/header";
 import $ from "jquery";
-import {scrollto} from "%modules%/demo/header/header";
+import {mobileDisplayInBrowser, scrollto} from "%modules%/demo/header/header";
 import {TweenMax, gsap} from "gsap/all"
+
 
 gsap.registerPlugin(TweenMax);
 
 
 $(document).ready(function () {
+    mobileDisplayInBrowser();
     initialParallax();
     scrollto();
     setTimeout(function () {

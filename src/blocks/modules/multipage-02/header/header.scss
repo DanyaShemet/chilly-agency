@@ -4,10 +4,10 @@
 .header {
   overflow: hidden;
   position: relative;
-  height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
   @include lg-block {
     background-attachment: fixed;
+    height: 100vh;
   }
   &__bg-video{
     position: absolute;
@@ -100,7 +100,7 @@
       font-size: 2.5rem;
       margin-bottom: 10px;
       text-align: center;
-      font-weight: 400;
+      font-weight: 500;
       @include lg-block {
         font-size: 4.375rem;
       }
