@@ -80,7 +80,6 @@
                     justify-content: flex-end;
                 }
                 li{
-
                     &:not(:last-child){
                         margin-right: 20px;
                     }
@@ -130,7 +129,9 @@
                     justify-content: initial;
                 }
                 li{
-                    margin-right: 30px;
+                    &:not(:last-child){
+                        margin-right: 30px;
+                    }
                     a {
                         color: #fff;
                         font-size: 1.2rem;
