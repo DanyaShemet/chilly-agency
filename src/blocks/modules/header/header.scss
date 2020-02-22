@@ -85,14 +85,6 @@
         font-size: 4.375rem;
       }
     }
-    img {
-      position: absolute;
-      width: 200px;
-      right: -8rem;
-      bottom: -3rem;
-      display: none;
-      @include sm(display, block);
-    }
   }
 
   &__button {
