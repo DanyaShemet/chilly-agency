@@ -6,6 +6,10 @@ import $ from "jquery";
 import ModalVideo from "modal-video/js/modal-video.min"
 
 
+//  100vh in mobile screen
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
 let burger = $('.burger-icon');
 let links = $('.header__animate-nav ul li a');
 let menu = $('.header__animate-nav ul li');
