@@ -10,13 +10,13 @@ let burger = $('.burger-icon');
 let links = $('.header__demo__animate-nav ul li a');
 let menu = $('.header__demo__animate-nav ul li');
 let overlay_navigation = $('.header__demo__navigation-overlay');
-let vh = window.innerHeight * 0.01;
 
-export function mobileDisplayInBrowser(){
-    if (document.documentElement.clientWidth <= 500){
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-    }
+
+export function mobileDisplayInBrowser() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
+
 // Burger menu functionality
 burger.click(showMenu)
 links.click(hideMenu);
@@ -79,7 +79,7 @@ $(window).scroll(function (e) {
 
 // Type machine Functionality
 let options = {
-    strings: ['Onepage Animated', 'Onepage solid color','Onepage video', 'Multipage version'],
+    strings: ['Onepage Animated', 'Onepage solid color', 'Onepage video', 'Multipage version'],
     typeSpeed: 40,
     showCursor: false,
     loop: true,

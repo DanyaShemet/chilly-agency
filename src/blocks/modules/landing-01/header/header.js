@@ -10,12 +10,11 @@ let burger = $('.burger-icon');
 let links = $('.header__animate-nav ul li a');
 let menu = $('.header__animate-nav ul li');
 let overlay_navigation = $('.header__navigation-overlay');
-let vh = window.innerHeight * 0.01;
+
 
 export function mobileDisplayInBrowser(){
-    if (document.documentElement.clientWidth <= 500){
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-    }
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
 
 

@@ -11,11 +11,6 @@ let menu = $('.header__animate-nav ul li');
 let overlay_navigation = $('.header__navigation-overlay');
 
 
-let vh = window.innerHeight * 0.01;
-// Then we set the value in the --vh custom property to the root of the document
-document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-
 // Burger menu functionality
 burger.click(showMenu)
 links.click(hideMenu);
