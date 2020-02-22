@@ -5,8 +5,10 @@
   overflow: hidden;
   background-image: $gradient;
   position: relative;
-  height: 100vh;
-
+  height: calc(var(--vh, 1vh) * 100);
+  @include lg-block{
+    height: 100vh;
+  }
   &__shadow {
     filter: drop-shadow(10px 20px 10px rgba(255, 255, 255, 0.8));
   }
@@ -19,7 +21,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    h2 {
+    transition: all .3s;
+    span {
       font-family: Pacifico, cursive;
       z-index: 2;
       color: #000;
@@ -28,11 +31,14 @@
       user-select: none;
       width: 70%;
     }
+    &:hover{
+      background-color: rgba(255, 255, 255, .6);
+    }
   }
-  &__logo-about {
+  &__logo-other-page {
     height: 80px;
     width: 70px;
-    h2 {
+    span {
       color: #000;
       font-size: .6rem;
     }
@@ -44,7 +50,7 @@
       height: 140px;
       width: 130px;
     }
-    h2 {
+    span {
       font-size: .8rem;
       @include sm-block {
         font-size: 1.2rem;
@@ -372,17 +378,21 @@
 
   nav {
     pointer-events: none;
-    width: 95%;
+    width: 70%;
     display: none;
     @include lg-block {
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-between;
     }
 
     ul {
       display: flex;
-      width: 58%;
-      justify-content: space-between;
+      justify-content: flex-end;
+      li{
+        &:not(:last-child){
+          margin-right: 20px;
+        }
+      }
     }
 
     .header__top-menu-logo a {
