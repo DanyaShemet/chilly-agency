@@ -8,6 +8,7 @@ import {mobileDisplayInBrowser, scrollto} from "%modules%/header/header";
 
 gsap.registerPlugin(TweenMax);
 
+const companyName = 'Chilly Agency';
 
 $(document).ready(function () {
     mobileDisplayInBrowser();
@@ -23,7 +24,9 @@ $(document).ready(function () {
     setCompanyName()
 });
 
-const companyName = 'Chilly Agency';
+window.addEventListener('resize', () => {
+    mobileDisplayInBrowser();
+});
 
 function setCompanyName() {
     $('.company-name').each(function () {
