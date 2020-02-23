@@ -8,9 +8,9 @@
   background-size: cover;
   position: relative;
   height: calc(var(--vh, 1vh) * 100);
+  transition: all 1s;
   @include lg-block {
     background-attachment: fixed;
-    height: 100vh;
   }
 
   &:after {
