@@ -9,14 +9,8 @@ let burger = $('.burger-icon');
 let links = $('.header__animate-nav ul li a');
 let menu = $('.header__animate-nav ul li');
 let overlay_navigation = $('.header__navigation-overlay');
-// 100 vh in mobile phone
-let vh = window.innerHeight * 0.01;
 
-export function mobileDisplayInBrowser(){
-    if (document.documentElement.clientWidth <= 500){
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-    }
-}
+
 
 // Burger menu functionality
 burger.click(showMenu)
@@ -80,3 +74,8 @@ function onWheel(){
 // Video functionality
 new ModalVideo('.open-video');
 
+// 100 vh in mobile phone
+export function mobileDisplayInBrowser(){
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
