@@ -19,6 +19,9 @@ $(document).ready(function () {
     }, 2000);
     setCompanyName()
 });
+window.addEventListener('resize', () => {
+    mobileDisplayInBrowser();
+});
 
 const companyName = 'Chilly Agency';
 

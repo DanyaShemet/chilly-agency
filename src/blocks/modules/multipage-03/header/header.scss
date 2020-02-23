@@ -8,6 +8,7 @@
     background-position: center;
     background-size: cover;
     height: calc(var(--vh, 1vh) * 100);
+transition: all 1s;
     @include lg-block {
         background-attachment: fixed;
     }
@@ -424,7 +425,7 @@
 
     nav {
         pointer-events: none;
-        width: 70%;
+        width: 80%;
         display: none;
         @include lg-block {
             display: flex;

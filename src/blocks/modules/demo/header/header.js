@@ -17,6 +17,7 @@ export function mobileDisplayInBrowser() {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
 
+
 // Burger menu functionality
 burger.click(showMenu)
 links.click(hideMenu);

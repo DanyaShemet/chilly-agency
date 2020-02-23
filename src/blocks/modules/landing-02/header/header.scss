@@ -6,6 +6,7 @@
   background-image: linear-gradient(50deg, #006D8F  10%, #23A4CC 80%);
   position: relative;
   height: calc(var(--vh, 1vh) * 100);
+transition: all 1s;
   &__shadow {
     filter: drop-shadow(10px 20px 10px rgba(255, 255, 255, 0.8));
   }
@@ -372,7 +373,7 @@
 
   nav {
     pointer-events: none;
-    width: 70%;
+    width: 80%;
     display: none;
     @include lg-block {
       display: flex;
