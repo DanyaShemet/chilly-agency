@@ -447,16 +447,22 @@
     background-color: rgba(255, 255, 255, .8);
     border-bottom: 1px solid rgba(0, 0, 0, .3);
 
-    & a {
+    a {
       color: #000;
     }
 
-    & .burger-icon {
+    .burger-icon {
       top: 1.2rem;
       display: block;
       background-color: #000;
       @include lg-block {
         display: none;
+      }
+      &:after{
+        background-color: #000;
+      }
+      &:before{
+        background-color: #000;
       }
       &.active{
         top: 2rem;
@@ -526,12 +532,6 @@
       width: 110%;
     }
   }
-}
-
-.burger-wrapper.navShadow > .burger-icon,
-.burger-wrapper.navShadow > .burger-icon:after,
-.burger-wrapper.navShadow > .burger-icon:before {
-  background-color: #000;
 }
 
 .burger-icon.active, .navShadow > .burger-icon.active {
