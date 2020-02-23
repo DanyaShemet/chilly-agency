@@ -12,14 +12,6 @@ let links = $('.header__animate-nav ul li a');
 let menu = $('.header__animate-nav ul li');
 let overlay_navigation = $('.header__navigation-overlay');
 
-//  100vh in mobile screen
-let vh = window.innerHeight * 0.01;
-
-export function mobileDisplayInBrowser(){
-    if (document.documentElement.clientWidth <= 500){
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-    }
-}
 // Burger menu functionality
 burger.click(showMenu)
 links.click(hideMenu);
@@ -63,7 +55,6 @@ function hideMenu() {
 }
 
 // On Scroll Functionality
-
 $(window).scroll(function (e) {
     let st = $(this).scrollTop();
     st > 200 ? $('.burger-wrapper').addClass('navShadow') : $('.burger-wrapper').removeClass('navShadow');
@@ -104,4 +95,11 @@ export function scrollto() {
 
 // Video functionality
 new ModalVideo('.open-video');
+
+//  100vh in mobile screen functionality
+export function mobileDisplayInBrowser(){
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
 
