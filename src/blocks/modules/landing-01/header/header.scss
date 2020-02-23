@@ -531,6 +531,10 @@ transition: all 1s;
 .burger-wrapper.navShadow > .burger-icon:before {
     background-color: #000;
 }
+.burger-wrapper.navShadow > .burger-icon.active:after,
+.burger-wrapper.navShadow > .burger-icon.active:before {
+    background-color: #fff;
+}
 
 .burger-icon.active, .navShadow > .burger-icon.active {
     background-color: transparent;
