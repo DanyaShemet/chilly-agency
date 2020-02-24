@@ -10,7 +10,6 @@ gsap.registerPlugin(TweenMax);
 
 const companyName = 'Chilly Agency';
 
-
 $(document).ready(function () {
     mobileDisplayInBrowser();
     aboutInit();

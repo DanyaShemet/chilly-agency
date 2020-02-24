@@ -7,10 +7,10 @@ import ModalVideo from "modal-video/js/modal-video.min"
 
 
 
-let burger = $('.burger-icon');
-let links = $('.header__animate-nav ul li a');
-let menu = $('.header__animate-nav ul li');
-let overlay_navigation = $('.header__navigation-overlay');
+const burger = $('.burger-icon');
+const links = $('.header__animate-nav ul li a');
+const menu = $('.header__animate-nav ul li');
+const overlay_navigation = $('.header__navigation-overlay');
 
 
 // Burger menu functionality
