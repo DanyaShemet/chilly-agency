@@ -6,7 +6,10 @@
         background-image: url("../img/teamBgImage.webp");
         background-position: center;
         background-size: cover;
-        background-attachment: fixed;
+        @include lg-block{
+     background-attachment: fixed;
+}
+
         position: relative;
         font-size: 1.3rem;
         @include md-block {

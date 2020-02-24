@@ -2,7 +2,10 @@
     padding-top: 40px;
     padding-bottom: 40px;
     background-image: url("../img/feedbackBg.webp");
-    background-attachment: fixed;
+    @include lg-block{
+     background-attachment: fixed;
+}
+
     background-size: cover;
     background-position: center;
     position: relative;
