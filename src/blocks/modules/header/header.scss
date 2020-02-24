@@ -6,7 +6,7 @@
     background-image: $gradient;
     position: relative;
     height: calc(var(--vh, 1vh) * 100);
-    transition: all 1s;
+    transition: all ease 1s;
     &__shadow {
         filter: drop-shadow(10px 20px 10px rgba(255, 255, 255, 0.8));
     }
@@ -27,7 +27,6 @@
 
         h2 {
             font-family: Pacifico, cursive;
-            z-index: 2;
             color: #000;
             font-size: .8rem;
             text-align: center;
@@ -46,7 +45,7 @@
         flex-direction: column;
         align-items: center;
         position: relative;
-        z-index: 2;
+        z-index: 1;
 
     }
 
@@ -54,6 +53,7 @@
         font-size: .9rem;
         position: relative;
         width: 90%;
+        padding: 0;
         @include md-block {
             font-size: 1.2rem;
             width: 50%;
@@ -75,7 +75,7 @@
         }
 
         p {
-            color: #DCDCDC;
+            color: $header-secondary-text;
             font-size: .9rem;
             line-height: 1.1;
             font-weight: 500;
@@ -96,7 +96,7 @@
     }
 
     &__button {
-        & a {
+        a {
             padding-top: 10px;
             padding-bottom: 10px;
             padding-left: 40px;
@@ -106,10 +106,10 @@
             color: $primary-color;
             font-weight: 700;
             border-radius: 20px;
-            transition: all .5s;
+            transition: all ease .5s;
 
             &:hover {
-                box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
                 transform: scale(1.05);
             }
 
@@ -176,7 +176,7 @@
         overflow: hidden;
         visibility: hidden;
         opacity: 0;
-        transition: all 1s;
+        transition: all ease 1s;
 
         &.active {
             opacity: 1;
@@ -300,19 +300,19 @@
     opacity: 0;
     overflow-y: hidden;
 
-    & nav, nav ul {
+    nav, nav ul {
         width: 100%;
         height: 100%;
         overflow: hidden;
 
-        & ul {
+        ul {
             display: flex;
             flex-direction: column;
             @include lg-block {
                 flex-direction: row;
             }
 
-            & li {
+            li {
                 justify-content: center;
                 align-items: center;
                 height: 100%;
@@ -367,7 +367,7 @@
     height: 100px;
     position: fixed;
     width: 100%;
-    transition: all .4s;
+    transition: all ease .4s;
     z-index: 101;
     justify-content: center;
     align-items: center;
@@ -395,7 +395,7 @@
             }
         }
 
-        .header__top-menu-logo a {
+        .header__noanimate-nav-logo a {
             font-family: Pacifico, cursive;
         }
     }
@@ -409,7 +409,7 @@
 
     a {
         color: transparent;
-        transition: all .3s;
+        transition: all ease .3s;
         font-family: Pacifico, cursive;
         font-size: 1rem;
         user-select: none;
@@ -467,7 +467,7 @@
         cursor: pointer;
         background-color: #fff;
         height: 1px;
-        transition: all .4s;
+        transition: all ease .4s;
         background-clip: content-box;
         border-top: 11px solid transparent;
         border-bottom: 11px solid transparent;
@@ -489,7 +489,7 @@
             right: 0;
             will-change: rotate;
             transform: rotate(0deg);
-            transition: all 0.5s ease;
+            transition: all ease0.5s ease;
         }
 
         &:before {

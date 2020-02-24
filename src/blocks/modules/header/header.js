@@ -6,11 +6,10 @@ import $ from "jquery";
 import ModalVideo from "modal-video/js/modal-video.min"
 
 
-let burger = $('.burger-icon');
-let links = $('.header__animate-nav ul li a');
-let menu = $('.header__animate-nav ul li');
-let overlay_navigation = $('.header__navigation-overlay');
-
+const burger = $('.burger-icon');
+const links = $('.header__animate-nav ul li a');
+const menu = $('.header__animate-nav ul li');
+const overlay_navigation = $('.header__navigation-overlay');
 
 // Burger menu functionality
 burger.click(showMenu)
@@ -83,7 +82,6 @@ let options = {
 };
 let typed = new Typed('#main-text', options);
 
-
 // scroll to chosen block on page functionality
 export function scrollto() {
     $(".scrollto").click(function () {
@@ -97,7 +95,7 @@ export function scrollto() {
 // Video functionality
 new ModalVideo('.open-video');
 
-// 100vh in mobile phone
+// 100vh in mobile phone functionality
 export function mobileDisplayInBrowser(){
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
