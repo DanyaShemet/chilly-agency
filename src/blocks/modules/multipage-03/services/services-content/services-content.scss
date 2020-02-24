@@ -74,7 +74,7 @@
             margin-bottom: 0;
 
         }
-        transition: all .5s;
+        transition: all  ease .3s;
         cursor: pointer;
         &:hover{
             transform: scale(1.01);
@@ -105,7 +105,7 @@
             }
             a{
                 color: $primary-color;
-                transition: all .3s;
+                transition: all  ease .3s;
                 &:hover{
                     text-decoration: underline;
                 }

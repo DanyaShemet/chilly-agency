@@ -131,7 +131,7 @@
                 @include md-block {
                     font-size: 1.4rem;
                 }
-                transition: all .5s;
+                transition: all  ease .3s;
 
                 &:hover {
                     @include hover-links-2()
@@ -237,7 +237,7 @@
                     }
                 }
                 margin-right: 3px;
-                transition: all .5s;
+                transition: all  ease .3s;
                 &:hover {
                     @include hover-links-2()
                 }
