@@ -1,16 +1,15 @@
 "use strict";
+
 import "velocity-animate/velocity.min"
 import "velocity-animate/velocity.ui.min"
 import Typed from 'typed.js'
 import $ from "jquery";
 import ModalVideo from "modal-video/js/modal-video.min"
 
-
-
-let burger = $('.burger-icon');
-let links = $('.header__animate-nav ul li a');
-let menu = $('.header__animate-nav ul li');
-let overlay_navigation = $('.header__navigation-overlay');
+const burger = $('.burger-icon');
+const links = $('.header__animate-nav ul li a');
+const menu = $('.header__animate-nav ul li');
+const overlay_navigation = $('.header__navigation-overlay');
 
 // Burger menu functionality
 burger.click(showMenu)
@@ -55,7 +54,7 @@ function hideMenu() {
 }
 
 // On Scroll Functionality
-$(window).scroll(function (e) {
+$(window).scroll(function () {
     let st = $(this).scrollTop();
     st > 200 ? $('.burger-wrapper').addClass('navShadow') : $('.burger-wrapper').removeClass('navShadow');
 
@@ -82,7 +81,6 @@ let options = {
 };
 let typed = new Typed('#main-text', options);
 
-
 // scroll to chosen block on page functionality
 export function scrollto() {
     $(".scrollto").click(function () {
@@ -97,7 +95,7 @@ export function scrollto() {
 new ModalVideo('.open-video');
 
 //  100vh in mobile screen functionality
-export function mobileDisplayInBrowser(){
+export function mobileDisplayInBrowser() {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 }

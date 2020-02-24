@@ -6,13 +6,15 @@
         background-image: url("../img/teamBgImage.webp");
         background-position: center;
         background-size: cover;
-        background-attachment: fixed;
         position: relative;
         font-size: 1.3rem;
         @include md-block {
             padding-top: 100px;
             padding-bottom: 100px;
             font-size: 1.7rem;
+        }
+        @include lg-block{
+            background-attachment: fixed;
         }
         font-weight: 500;
         color: #fff;
@@ -67,6 +69,7 @@
         }
 
         .team__heads-preview {
+            @include size-lg(5);
             .team__head-img-wrap {
                 overflow: hidden;
                 font-size: 0;
@@ -86,12 +89,11 @@
                 }
                 img {
                     width: 100%;
-                    transition: transform .3s;
+                    transition: transform ease .3s;
                     overflow: hidden;
                     &:hover {
                         transform: scale(1.06);
                     }
-
                 }
             }
 
@@ -131,14 +133,14 @@
                 @include md-block {
                     font-size: 1.4rem;
                 }
-                transition: all .5s;
+                transition: all ease .5s;
 
                 &:hover {
                     @include hover-links()
                 }
             }
 
-            @include size-lg(5);
+
 
             &:last-child {
                 margin-left: 30px;
@@ -237,7 +239,7 @@
                     }
                 }
                 margin-right: 3px;
-                transition: all .5s;
+                transition: all ease .5s;
                 &:hover {
                     @include hover-links()
                 }
