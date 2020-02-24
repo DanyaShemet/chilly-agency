@@ -1,4 +1,8 @@
 $primary-color: #006D8F;
+
+$gradient-color-first: $primary-color;
+$gradient-color-second: #23A4CC;
+$gradient: linear-gradient( 100deg, #006D8F , #23A4CC 80%);
 $secondary-text-color: #010101;
 $header-secondary-text: #DCDCDC;
 $border-on-about-page: 1px solid rgba(0, 0, 0, .1);

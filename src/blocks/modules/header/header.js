@@ -11,6 +11,7 @@ let links = $('.header__animate-nav ul li a');
 let menu = $('.header__animate-nav ul li');
 let overlay_navigation = $('.header__navigation-overlay');
 
+
 // Burger menu functionality
 burger.click(showMenu)
 links.click(hideMenu);
@@ -96,3 +97,8 @@ export function scrollto() {
 // Video functionality
 new ModalVideo('.open-video');
 
+// 100vh in mobile phone
+export function mobileDisplayInBrowser(){
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
