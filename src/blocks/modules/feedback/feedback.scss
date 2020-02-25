@@ -2,24 +2,11 @@
 .feedback {
     padding-top: 40px;
     padding-bottom: 40px;
-    background-image: url("../img/feedbackBg.webp");
-    background-size: cover;
-    background-position: center;
     position: relative;
     overflow: hidden;
-    @include lg-block{
-        background-attachment: fixed;
-    }
-    &:after {
-        @include overlay-block();
-        background-color: $primary-color;
-        opacity: .9;
-    }
+    background-color: $primary-color;
 
     .container {
-        z-index: 2;
-        position: relative;
-
         h2 {
             color: #fff;
             font-size: 1.5rem;
