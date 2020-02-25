@@ -1,18 +1,15 @@
 /*  08 Blog */
 .blog{
-    background-image: url("../img/blogBg.webp");
-    background-position: center;
-    background-size: cover;
+
     position: relative;
-    @include lg-block{
-     background-attachment: fixed;
-}
+    background-color: $primary-color-landing-2;
+
 
     padding-top: 40px;
     padding-bottom: 40px;
     &:after{
         @include overlay-block();
-        background-color: $primary-color-landing-2;
+
         opacity: .8;
     }
     .container{

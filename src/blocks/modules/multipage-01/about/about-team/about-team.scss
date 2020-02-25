@@ -2,13 +2,7 @@
     &__text {
         padding-top: 50px;
         padding-bottom: 50px;
-        background-image: url("../img/teamBgImage.webp");
-        background-position: center;
-        background-size: cover;
-        @include lg-block{
-     background-attachment: fixed;
-}
-
+        background-color: $primary-color-landing-2;
         position: relative;
         font-size: 1.3rem;
         @include md-block {
@@ -18,11 +12,6 @@
         }
         font-weight: 500;
         color: #fff;
-        &:after {
-            @include overlay-block();
-            background-color: $primary-color-landing-2;
-            opacity: .9;
-        }
         .container {
             display: flex;
             flex-direction: column;
