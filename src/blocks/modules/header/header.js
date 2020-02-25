@@ -6,11 +6,10 @@ import $ from "jquery";
 import ModalVideo from "modal-video/js/modal-video.min"
 
 
-let burger = $('.burger-icon');
-let links = $('.header__animate-nav ul li a');
-let menu = $('.header__animate-nav ul li');
-let overlay_navigation = $('.header__navigation-overlay');
-
+const burger = $('.burger-icon');
+const links = $('.header__animate-nav ul li a');
+const menu = $('.header__animate-nav ul li');
+const overlay_navigation = $('.header__navigation-overlay');
 
 // Burger menu functionality
 burger.click(showMenu)
@@ -55,7 +54,6 @@ function hideMenu() {
 }
 
 // On Scroll Functionality
-
 $(window).scroll(function (e) {
     let st = $(this).scrollTop();
     st > 200 ? $('.burger-wrapper').addClass('navShadow') : $('.burger-wrapper').removeClass('navShadow');

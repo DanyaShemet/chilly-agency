@@ -3,7 +3,6 @@
 import ScrollMagic from 'scrollmagic'
 
 // animate numbers functionality
-
 function animateCount() {
     $('.about__animated-numbers').each(function () {
         const _this = $(this)
