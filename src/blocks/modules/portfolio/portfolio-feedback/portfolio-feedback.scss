@@ -1,18 +1,12 @@
+/* 06 Feedback */
+
 .feedback {
     padding-top: 40px;
     padding-bottom: 40px;
-    background-image: url("../img/feedbackBg.webp");
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+    background-color: $primary-color;
     position: relative;
     overflow: hidden;
 
-    &:after {
-        @include overlay-block();
-        background-color: $primary-color;
-        opacity: .9;
-    }
     .container {
         z-index: 2;
         position: relative;
@@ -58,7 +52,8 @@
                 margin-bottom: 40px;
             }
         }
-        p{
+
+        p {
             color: #fff;
             text-align: center;
             font-size: 1rem;
@@ -91,6 +86,7 @@
         @include figures();
         border-radius: 50%;
     }
+
     .circles {
         background-color: rgba(255, 255, 255, 0.3);
     }

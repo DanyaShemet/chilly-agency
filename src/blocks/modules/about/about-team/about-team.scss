@@ -1,13 +1,12 @@
+/* 03 Team */
+
 .team {
     &__text {
         padding-top: 50px;
         padding-bottom: 50px;
-        background-image: url("../img/teamBgImage.webp");
-        background-position: center;
-        background-size: cover;
-        background-attachment: fixed;
         position: relative;
         font-size: 1.3rem;
+        background-color: $primary-color;
         @include md-block {
             padding-top: 100px;
             padding-bottom: 100px;
@@ -15,11 +14,6 @@
         }
         font-weight: 500;
         color: #fff;
-        &:after {
-            @include overlay-block();
-            background-color: $primary-color;
-            opacity: .9;
-        }
         .container {
             display: flex;
             flex-direction: column;
@@ -43,7 +37,7 @@
                     line-height: 1.5;
                 }
                 line-height: 1.4;
-                span {
+                & span {
                     font-weight: 700;
                 }
             }
@@ -76,8 +70,8 @@
                     margin-bottom: 20px;
                 }
                 @include xs-block {
-                     height: 190px;
-                     width: 130px;
+                    height: 190px;
+                    width: 130px;
                 }
                 @include lg-block {
                     height: 410px;
@@ -86,7 +80,7 @@
 
                 img {
                     width: 100%;
-                    transition: transform .3s;
+                    transition: transform ease .3s;
                     overflow: hidden;
                     &:hover {
                         transform: scale(1.06);
@@ -131,7 +125,7 @@
                 @include md-block {
                     font-size: 1.4rem;
                 }
-                transition: all .5s;
+                transition: all ease .5s;
 
                 &:hover {
                     @include hover-links()
@@ -237,7 +231,7 @@
                     }
                 }
                 margin-right: 3px;
-                transition: all .5s;
+                transition: all ease .5s;
                 &:hover {
                     @include hover-links()
                 }
