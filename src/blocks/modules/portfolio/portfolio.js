@@ -1,7 +1,7 @@
 "use strict";
 
-let categories = $('.filter-item');
-let elem = $(".portfolio__item");
+const categories = $('.filter-item');
+const elem = $(".portfolio__item");
 categories.click(applyFilter);
 
 // filter functionality

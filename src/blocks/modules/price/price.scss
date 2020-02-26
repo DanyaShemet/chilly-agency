@@ -3,15 +3,18 @@
 .pricing {
     padding-top: 40px;
     padding-bottom: 40px;
+
     &__text {
         margin-bottom: 40px;
         @include size-lg(6);
         @include size-xs(12);
+
         h2 {
             margin-bottom: 20px;
             font-size: 1.5rem;
             color: $primary-color;
         }
+
         p {
             color: $secondary-text-color;
             font-weight: 500;
@@ -40,8 +43,8 @@
         @include xs-block {
             margin-bottom: 20px;
             padding: 0;
-
         }
+
         &:first-child {
             padding-left: 0;
         }
@@ -88,7 +91,10 @@
 
         .benefits p {
             border-top: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 15px 0;
+            padding-top: 15px;
+            padding-right: 0;
+            padding-left: 0;
+            padding-bottom: 15px;
             color: #4A4949;
             font-weight: 500;
             font-size: 1rem;
@@ -119,7 +125,7 @@
             height: 35px;
             border: 1px solid transparent;
             box-shadow: 0 3px 6px rgba(0, 0, 0, .3);
-            transition: all .3s;
+            transition: all ease .3s;
 
             &:hover {
                 background-color: #fff;
@@ -140,8 +146,8 @@
         .price__card-btn {
             color: $primary-color;
             background-color: #fff;
-            box-shadow: 0px 3px 6px rgba(255, 255, 255, .7);
-            transition: all .3s;
+            box-shadow: 0 3px 6px rgba(255, 255, 255, .7);
+            transition: all ease .3s;
 
             &:hover {
                 background-color: $primary-color;
