@@ -33,7 +33,7 @@
             justify-content: space-between;
         }
         .footer__shadow{
-            @include size-lg(4);
+            @include size-lg(2);
             filter: drop-shadow(10px 10px 5px rgba(255, 255, 255, 0.5));
 
         }
@@ -71,7 +71,7 @@
                 display: block;
             }
             display: none;
-            @include size-lg(8);
+            @include size-lg(10);
             @include size-xs(12);
             ul{
                 display: flex;
