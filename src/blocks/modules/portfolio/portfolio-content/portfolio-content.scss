@@ -1,17 +1,19 @@
-/* 04 Portfolio */
+/* 05 Portfolio */
 
 .portfolio {
     position: relative;
     padding-top: 40px;
     padding-bottom: 40px;
+
     &__top {
         margin-bottom: 40px;
+
         h2 {
             font-size: 1.5rem;
         }
     }
 
-    &__categories{
+    &__categories {
         display: flex;
         flex-wrap: wrap;
         justify-content: start;
@@ -41,7 +43,7 @@
             padding-right: 30px;
             border: 1px solid #000;
             border-radius: 10px;
-            transition: all .5s;
+            transition: all ease .4s;
 
             &:hover, .active {
                 background-color: $primary-color;
@@ -74,18 +76,20 @@
         @include size-md(6);
         @include size-xs(12);
         height: 250px;
-        @include sm-block{
+        @include sm-block {
             height: 350px;
         }
-        @include lg-block{
+        @include lg-block {
             height: 250px;
         }
 
         transition: transform .5s;
-        img{
+
+        img {
             width: 100%;
             height: 100%;
         }
+
         &:after {
             content: '';
             position: absolute;
@@ -96,12 +100,13 @@
             background-color: $primary-color;
             transform: scale(0);
         }
+
         .portfolio__overlay-text {
             position: absolute;
             left: 0;
             opacity: 0;
             top: 18%;
-            @include sm-block{
+            @include sm-block {
                 top: 25%;
             }
             right: 0;
@@ -114,20 +119,25 @@
 
         .overlay-description {
             font-size: 1rem;
+
             .main-text {
                 margin-bottom: 20px;
             }
         }
+
         .overlay-name {
             margin-bottom: 10px;
             font-size: 1.3rem;
         }
+
         .portfolio__item-social {
             display: flex;
             justify-content: space-evenly;
+
             a {
-                transition: all .4s;
+                transition: all ease .4s;
                 color: #fff;
+
                 &:hover {
                     color: #1396E2;
                 }
@@ -142,10 +152,12 @@
             }
             z-index: 3;
             background-image: none;
+
             &:after {
                 transform: scale(1);
             }
-            .portfolio__overlay-text{
+
+            .portfolio__overlay-text {
                 opacity: 1;
             }
         }

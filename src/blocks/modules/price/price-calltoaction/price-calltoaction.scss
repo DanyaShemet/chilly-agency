@@ -1,19 +1,22 @@
-/* 04 Calltoaction-price */
+/* 09 Call to action price */
 
-.calltoaction-price{
+.calltoaction-price {
     padding-bottom: 40px;
-    &__content{
+
+    &__content {
         display: flex;
         align-items: center;
         flex-direction: column;
+
         p {
             @include calltoactiontext();
             margin-bottom: 20px;
-            @include lg-block{
+            @include lg-block {
                 margin-bottom: 30px;
             }
         }
-        a{
+
+        a {
             @include calltoactionBtn()
         }
     }

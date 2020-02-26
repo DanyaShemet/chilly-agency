@@ -4,7 +4,7 @@ import "./import/modules";
 import $ from "jquery";
 import {aboutInit} from '../blocks/modules/about/about-text/about-text.js'
 import {TweenMax, gsap} from "gsap/all"
-import {mobileDisplayInBrowser} from "%modules%/header/header";
+import {mobileDisplayInBrowser} from "../blocks/modules/header/header";
 
 gsap.registerPlugin(TweenMax);
 

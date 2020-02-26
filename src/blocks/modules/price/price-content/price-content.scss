@@ -1,20 +1,23 @@
-/* 05 Price */
+/* 08 Price */
 
 .pricing {
     padding-top: 40px;
     padding-bottom: 20px;
-    @include lg-block{
+    @include lg-block {
         padding-bottom: 40px;
     }
+
     &__text {
         margin-bottom: 40px;
         @include size-lg(6);
         @include size-xs(12);
+
         h2 {
             margin-bottom: 20px;
             font-size: 1.5rem;
             color: $primary-color;
         }
+
         p {
             color: $secondary-text-color;
             font-weight: 500;
@@ -45,6 +48,7 @@
             padding: 0;
 
         }
+
         &:first-child {
             padding-left: 0;
         }
@@ -122,7 +126,7 @@
             height: 35px;
             border: 1px solid transparent;
             box-shadow: 0 3px 6px rgba(0, 0, 0, .3);
-            transition: all .3s;
+            transition: all ease .4s;
 
             &:hover {
                 background-color: #fff;
@@ -144,7 +148,7 @@
             color: $primary-color;
             background-color: #fff;
             box-shadow: 0px 3px 6px rgba(255, 255, 255, .7);
-            transition: all .3s;
+            transition: all ease .4s;
 
             &:hover {
                 background-color: $primary-color;

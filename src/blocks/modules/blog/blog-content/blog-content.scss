@@ -1,4 +1,4 @@
-/*  06 Blog */
+/*  10 Blog */
 .blog {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -261,7 +261,7 @@
         a {
             display: none;
             z-index: 1;
-            transition: all .4s;
+            transition: all ease .4s;
         }
 
         small {
@@ -272,38 +272,43 @@
         }
     }
 
-    &__figures{
+    &__figures {
         @include figures();
         display: none;
-        @include xl-block{
+        @include xl-block {
             display: block;
         }
     }
-    .pentagon-1{
+
+    .pentagon-1 {
         width: 200px;
         height: 200px;
         top: 15%;
         left: 10%;
     }
-    .pentagon-2{
+
+    .pentagon-2 {
         width: 200px;
         height: 200px;
         top: 65%;
         left: 5%;
     }
-    .pentagon-3{
+
+    .pentagon-3 {
         width: 200px;
         height: 200px;
         top: 45%;
         left: 7%;
     }
-    .pentagon-4{
+
+    .pentagon-4 {
         width: 200px;
         height: 200px;
         top: 75%;
         right: 5%;
     }
-    .pentagon-5{
+
+    .pentagon-5 {
         width: 500px;
         height: 500px;
         top: 30%;

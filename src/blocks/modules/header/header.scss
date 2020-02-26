@@ -6,9 +6,6 @@
     position: relative;
     height: calc(var(--vh, 1vh) * 100);
     transition: all 1s;
-    @include lg-block {
-        background-attachment: fixed;
-    }
 
     &__bg-video {
         position: absolute;
@@ -37,7 +34,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: all .3s;
+        transition: all ease .4s;
 
         span {
             font-family: Pacifico, cursive;
@@ -113,7 +110,7 @@
     }
 
     &__button {
-        & a {
+        a {
             padding-top: 10px;
             padding-bottom: 10px;
             padding-left: 40px;
@@ -123,7 +120,7 @@
             color: #fff;
             font-weight: 700;
             border-radius: 20px;
-            transition: all .5s;
+            transition: all ease .4s;
 
             &:hover {
                 box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
@@ -383,7 +380,7 @@
     height: 100px;
     position: fixed;
     width: 100%;
-    transition: all .4s;
+    transition: all ease .4s;
     z-index: 101;
     justify-content: center;
     align-items: center;
@@ -425,7 +422,7 @@
 
     a {
         color: transparent;
-        transition: all .3s;
+        transition: all ease .4s;
         font-family: Pacifico, cursive;
         font-size: 1rem;
         user-select: none;
@@ -456,11 +453,11 @@
         background-color: rgba(255, 255, 255, .8);
         border-bottom: 1px solid rgba(0, 0, 0, .3);
 
-        & a {
+        a {
             color: #000;
         }
 
-        & .burger-icon {
+        .burger-icon {
             top: 1.2rem;
             display: block;
             background-color: #000;
@@ -499,7 +496,7 @@
         cursor: pointer;
         background-color: #fff;
         height: 1px;
-        transition: all .4s;
+        transition: all ease .4s;
         background-clip: content-box;
         border-top: 11px solid transparent;
         border-bottom: 11px solid transparent;

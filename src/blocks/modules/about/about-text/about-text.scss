@@ -2,6 +2,7 @@
 .about {
     padding-top: 30px;
     padding-bottom: 30px;
+
     &__text-items {
         margin-bottom: 40px;
         @include row-flex();
@@ -36,7 +37,7 @@
                     position: relative;
                     width: 100%;
                     display: block;
-                    & img {
+                    img {
                         width: 124px;
                         height: 124px;
                         margin-left: 5px;
@@ -50,9 +51,9 @@
             @include size-lg(6);
             font-weight: 500;
             line-height: 1.5;
-            span{
+
+            span {
                 font-weight: 600;
-                color: $primary-color;
             }
         }
 
@@ -86,13 +87,13 @@
             &:after {
                 bottom: -1px;
                 right: -1px;
-                @include about-number-vertical-line-2()
+                @include about-number-vertical-line()
             }
 
             &:before {
                 bottom: -1px;
                 right: -1px;
-                @include about-number-horizon-line-2();
+                @include about-number-horizon-line();
             }
         }
 
@@ -100,60 +101,73 @@
             &:after {
                 bottom: -1px;
                 left: -1px;
-                @include about-number-vertical-line-2()
+                @include about-number-vertical-line()
             }
 
             &:before {
                 bottom: -1px;
                 left: -1px;
-                @include about-number-horizon-line-2()
+                @include about-number-horizon-line()
             }
         }
 
         &:nth-child(3) {
             &:after {
                 bottom: -1px;
-                left: -1px;
-                @include about-number-vertical-line-2()
+                left: 0;
+                @include about-number-vertical-line()
             }
 
             &:before {
-                @include about-number-horizon-line-2();
+                @include about-number-horizon-line();
                 bottom: -1px;
-                left: -1px;
+                left: 0;
             }
         }
 
         &:nth-child(4) {
             &:after {
-                top: -1px;
+                top: 0;
                 right: -1px;
-                @include about-number-vertical-line-2()
+                @include about-number-vertical-line()
             }
 
             &:before {
-                @include about-number-horizon-line-2();
-                top: -1px;
+                @include about-number-horizon-line();
+                top: 0;
                 right: -1px;
             }
         }
 
-        &:nth-child(n+5) {
+        &:nth-child(5) {
             &::after {
-                @include about-number-vertical-line-2();
-                top: -1px;
+                @include about-number-vertical-line();
+                top: 0;
                 left: -1px;
             }
 
             &::before {
-                top: -1px;
+                top: 0;
                 left: -1px;
-                @include about-number-horizon-line-2();
+                @include about-number-horizon-line();
+            }
+        }
+
+        &:nth-child(6) {
+            &::after {
+                @include about-number-vertical-line();
+                top: 0;
+                left: 0;
+            }
+
+            &::before {
+                top: 0;
+                left: 0;
+                @include about-number-horizon-line();
             }
         }
 
         @include lg-block {
-            border: none;
             &:nth-child(-n+3) {
                 border-bottom: $border-on-about-page;
             }
@@ -208,9 +222,9 @@
         }
 
         div {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 400;
-            max-width: 50%;
+            max-width: 60%;
         }
     }
 }

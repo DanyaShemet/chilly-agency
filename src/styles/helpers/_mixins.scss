@@ -16,7 +16,7 @@
     background: $primary-color;
     width: 1px;
     height: 0;
-    transition: all .3s;
+    transition: all ease .4s;
     z-index: 5;
 }
 
@@ -27,7 +27,7 @@
     background: $primary-color;
     height: 1px;
     width: 0;
-    transition: all .3s;
+    transition: all ease .4s;
 }
 
 @mixin about-number-vertical-line-2{
@@ -37,7 +37,7 @@
     background: $primary-color;
     width: 1px;
     height: 0;
-    transition: all .3s;
+    transition: all ease .4s;
     z-index: 5;
 }
 
@@ -48,7 +48,7 @@
     background: $primary-color;
     height: 1px;
     width: 0;
-    transition: all .3s;
+    transition: all ease .4s;
 }
 
 @mixin overlay-block{
@@ -86,7 +86,7 @@
     padding-right: 10px;
     padding-bottom: 8px;
     border-radius: 10px;
-    transition: all .3s;
+    transition: all ease .4s;
     @include sm-block{
         font-size: 1rem;
     }
