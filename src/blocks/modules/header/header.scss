@@ -386,7 +386,7 @@
 
     nav {
         pointer-events: none;
-        width: 80%;
+        width: 85%;
         display: none;
         @include lg-block {
             display: flex;
@@ -411,6 +411,7 @@
 
     &-logo {
         display: block;
+        font-family: Pacifico, cursive;
         @include lg-block {
             display: none;
         }
@@ -418,12 +419,9 @@
 
     a {
         color: transparent;
-        transition: all ease .3s;
-        font-size: 1rem;
-        user-select: none;
-        font-family: Pacifico, cursive;
         @include lg-block {
-            font-family: Quicksand, sans-serif;
+            transition: all ease .3s;
+            user-select: none;
             font-size: 1.2rem;
             font-weight: 600;
             &:hover {
