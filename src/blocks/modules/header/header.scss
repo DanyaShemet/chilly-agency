@@ -457,16 +457,16 @@
                 display: none;
             }
 
+            &:before {
+                background-color: #000;
+            }
+
+            &:after {
+                background-color: #000;
+            }
+
             &.active {
                 top: 2rem;
-
-                &:before {
-                    background-color: #000;
-                }
-
-                &:after {
-                    background-color: #000;
-                }
             }
         }
     }
