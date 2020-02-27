@@ -1,12 +1,9 @@
-
 body{
     font-family: Quicksand, sans-serif;
-    overflow-x: hidden;
 }
 h1, h2, h3, h4, h5, h6, ul, p {
     margin: 0;
     padding: 0;
-    user-select: none;
 }
 li{
     list-style: none;
@@ -15,7 +12,7 @@ a{
     color: #000;
     text-decoration: none;
 }
-img{
+img, ul, h1{
     user-select: none;
 }
 button{
@@ -39,7 +36,3 @@ header, section, footer {
 main{
     overflow: hidden;
 }
-
-
-
-

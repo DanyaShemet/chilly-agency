@@ -50,7 +50,7 @@
             align-items: center;
             margin-bottom: 20px;
             justify-content: center;
-            transition: all ease .4s;
+            transition: all ease .3s;
             @include lg-block {
                 height: 80px;
                 width: 70px;
@@ -98,13 +98,16 @@
                         font-weight: 500;
                         font-size: .9rem;
                         color: #fff;
-                        transition: all ease .4s;
+                        transition: all ease .3s;
                         @include lg-block {
                             font-size: 1.2rem;
                         }
                         border-bottom: 1px solid transparent;
 
                         &:hover {
+                            border-bottom: 1px solid rgba(255, 255, 255, 1);
+                        }
+                        &.active {
                             border-bottom: 1px solid rgba(255, 255, 255, 1);
                         }
                     }
@@ -151,7 +154,7 @@
                     a {
                         color: #fff;
                         font-size: 1.2rem;
-                        transition: all ease .4s;
+                        transition: all ease .3s;
                         border-bottom: 1px solid transparent;
                         @include lg-block {
                             font-size: 1.5rem;
@@ -162,6 +165,8 @@
                         }
                     }
                 }
+
+
             }
         }
 
@@ -187,13 +192,14 @@
             }
 
             a {
-                transition: all ease .4s;
+                transition: all ease .3s;
                 z-index: 10000;
                 border-bottom: 1px solid transparent;
 
                 &:hover {
                     border-bottom: 1px solid rgba(255, 255, 255, 1);
                 }
+
             }
         }
     }
@@ -254,4 +260,7 @@
             top: 2%;
         }
     }
+
+
 }
+
