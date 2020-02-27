@@ -1,31 +1,33 @@
-
-body{
+body {
     font-family: Quicksand, sans-serif;
-    overflow-x: hidden;
 }
+
 h1, h2, h3, h4, h5, h6, ul, p {
     margin: 0;
     padding: 0;
 }
-li{
+
+li {
     list-style: none;
 }
-h1, ul{
-    user-select: none;
-}
-a{
+
+a {
     color: #000;
     text-decoration: none;
 }
-img{
+
+img, ul, h1 {
     user-select: none;
 }
-button{
+
+button {
     @include button-starter();
 }
-.color{
+
+.color {
     color: $primary-color
 }
+
 .container {
     @include container();
     @include xs(max-width, rem(420));
@@ -38,10 +40,7 @@ button{
 header, section, footer {
     max-width: 100%;
 }
-main{
+
+main {
     overflow: hidden;
 }
-
-
-
-
