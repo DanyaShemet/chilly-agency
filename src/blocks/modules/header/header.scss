@@ -69,7 +69,7 @@
         flex-direction: column;
         align-items: center;
         position: relative;
-        z-index: 2;
+        z-index: 1;
 
         &.header__main-content-about {
             justify-content: space-around;
@@ -342,7 +342,6 @@
                     height: 100%;
                     color: #000;
                     text-transform: uppercase;
-                    font-family: Quicksand, sans-serif;
                     font-weight: 700;
                     letter-spacing: 4px;
                     text-align: center;
@@ -382,7 +381,7 @@
 
     nav {
         pointer-events: none;
-        width: 80%;
+        width: 85%;
         display: none;
         @include lg-block {
             display: flex;
@@ -407,6 +406,7 @@
 
     &-logo {
         display: block;
+        font-family: Pacifico, cursive;
         @include lg-block {
             display: none;
         }
@@ -414,12 +414,9 @@
 
     a {
         color: transparent;
-        transition: all ease .3s;
-        font-family: Pacifico, cursive;
-        font-size: 1rem;
-        user-select: none;
         @include lg-block {
-            font-family: Quicksand, sans-serif;
+            transition: all ease .3s;
+            user-select: none;
             font-size: 1.2rem;
             font-weight: 600;
             &:hover {
