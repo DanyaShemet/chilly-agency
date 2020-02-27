@@ -14,13 +14,8 @@
         padding-left: 0;
         padding-bottom: 20px;
     }
-
-    h2 {
-        font-size: 1.5rem;
-        margin-bottom: 60px;
-    }
-
     .form__contact-form {
+        padding-top: 60px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -177,16 +172,4 @@
     border-color: $error-input !important;
 }
 
-
-@keyframes blink {
-    from {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    to {
-        opacity: 1;
-    }
-}
 
