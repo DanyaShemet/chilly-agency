@@ -1,10 +1,10 @@
 /* 11 Footer */
 .footer {
-    height: 50vh;
+    height: 40vh;
     padding-top: 0;
     padding-bottom: 0;
     position: relative;
-    background-color: $primary-color;
+    background-image: linear-gradient( 100deg, #13CADF , #13CADF 40%, #1396E2);
     overflow: hidden;
     @include lg-block {
         height: 35vh;
