@@ -93,7 +93,7 @@ transition: all 1s;
   &__block-text {
     width: 100%;
     @include md-block{
-      width: 80%;
+      width: 85%;
     }
     h1 {
       color: $primary-color;
@@ -399,7 +399,7 @@ transition: all 1s;
 
   nav {
     pointer-events: none;
-    width: 80%;
+    width: 85%;
     display: none;
     @include lg-block {
       display: flex;
