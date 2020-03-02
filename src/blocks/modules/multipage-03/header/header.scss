@@ -347,21 +347,21 @@ transition: all 1s;
         height: 100%;
         overflow: hidden;
 
-        & ul {
+        ul {
             display: flex;
             flex-direction: column;
             @include lg-block {
                 flex-direction: row;
             }
 
-            & li {
+            li {
                 justify-content: center;
                 align-items: center;
                 height: 100%;
                 overflow: hidden;
                 display: none;
                 background-color: rgba(255, 255, 255, 0.75);
-                border: 1px solid rgba(0, 109, 143, .4);
+                border: 1px solid rgba(19, 188, 223, .4);
                 &:hover {
                     background-color: rgba(255, 255, 255, 1);
                 }
