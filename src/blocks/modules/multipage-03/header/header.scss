@@ -4,7 +4,7 @@
 .header {
     overflow: hidden;
     position: relative;
-    background-image: url("../../img/headerMainImage.webp");
+    background-image: url("../img/headerMainImage.webp");
     background-position: center;
     background-size: cover;
     height: calc(var(--vh, 1vh) * 100);
@@ -14,27 +14,27 @@ transition: all 1s;
     }
 
     &-about {
-        background-image: url("../../img/headerAboutImage.webp");
+        background-image: url("../img/headerAboutImage.webp");
     }
 
     &-contact {
-        background-image: url("../../img/headerContactImage.webp");
+        background-image: url("../img/headerContactImage.webp");
     }
 
     &-portfolio {
-        background-image: url("../../img/headerPortfolioImage.webp");
+        background-image: url("../img/headerPortfolioImage.webp");
     }
 
     &-services {
-        background-image: url("../../img/headerServicesImage.webp");
+        background-image: url("../img/headerServicesImage.webp");
     }
 
     &-blog {
-        background-image: url("../../img/headerBlogImage.webp");
+        background-image: url("../img/headerBlogImage.webp");
     }
 
     &-price {
-        background-image: url("../../img/headerPriceImage.webp");
+        background-image: url("../img/headerPriceImage.webp");
     }
 
     &:after {
