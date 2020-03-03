@@ -5,6 +5,12 @@ $gradient-color-second: #1396E2;
 $gradient: linear-gradient(100deg, $gradient-color-first, $gradient-color-first 80%, $gradient-color-second);
 $gradient-footer: linear-gradient(100deg, $gradient-color-first, $gradient-color-first 40%, $gradient-color-second);
 
+$preloader-color-one: #1795FF;
+$preloader-color-two: #1C9FFF;
+$preloader-color-three: #1FB1FD;
+$preloader-color-four: #22C7FB;
+$preloader-color-five: #23D3FB;
+
 $secondary-text-color: #5D5D5D;
 $header-secondary-text: #DCDCDC;
 $border-on-about-page: 1px solid rgba(0, 0, 0, .1);
