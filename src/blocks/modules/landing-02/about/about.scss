@@ -114,27 +114,27 @@
         &:nth-child(3) {
             &:after {
                 bottom: -1px;
-                left: -1px;
+                left: 0;
                 @include about-number-vertical-line-2()
             }
 
             &:before {
                 @include about-number-horizon-line-2();
                 bottom: -1px;
-                left: -1px;
+                left: 0;
             }
         }
 
         &:nth-child(4) {
             &:after {
-                top: -1px;
+                top: 0;
                 right: -1px;
                 @include about-number-vertical-line-2()
             }
 
             &:before {
                 @include about-number-horizon-line-2();
-                top: -1px;
+                top: 0;
                 right: -1px;
             }
         }
@@ -142,13 +142,13 @@
         &:nth-child(n+5) {
             &::after {
                 @include about-number-vertical-line-2();
-                top: -1px;
-                left: -1px;
+                top: 0;
+                left: 0;
             }
 
             &::before {
-                top: -1px;
-                left: -1px;
+                top: 0;
+                left: 0;
                 @include about-number-horizon-line-2();
             }
         }
