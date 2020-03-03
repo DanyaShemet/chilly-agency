@@ -1,6 +1,6 @@
 /* 13 Footer */
 .footer {
-    height: 40vh;
+    height: 50vh;
     padding-top: 0;
     padding-bottom: 0;
     position: relative;
@@ -48,12 +48,13 @@
             width: 60px;
             display: flex;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             justify-content: center;
             transition: all ease .3s;
             @include lg-block {
                 height: 80px;
                 width: 70px;
+                margin-bottom: 20px;
             }
 
             span {
