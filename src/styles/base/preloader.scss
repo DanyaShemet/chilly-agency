@@ -46,7 +46,7 @@
         right: 0;
         background-color: $primary-color;
         border-radius: $preloader-element-border-radius;
-        box-shadow: 0px 0px 10px 0px rgba(#1C9FFF, 0.4);
+        box-shadow: 0 0 10px 0 rgba(#1C9FFF, 0.4);
     }
 
     &:nth-child(1) {
@@ -68,30 +68,30 @@
     }
 
     &:nth-child(2):after {
-        background-color: #1C9FFF;
+        background-color: $preloader-color-two;
     }
 
     &:nth-child(3):after {
-        background-color: #1FB1FD;
+        background-color: $preloader-color-three;
     }
 
     &:nth-child(4):after {
-        background-color: #22C7FB;
+        background-color: $preloader-color-four;
     }
 
     &:nth-child(5):after {
-        background-color: #23D3FB;
+        background-color: $preloader-color-five;
     }
 }
 
 
 @keyframes slide {
     0% {
-        background-color: #1795FF;
+        background-color: $preloader-color-one;
         transform: translatex(0vw);
     }
     100% {
-        background-color: #23D3FB;
+        background-color: $preloader-color-five;
     }
     100% {
         transform: translatex($preloader-size - ($preloader-element-size * 1.25));
@@ -100,10 +100,10 @@
 
 @keyframes color-change {
     0% {
-        background-color: #1795FF;
+        background-color: $preloader-color-one;
     }
     100% {
-        background-color: #23D3FB;
+        background-color: $preloader-color-five;
     }
 }
 
