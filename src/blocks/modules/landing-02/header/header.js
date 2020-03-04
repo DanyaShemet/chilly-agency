@@ -72,16 +72,6 @@ $(window).scroll(function (e) {
     })
 });
 
-// Type machine Functionality
-let options = {
-    strings: ['Chilly Agency', 'Developers', 'Designers', 'Strategists', 'Marketers'],
-    typeSpeed: 40,
-    showCursor: false,
-    loop: true,
-    backSpeed: 40
-};
-let typed = new Typed('#main-text', options);
-
 
 // scroll to chosen block on page functionality
 export function scrollto() {
