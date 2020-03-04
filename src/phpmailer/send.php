@@ -20,14 +20,14 @@ try {
 
 
     $mail->Host       = 'smtp.gmail.com'; // SMTP server
-    $mail->Username   = 'shemetwork@gmail.com'; // Login email
-    $mail->Password   = 'w1AAC%8cP6ClXFP58TqT8nqI'; //Email Password
+    $mail->Username   = 'youremail@gmail.com'; // Login email
+    $mail->Password   = 'password'; //Email Password
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('shemetwork@gmail.com', 'Request from site'); // Mail address
+    $mail->setFrom('youremail@gmail.com', 'Request from site'); // Mail address
 
     // Message recipient
-    $mail->addAddress('shemetwork@gmail.com');
+    $mail->addAddress('youremail@gmail.com');
 
     // Letter
     $mail->isHTML(true);
