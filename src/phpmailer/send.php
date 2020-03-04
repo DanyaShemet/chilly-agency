@@ -27,7 +27,7 @@ try {
     $mail->setFrom('youremail@gmail.com', 'Request from site'); // Mail address
 
     // Message recipient
-    $mail->addAddress('shemetwork@gmail.com');
+    $mail->addAddress('youremail@gmail.com');
 
     // Letter
     $mail->isHTML(true);
