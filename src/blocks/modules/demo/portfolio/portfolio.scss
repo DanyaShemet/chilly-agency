@@ -38,7 +38,7 @@
         overflow: hidden;
         color: #fff;
         position: relative;
-        @include size-lg(6);
+        @include size-md(6);
         @include size-xs(12);
         height: 300px;
         @include lg-block{
