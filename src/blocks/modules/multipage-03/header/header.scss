@@ -437,6 +437,7 @@ transition: all 1s;
                     margin-right: 20px;
                 }
             }
+
         }
 
         .header__top-menu-logo a {
@@ -462,7 +463,7 @@ transition: all 1s;
             font-size: 1.2rem;
             font-weight: 600;
             &:hover {
-                @include hover-links-2()
+                @include hover-links()
             }
         }
     }
