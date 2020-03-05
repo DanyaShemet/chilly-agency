@@ -292,6 +292,7 @@
         width: 1px;
     }
 }
+
 /* End Main styles for header */
 
 /* Animate menu functionality */
@@ -334,7 +335,8 @@
 
                 &:hover {
                     background-color: rgba(19, 188, 223, 1);
-                    a{
+
+                    a {
                         transform: scale(1.15);
                     }
                 }
@@ -543,6 +545,7 @@
     background-color: transparent;
     background-clip: content-box;
 }
+
 /* End animate menu functionality */
 
 
