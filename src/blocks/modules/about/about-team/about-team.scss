@@ -14,6 +14,7 @@
         }
         font-weight: 500;
         color: #fff;
+
         .container {
             display: flex;
             flex-direction: column;
@@ -21,6 +22,7 @@
                 flex-direction: row;
             }
             padding-bottom: 50px;
+
             h2 {
                 font-size: 1.5rem;
                 margin-bottom: 20px;
@@ -30,6 +32,7 @@
                     margin-bottom: 0;
                 }
             }
+
             p {
                 @include size-xs(12);
                 @include size-lg(9);
@@ -37,6 +40,7 @@
                     line-height: 1.5;
                 }
                 line-height: 1.4;
+
                 & span {
                     font-weight: 700;
                 }
@@ -82,6 +86,7 @@
                     width: 100%;
                     transition: transform ease .3s;
                     overflow: hidden;
+
                     &:hover {
                         transform: scale(1.06);
                     }
@@ -96,6 +101,7 @@
                 }
                 margin-bottom: 5px;
             }
+
             span {
                 color: $primary-color;
                 font-size: 0.8rem;
@@ -186,10 +192,12 @@
             padding-bottom: 30px;
             margin-bottom: 30px;
         }
+
         .team__worker-preview {
             width: 80%;
             display: flex;
             align-items: center;
+
             img {
                 width: 80px;
                 height: 80px;
@@ -204,6 +212,7 @@
                     margin-right: 20px;
                 }
             }
+
             h4 {
                 font-size: 1rem;
                 margin-bottom: 5px;
@@ -212,6 +221,7 @@
                     margin-bottom: 10px;
                 }
             }
+
             span {
                 font-size: 0.7rem;
                 @include md-block {
@@ -221,6 +231,7 @@
                 font-weight: 500;
             }
         }
+
         .team__worker-social {
             a {
                 font-size: 0.8rem;
@@ -232,6 +243,7 @@
                 }
                 margin-right: 3px;
                 transition: all ease .5s;
+
                 &:hover {
                     @include hover-links()
                 }
