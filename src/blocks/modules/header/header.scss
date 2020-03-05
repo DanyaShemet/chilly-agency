@@ -7,9 +7,11 @@
     position: relative;
     height: calc(var(--vh, 1vh) * 100);
     transition: all ease 1s;
+
     &__shadow {
         filter: drop-shadow(10px 20px 10px rgba(255, 255, 255, 0.8));
     }
+
     &__logo {
         background-color: rgba(255, 255, 255, .3);
         clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
