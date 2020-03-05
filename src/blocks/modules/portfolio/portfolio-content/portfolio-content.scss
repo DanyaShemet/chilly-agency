@@ -1,9 +1,12 @@
 /* 05 Portfolio */
 
 .portfolio {
-    position: relative;
     padding-top: 40px;
     padding-bottom: 40px;
+    min-height: 100vh;
+    @include sm-block {
+        min-height: auto;
+    }
 
     &__top {
         margin-bottom: 40px;
