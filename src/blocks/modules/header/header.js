@@ -86,7 +86,7 @@ export function scrollto() {
     $(".scrollto").click(function () {
         let elementClick = $(this).attr("href");
         let destination = $(elementClick).offset().top;
-        jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination - 80}, 1500);
+        $("html:not(:animated),body:not(:animated)").animate({scrollTop: destination - 80}, 1500);
         return false;
     });
 }
