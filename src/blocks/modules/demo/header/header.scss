@@ -33,6 +33,7 @@ transition: all 1s;
       text-align: center;
       user-select: none;
       width: 70%;
+      font-weight: 500;
       @include sm-block {
         font-size: 1.1rem;
       }

@@ -80,7 +80,7 @@ $(window).scroll(function (e) {
 
 // Type machine Functionality
 let options = {
-    strings: ['Onepage Animated', 'Onepage solid color', 'Onepage video', 'Multipage version'],
+    strings: ['Onepage Animated', 'Onepage solid color', 'Onepage video', 'Multipage versions'],
     typeSpeed: 40,
     showCursor: false,
     loop: true,
