@@ -137,7 +137,7 @@
                 transition: all  ease .3s;
 
                 &:hover {
-                    @include hover-links-2()
+                    @include hover-links()
                 }
             }
 
@@ -242,7 +242,7 @@
                 margin-right: 3px;
                 transition: all  ease .3s;
                 &:hover {
-                    @include hover-links-2()
+                    @include hover-links()
                 }
             }
         }
