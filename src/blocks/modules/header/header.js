@@ -90,3 +90,14 @@ export function mobileDisplayInBrowser(){
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
+
+// Type machine Functionality
+
+// let options = {
+//     strings: ['We are Chilly Agency', ' We are Developers', 'We are Designers', 'We are Strategists', 'We are Marketers'],
+//     typeSpeed: 40,
+//     showCursor: false,
+//     loop: true,
+//     backSpeed: 40
+// };
+// let typed = new Typed('#main-text', options);
