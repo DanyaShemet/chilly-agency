@@ -20,8 +20,8 @@ try {
 
 
     $mail->Host       = 'smtp.gmail.com'; // SMTP server
-    $mail->Username   = 'shemetwork@gmail.com'; // Login email
-    $mail->Password   = 'w1AAC%8cP6ClXFP58TqT8nqI'; //Email Password
+    $mail->Username   = 'email'; // Login email
+    $mail->Password   = 'password'; //Email Password
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
     $mail->setFrom('shemetwork@gmail.com', 'Request from site'); // Mail address
